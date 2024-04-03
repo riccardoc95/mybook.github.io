@@ -1,0 +1,1015 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>TopoAttention &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ILLUSTRIS_topoattention';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PeronaMalik" href="ILLUSTRIS_peronamalik.html" />
+    <link rel="prev" title="AutoEncoder" href="ILLUSTRIS_autoencoder.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="sec_intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="sec_intro.html">
+                    Home
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Denoising</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="sec_forecast.html">FORECAST</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="FORECAST_unet.html">AstroU-NET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FORECAST_autoencoder.html">AutoEncoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FORECAST_topoattention.html">TopoAttention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FORECAST_peronamalik.html">PeronaMalik</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FORECAST.html">All Models</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="sec_illustris.html">ILLUSTRIS</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS_unet.html">AstroU-NET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS_autoencoder.html">AutoEncoder</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">TopoAttention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS_peronamalik.html">PeronaMalik</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS.html">All Models</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Segmentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="sec_mcvis.html">MC-VIS</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="UNetTopoLoss.html">UNet with TopoLoss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TIS.html">TIS</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FILLUSTRIS_topoattention.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/ILLUSTRIS_topoattention.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>TopoAttention</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#without-zscale">without zscale</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-scale">with scale</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="topoattention">
+<h1>TopoAttention<a class="headerlink" href="#topoattention" title="Link to this heading">#</a></h1>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Input</p></th>
+<th class="head"><p>MSE</p></th>
+<th class="head"><p>PSNR</p></th>
+<th class="head"><p>SSIM</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TopoAttention</p></td>
+<td><p>0.0015</p></td>
+<td><p>30.33</p></td>
+<td><p>0.70</p></td>
+</tr>
+</tbody>
+</table>
+<section id="without-zscale">
+<h2>without zscale<a class="headerlink" href="#without-zscale" title="Link to this heading">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/7a5af515b6afacb57b26762f607e765aee674e6124f0976b57975af6ee50636c.png" src="_images/7a5af515b6afacb57b26762f607e765aee674e6124f0976b57975af6ee50636c.png" />
+<img alt="_images/f5fe4105e3bc6634b920ff803c8b9d2edd9f0a8b9eb5e52ddd27d551db587a2e.png" src="_images/f5fe4105e3bc6634b920ff803c8b9d2edd9f0a8b9eb5e52ddd27d551db587a2e.png" />
+<img alt="_images/f4e9cdd2dbfc11cc3fc91763ac1537a1c544d1eb95228e38eaa075e222c9ae11.png" src="_images/f4e9cdd2dbfc11cc3fc91763ac1537a1c544d1eb95228e38eaa075e222c9ae11.png" />
+<img alt="_images/795a1487ad18fd348d4ef5247d737f7a063627b0c20ffa2c90b99d4d2efb0825.png" src="_images/795a1487ad18fd348d4ef5247d737f7a063627b0c20ffa2c90b99d4d2efb0825.png" />
+<img alt="_images/298ec56660d73b5bb556b4fddc0d1588830d0159af536925253538a65529f49c.png" src="_images/298ec56660d73b5bb556b4fddc0d1588830d0159af536925253538a65529f49c.png" />
+<img alt="_images/9734d5e36c2ec333dba655cca88b2431e644503e6f5cdb3c6f513e53ecbb828a.png" src="_images/9734d5e36c2ec333dba655cca88b2431e644503e6f5cdb3c6f513e53ecbb828a.png" />
+<img alt="_images/aa33225ef3155b66a1a600f73ace6a4449ee5eb6ba0bf51bee52406d8508b39d.png" src="_images/aa33225ef3155b66a1a600f73ace6a4449ee5eb6ba0bf51bee52406d8508b39d.png" />
+<img alt="_images/d97e4d6fd68980e57c9c65f79005ddf8abc72d0ad5238b042b4a6b897b0cd1cc.png" src="_images/d97e4d6fd68980e57c9c65f79005ddf8abc72d0ad5238b042b4a6b897b0cd1cc.png" />
+<img alt="_images/c654ec80d86a837827f575cbaa06124c092c1fa8731e740a94ccd9ac68af53e7.png" src="_images/c654ec80d86a837827f575cbaa06124c092c1fa8731e740a94ccd9ac68af53e7.png" />
+<img alt="_images/5b9908eaac7a635f6d36eb77d1a8d237476cb8b9739fe786d35bac3ac9d34eba.png" src="_images/5b9908eaac7a635f6d36eb77d1a8d237476cb8b9739fe786d35bac3ac9d34eba.png" />
+<img alt="_images/4ed044a5c2e69cf5b1e8363964fe093206aae0adba21bf84139acac38bb53d75.png" src="_images/4ed044a5c2e69cf5b1e8363964fe093206aae0adba21bf84139acac38bb53d75.png" />
+<img alt="_images/cea38cf18b0c09dab5b2a798b247c5de1cad3a9925a49dfd2bb597648a21cec0.png" src="_images/cea38cf18b0c09dab5b2a798b247c5de1cad3a9925a49dfd2bb597648a21cec0.png" />
+<img alt="_images/f9d3c778cc85de45f0e1a2b7cec8dd029f15b6cd5af8e9eed710c2d5d6a53589.png" src="_images/f9d3c778cc85de45f0e1a2b7cec8dd029f15b6cd5af8e9eed710c2d5d6a53589.png" />
+<img alt="_images/3754e33df8a9266cb9e5bcadc6c9d875963c9d458fd5edd461c7ed10502839a0.png" src="_images/3754e33df8a9266cb9e5bcadc6c9d875963c9d458fd5edd461c7ed10502839a0.png" />
+<img alt="_images/21f37b3f9a312a3376ea9d50fc9f7678ade981df41d82af01273bc5f8cd3785b.png" src="_images/21f37b3f9a312a3376ea9d50fc9f7678ade981df41d82af01273bc5f8cd3785b.png" />
+<img alt="_images/ddf19b88a1ad61d93c0761346b3f23e57849dde52abe1a7e0caa97e57d5b3e58.png" src="_images/ddf19b88a1ad61d93c0761346b3f23e57849dde52abe1a7e0caa97e57d5b3e58.png" />
+<img alt="_images/48adcf6b60ab5b9ac1ffea35fb231caa7c31fd7df0bc0e40bc17e62805f10bb9.png" src="_images/48adcf6b60ab5b9ac1ffea35fb231caa7c31fd7df0bc0e40bc17e62805f10bb9.png" />
+<img alt="_images/4fb861336eb7ecf276e1c7ee7545f6717fe022986c2d0840735267739fdef8f5.png" src="_images/4fb861336eb7ecf276e1c7ee7545f6717fe022986c2d0840735267739fdef8f5.png" />
+<img alt="_images/0dc96ba977ad721fac83acfa5707495fe11845211cf4f353407215443642011c.png" src="_images/0dc96ba977ad721fac83acfa5707495fe11845211cf4f353407215443642011c.png" />
+<img alt="_images/dfbdb85d5a28540f93ebe5f2d6ca55b6b9a11f8e1ee5b7c110f0d6e8056b2227.png" src="_images/dfbdb85d5a28540f93ebe5f2d6ca55b6b9a11f8e1ee5b7c110f0d6e8056b2227.png" />
+<img alt="_images/fd47099c46320fe5770d9495177cb94c28172824c87c8ae05ce26c05f4efc3e7.png" src="_images/fd47099c46320fe5770d9495177cb94c28172824c87c8ae05ce26c05f4efc3e7.png" />
+<img alt="_images/0a59e4d992feedd1da3bb791b5fb005e3fba7c6f35b9d7724e1247b3e1b82e7d.png" src="_images/0a59e4d992feedd1da3bb791b5fb005e3fba7c6f35b9d7724e1247b3e1b82e7d.png" />
+<img alt="_images/c9c5eb925d7d8decf4cc2aba3b983126afd89986a0a97016138438f3e0cdc7d5.png" src="_images/c9c5eb925d7d8decf4cc2aba3b983126afd89986a0a97016138438f3e0cdc7d5.png" />
+<img alt="_images/92c6da354d507dbdd7f02160404e290996390bfc45acdf812b380f824047bdc2.png" src="_images/92c6da354d507dbdd7f02160404e290996390bfc45acdf812b380f824047bdc2.png" />
+<img alt="_images/6cb2c95d5a68534dab0bee0202971cce7456f2bc1971c1ba149b5ca0af94df97.png" src="_images/6cb2c95d5a68534dab0bee0202971cce7456f2bc1971c1ba149b5ca0af94df97.png" />
+<img alt="_images/849324b53a813ac854cc607daf0d65066c13505044b93fc17797757fb6ebde80.png" src="_images/849324b53a813ac854cc607daf0d65066c13505044b93fc17797757fb6ebde80.png" />
+<img alt="_images/0294e257c727e722fff0bde73a9c4686d966f41e0d3877a5f9c8380094c9d459.png" src="_images/0294e257c727e722fff0bde73a9c4686d966f41e0d3877a5f9c8380094c9d459.png" />
+<img alt="_images/4775dad164a6080f8eb2aaf2c09aa63efef1b20a6050dae3c41597c69e2a361d.png" src="_images/4775dad164a6080f8eb2aaf2c09aa63efef1b20a6050dae3c41597c69e2a361d.png" />
+<img alt="_images/085ad57378e3c505153b6bce33af7eac7bdf7bcc468f47f8989c73733dcf634f.png" src="_images/085ad57378e3c505153b6bce33af7eac7bdf7bcc468f47f8989c73733dcf634f.png" />
+<img alt="_images/4c510fbbf44a8808c3947a6f9ec3dd201cb0849c9e780aaeba6235e6484fecb3.png" src="_images/4c510fbbf44a8808c3947a6f9ec3dd201cb0849c9e780aaeba6235e6484fecb3.png" />
+<img alt="_images/c5bcdf8c451ca975baa32f9248f4125c9b3c4b828f334970efb7f236501c9a4e.png" src="_images/c5bcdf8c451ca975baa32f9248f4125c9b3c4b828f334970efb7f236501c9a4e.png" />
+<img alt="_images/a48ad5984d385a84cb5ad5feaf86793fc0130686735864e2566cbfe79169416b.png" src="_images/a48ad5984d385a84cb5ad5feaf86793fc0130686735864e2566cbfe79169416b.png" />
+<img alt="_images/dd76a092a1315379c408625ad6ab50f7aeb147845206eea36d8558f6cf02214c.png" src="_images/dd76a092a1315379c408625ad6ab50f7aeb147845206eea36d8558f6cf02214c.png" />
+<img alt="_images/c493259c136f9b9d2c62f4b61921d64ff6ea0145ccdc2613dc8ca7777b1d8ba3.png" src="_images/c493259c136f9b9d2c62f4b61921d64ff6ea0145ccdc2613dc8ca7777b1d8ba3.png" />
+<img alt="_images/6908195d3d19d382090c4da4a2d95dac75fda04a8d67ca554ffdb5bcde1930d0.png" src="_images/6908195d3d19d382090c4da4a2d95dac75fda04a8d67ca554ffdb5bcde1930d0.png" />
+<img alt="_images/0a85cbf2d5c88b3c4359a34651cbdf5fd0de45aae11cc96776fe9302c1b4762d.png" src="_images/0a85cbf2d5c88b3c4359a34651cbdf5fd0de45aae11cc96776fe9302c1b4762d.png" />
+<img alt="_images/4ac9ff419f76668005c3410b0708031841e80be26e875cd62dd8514bf25f86ec.png" src="_images/4ac9ff419f76668005c3410b0708031841e80be26e875cd62dd8514bf25f86ec.png" />
+<img alt="_images/7ca983e6f1d31d31865c0b0647d6672d994259c7379d94ca63a14c00d2d5714b.png" src="_images/7ca983e6f1d31d31865c0b0647d6672d994259c7379d94ca63a14c00d2d5714b.png" />
+<img alt="_images/fd43f6d43211f01e680e869fa70d7c1d162258071fed6aff16b621f88d9c3669.png" src="_images/fd43f6d43211f01e680e869fa70d7c1d162258071fed6aff16b621f88d9c3669.png" />
+<img alt="_images/d8ba286861bbf6c7e475377040796aef3f06d67140344ee3c758be64653ea6eb.png" src="_images/d8ba286861bbf6c7e475377040796aef3f06d67140344ee3c758be64653ea6eb.png" />
+<img alt="_images/9729249ad216719348ee7ad769fe7ea68107a157dfa3647e73bd68f9371c18fa.png" src="_images/9729249ad216719348ee7ad769fe7ea68107a157dfa3647e73bd68f9371c18fa.png" />
+<img alt="_images/5d53f908cd72768a4b27b1d5112f2dee9b5c65e35f69f1f03fab8d5fbc14fa0d.png" src="_images/5d53f908cd72768a4b27b1d5112f2dee9b5c65e35f69f1f03fab8d5fbc14fa0d.png" />
+<img alt="_images/aa9ea6d11ae009e7ca97c70d0d42d7fbc18391f36df325b2d81fc9c5f052e3b6.png" src="_images/aa9ea6d11ae009e7ca97c70d0d42d7fbc18391f36df325b2d81fc9c5f052e3b6.png" />
+<img alt="_images/99bc93fc0dfdf65ecfe755e3638398864255fee91547e2a900967d70bdde39cc.png" src="_images/99bc93fc0dfdf65ecfe755e3638398864255fee91547e2a900967d70bdde39cc.png" />
+<img alt="_images/21bfbf5b7ea83094a1f4b4ccbcae0c11e65f1814658c8b28e788374128e751e6.png" src="_images/21bfbf5b7ea83094a1f4b4ccbcae0c11e65f1814658c8b28e788374128e751e6.png" />
+<img alt="_images/8c177543b316310ebef8a162667ac75a555a1b8f220fc0b17f601b46634b738c.png" src="_images/8c177543b316310ebef8a162667ac75a555a1b8f220fc0b17f601b46634b738c.png" />
+<img alt="_images/5377f917b3fdae6453b103a1680b55c55f3e182e5064a236180405bb14cce3a8.png" src="_images/5377f917b3fdae6453b103a1680b55c55f3e182e5064a236180405bb14cce3a8.png" />
+<img alt="_images/55dc242562bd52d635ae9766c1f92283cc631084aa188511f0a29c91f01c31e8.png" src="_images/55dc242562bd52d635ae9766c1f92283cc631084aa188511f0a29c91f01c31e8.png" />
+<img alt="_images/22d8c92e29d7c7667eba0af5d6f3c9465d5736304aed48756257579f6fcec2f7.png" src="_images/22d8c92e29d7c7667eba0af5d6f3c9465d5736304aed48756257579f6fcec2f7.png" />
+<img alt="_images/995dc320122059f4c2a593cf55fdf4099382c8a6f9e1e777d53424dccfcac1a9.png" src="_images/995dc320122059f4c2a593cf55fdf4099382c8a6f9e1e777d53424dccfcac1a9.png" />
+<img alt="_images/a4f77a45f213d0ff6341ca3cf9b2233458565261be324c237926bcb8d7d4db8b.png" src="_images/a4f77a45f213d0ff6341ca3cf9b2233458565261be324c237926bcb8d7d4db8b.png" />
+<img alt="_images/ff86d30438ba4b8af732364a4c0092c2bb7049df1c3fe2774bca783275bcec02.png" src="_images/ff86d30438ba4b8af732364a4c0092c2bb7049df1c3fe2774bca783275bcec02.png" />
+<img alt="_images/6ad3d3637197942861f6365fcee807639b65f89307a6f9424c7696585b5aa4d3.png" src="_images/6ad3d3637197942861f6365fcee807639b65f89307a6f9424c7696585b5aa4d3.png" />
+<img alt="_images/b1ce7c3c850f39777577609592431417bd8c524756e0f2f4c6fe8c05cf32414e.png" src="_images/b1ce7c3c850f39777577609592431417bd8c524756e0f2f4c6fe8c05cf32414e.png" />
+<img alt="_images/0882d25ee4d42a30185608a8461e8898b661f7f2194859e794065fd660a54b7c.png" src="_images/0882d25ee4d42a30185608a8461e8898b661f7f2194859e794065fd660a54b7c.png" />
+<img alt="_images/d4f5a916228a1f54bf20bd9f8e1be6e4b62eb02b211ef42ab3c2730bec8615de.png" src="_images/d4f5a916228a1f54bf20bd9f8e1be6e4b62eb02b211ef42ab3c2730bec8615de.png" />
+<img alt="_images/36864104d3629d688be73718b39f926687280dd331a085ce5f26b92dc7d4c7dd.png" src="_images/36864104d3629d688be73718b39f926687280dd331a085ce5f26b92dc7d4c7dd.png" />
+<img alt="_images/27a06f87839f1c9ccf09237a9b266c5e63248dd68715e4ec9d1cf37ffaced32a.png" src="_images/27a06f87839f1c9ccf09237a9b266c5e63248dd68715e4ec9d1cf37ffaced32a.png" />
+<img alt="_images/ce0ef0f2548a1d3387e0ea58627f872a3d73bc0cd363f529f0b8cbf3fa60ac68.png" src="_images/ce0ef0f2548a1d3387e0ea58627f872a3d73bc0cd363f529f0b8cbf3fa60ac68.png" />
+<img alt="_images/9a6c1813711c552fba343dfb26e2370cb5b66e58280668e9914af9b9991293af.png" src="_images/9a6c1813711c552fba343dfb26e2370cb5b66e58280668e9914af9b9991293af.png" />
+<img alt="_images/ed0ccf8e07860b7d33737a30f51d8de64dba3efe60dda48872d3f55554bbe201.png" src="_images/ed0ccf8e07860b7d33737a30f51d8de64dba3efe60dda48872d3f55554bbe201.png" />
+<img alt="_images/0e5876e9f1597714db2d140cb976369dcdd0daa08c87a0b75bf34b84b998133a.png" src="_images/0e5876e9f1597714db2d140cb976369dcdd0daa08c87a0b75bf34b84b998133a.png" />
+<img alt="_images/6395ee032eb4424b442f9f5b8382b7de2127bb38358d14f08fd5da27333b9e8f.png" src="_images/6395ee032eb4424b442f9f5b8382b7de2127bb38358d14f08fd5da27333b9e8f.png" />
+<img alt="_images/a42534202a9852a1f5ec7f2f7d24f369dbf567c8e5722ae61feb553ddc1e2b4e.png" src="_images/a42534202a9852a1f5ec7f2f7d24f369dbf567c8e5722ae61feb553ddc1e2b4e.png" />
+<img alt="_images/2568437992888f00905edc05fc67869a6d78e716968f993aeaa1ae649a0d6328.png" src="_images/2568437992888f00905edc05fc67869a6d78e716968f993aeaa1ae649a0d6328.png" />
+<img alt="_images/23a8315c6d0afcf687452aeee699960a9be8233888c57b51e132bc99b1f70af3.png" src="_images/23a8315c6d0afcf687452aeee699960a9be8233888c57b51e132bc99b1f70af3.png" />
+<img alt="_images/2dab6e8224389ae1765d8f87c5c678798ed68f2671d8f3fc1dcfbec6b4425d79.png" src="_images/2dab6e8224389ae1765d8f87c5c678798ed68f2671d8f3fc1dcfbec6b4425d79.png" />
+<img alt="_images/e9ea09353f3bf7c43368f2e5a61ff4aacb39c9af3f0d7f76bec1c7af75f0525b.png" src="_images/e9ea09353f3bf7c43368f2e5a61ff4aacb39c9af3f0d7f76bec1c7af75f0525b.png" />
+<img alt="_images/6ae7d69f8b08e6f88aa6af379b381af2e8c2de7d11d3e2e7fccc4461af8d7044.png" src="_images/6ae7d69f8b08e6f88aa6af379b381af2e8c2de7d11d3e2e7fccc4461af8d7044.png" />
+<img alt="_images/d11e73fe71adb4aa22e74e9c81970118bbe0e425cae90821bb28d369a1f02def.png" src="_images/d11e73fe71adb4aa22e74e9c81970118bbe0e425cae90821bb28d369a1f02def.png" />
+<img alt="_images/a89350d0b5e40a0fdccb3a30f48a94e574359edd5d65ef129dff8a5d3b0dd8da.png" src="_images/a89350d0b5e40a0fdccb3a30f48a94e574359edd5d65ef129dff8a5d3b0dd8da.png" />
+<img alt="_images/95d5bc3c690bad7239f226c3d69cc73a4157c88c057cc6d823a9c6ebc54b180f.png" src="_images/95d5bc3c690bad7239f226c3d69cc73a4157c88c057cc6d823a9c6ebc54b180f.png" />
+<img alt="_images/83e3bd8de569635405f817b0f14802853e0fec4795f2315ed19e71e527d197a7.png" src="_images/83e3bd8de569635405f817b0f14802853e0fec4795f2315ed19e71e527d197a7.png" />
+<img alt="_images/7fa981d94c06780685f1bb89ab1543e2c4465fabfe5a7f536767e475036a7797.png" src="_images/7fa981d94c06780685f1bb89ab1543e2c4465fabfe5a7f536767e475036a7797.png" />
+<img alt="_images/7db34563762ce4ec47bfac0fccf177fec3f3786d3c3c95fc4c13b349f8c01bcc.png" src="_images/7db34563762ce4ec47bfac0fccf177fec3f3786d3c3c95fc4c13b349f8c01bcc.png" />
+<img alt="_images/63dfa5f9e9c492c8fa53639971bb8be8cf02cfb3f4707212b3ed3783c79b79db.png" src="_images/63dfa5f9e9c492c8fa53639971bb8be8cf02cfb3f4707212b3ed3783c79b79db.png" />
+<img alt="_images/f73b10279fe979da09d6d96babc9eb751a9f88d0df04fa9d8de8f0003d749a7d.png" src="_images/f73b10279fe979da09d6d96babc9eb751a9f88d0df04fa9d8de8f0003d749a7d.png" />
+<img alt="_images/80fcb43b9f4a7043cd5151f7bcc6a6d598b7135fbc11ca745c5d551d9a71e15e.png" src="_images/80fcb43b9f4a7043cd5151f7bcc6a6d598b7135fbc11ca745c5d551d9a71e15e.png" />
+<img alt="_images/82a0fe4035a32ef48bd18c6020ad08950be1e6965be894bf0185f3f8c8696050.png" src="_images/82a0fe4035a32ef48bd18c6020ad08950be1e6965be894bf0185f3f8c8696050.png" />
+<img alt="_images/f0b603ab8196938ac13935bb9f8b8a2c883b09c113cf9bea4e3b876d8ee05c05.png" src="_images/f0b603ab8196938ac13935bb9f8b8a2c883b09c113cf9bea4e3b876d8ee05c05.png" />
+<img alt="_images/3fb011468f3cca72bb6f02d904c0c602d49318e19f94fbebab3192b9b2a8aaaa.png" src="_images/3fb011468f3cca72bb6f02d904c0c602d49318e19f94fbebab3192b9b2a8aaaa.png" />
+<img alt="_images/b55f7d647ecef88213ff3c22e3059c53f4519652ac04ab50f54f5009724df921.png" src="_images/b55f7d647ecef88213ff3c22e3059c53f4519652ac04ab50f54f5009724df921.png" />
+<img alt="_images/144cafe6bd1c5fa4eef1fa01854c11c0fb1fd09f779551afa9a0f52b21891c1a.png" src="_images/144cafe6bd1c5fa4eef1fa01854c11c0fb1fd09f779551afa9a0f52b21891c1a.png" />
+<img alt="_images/3c14dbd93b343e572bf35538bee5c07c89172221b581285e705d8ecba5d7f09a.png" src="_images/3c14dbd93b343e572bf35538bee5c07c89172221b581285e705d8ecba5d7f09a.png" />
+<img alt="_images/5cd30bb1285967b12deb3df6b27b9e0319e79edb163656d3349fa61d5136b4f2.png" src="_images/5cd30bb1285967b12deb3df6b27b9e0319e79edb163656d3349fa61d5136b4f2.png" />
+<img alt="_images/ec30a25d9817692082c897cbcb2f2a44de45c8ddf0e8d52b08efb9356a7659e8.png" src="_images/ec30a25d9817692082c897cbcb2f2a44de45c8ddf0e8d52b08efb9356a7659e8.png" />
+<img alt="_images/dbb1c158ea1bb30d6f590713f34323293e5c8c561c80ceb8ccbc1c0e8f7b34dd.png" src="_images/dbb1c158ea1bb30d6f590713f34323293e5c8c561c80ceb8ccbc1c0e8f7b34dd.png" />
+<img alt="_images/0fc8a4e5ff2f00af861672cb33f2b8181c14eb3bab54ceb60a06fbac85a41e82.png" src="_images/0fc8a4e5ff2f00af861672cb33f2b8181c14eb3bab54ceb60a06fbac85a41e82.png" />
+<img alt="_images/d2e70ba129e1f34ba1a3ac69b68aefc5e554e9810b6405d292d5884988e8c3bd.png" src="_images/d2e70ba129e1f34ba1a3ac69b68aefc5e554e9810b6405d292d5884988e8c3bd.png" />
+<img alt="_images/398359bb47c63648404d6b802f3a96e5a1100066dce97f232b79d31d20a9ed47.png" src="_images/398359bb47c63648404d6b802f3a96e5a1100066dce97f232b79d31d20a9ed47.png" />
+<img alt="_images/f4d5c9cf5d2c6238f10102a652f6caef0099cbe90905a3ef7b2e2cfd8465c804.png" src="_images/f4d5c9cf5d2c6238f10102a652f6caef0099cbe90905a3ef7b2e2cfd8465c804.png" />
+<img alt="_images/583d623e81b71057d34a3db30abaa3d613b49a433ceb7707182a1dab08b166bb.png" src="_images/583d623e81b71057d34a3db30abaa3d613b49a433ceb7707182a1dab08b166bb.png" />
+<img alt="_images/19fd66e5c9fd497923893b763b9a592efaf155adfaf1286e9565825ab87709c3.png" src="_images/19fd66e5c9fd497923893b763b9a592efaf155adfaf1286e9565825ab87709c3.png" />
+<img alt="_images/05cbdd387ab521d6f7068d50f14ab7471eeac1ec889e47f829024549067cd666.png" src="_images/05cbdd387ab521d6f7068d50f14ab7471eeac1ec889e47f829024549067cd666.png" />
+<img alt="_images/a71f818633ff0ec62ccfe2c5529ba9d0ff8b49ed4019381df031fd64226ebffb.png" src="_images/a71f818633ff0ec62ccfe2c5529ba9d0ff8b49ed4019381df031fd64226ebffb.png" />
+<img alt="_images/2bca6ccdbc6f165bad172f2227bdf13197c6d4467b1fd6cdc18f25f877de1b78.png" src="_images/2bca6ccdbc6f165bad172f2227bdf13197c6d4467b1fd6cdc18f25f877de1b78.png" />
+<img alt="_images/89f7c6f184d5eadec9447fc9eefba6605ec9e52cd39012af05d9ef875fb14c7f.png" src="_images/89f7c6f184d5eadec9447fc9eefba6605ec9e52cd39012af05d9ef875fb14c7f.png" />
+<img alt="_images/766b4c84efcc61dd7613c62aa8ff978526d983a1842c7bd8449e39bf92353bee.png" src="_images/766b4c84efcc61dd7613c62aa8ff978526d983a1842c7bd8449e39bf92353bee.png" />
+<img alt="_images/bc71fdf61e8c601c273831bf22d8241a95f405a9a7b82ccc5cbf9727e9e4dd31.png" src="_images/bc71fdf61e8c601c273831bf22d8241a95f405a9a7b82ccc5cbf9727e9e4dd31.png" />
+<img alt="_images/092e69a482f1d419f87ca008170069576690971f3f108b00b71645a3f8a8623e.png" src="_images/092e69a482f1d419f87ca008170069576690971f3f108b00b71645a3f8a8623e.png" />
+<img alt="_images/f6c1f4553796da69f59e349e2c88bd87f69d3b9da4bc8dc8375f26925ff543ac.png" src="_images/f6c1f4553796da69f59e349e2c88bd87f69d3b9da4bc8dc8375f26925ff543ac.png" />
+<img alt="_images/95b23735d465b56a6138922aa87684cdf3fbdec56e6c04e42634c4f2a280211e.png" src="_images/95b23735d465b56a6138922aa87684cdf3fbdec56e6c04e42634c4f2a280211e.png" />
+<img alt="_images/5574601f0f02bcd8c18bdb63f2703f901170af5e0c096e74c46c3961ea328203.png" src="_images/5574601f0f02bcd8c18bdb63f2703f901170af5e0c096e74c46c3961ea328203.png" />
+<img alt="_images/17d235317c6fadedf284d21fa33d93e0f805a79684a8c869d6922b66f183fb68.png" src="_images/17d235317c6fadedf284d21fa33d93e0f805a79684a8c869d6922b66f183fb68.png" />
+<img alt="_images/599a23d3cd07ae5356510ef0cfaef9ad552b090355b10a97ebbe54da32523cee.png" src="_images/599a23d3cd07ae5356510ef0cfaef9ad552b090355b10a97ebbe54da32523cee.png" />
+<img alt="_images/edd42f1b6a874f2c7f7b8285b177a3a8da5d849a658db0b97f49af3a9637da34.png" src="_images/edd42f1b6a874f2c7f7b8285b177a3a8da5d849a658db0b97f49af3a9637da34.png" />
+<img alt="_images/e526fe7a866a46e035c96428a0be767a4496d2b5295a12ff1c40a07cf2386063.png" src="_images/e526fe7a866a46e035c96428a0be767a4496d2b5295a12ff1c40a07cf2386063.png" />
+<img alt="_images/941962d630daf0b4eab33093c20fe58a19d07a14d45ae4c6318b3f782f263798.png" src="_images/941962d630daf0b4eab33093c20fe58a19d07a14d45ae4c6318b3f782f263798.png" />
+<img alt="_images/ac643c461adbf11413e948bb5c194cda2d8c637759cf41bc783203b69fe3ee16.png" src="_images/ac643c461adbf11413e948bb5c194cda2d8c637759cf41bc783203b69fe3ee16.png" />
+<img alt="_images/94a94c90e7fb946f3eb8e6d15afd85267f2d412b16a7d71522ff853caff0ec55.png" src="_images/94a94c90e7fb946f3eb8e6d15afd85267f2d412b16a7d71522ff853caff0ec55.png" />
+<img alt="_images/573ca36bbe38025cf5cf411cef4f38d6f2bce40a6944e968ee99941f69024c4c.png" src="_images/573ca36bbe38025cf5cf411cef4f38d6f2bce40a6944e968ee99941f69024c4c.png" />
+<img alt="_images/1e7dd87b622c56278cb92efcd3cb0186d716e2263fbaf27d8b4df7dde9a54586.png" src="_images/1e7dd87b622c56278cb92efcd3cb0186d716e2263fbaf27d8b4df7dde9a54586.png" />
+<img alt="_images/6774fb936ccfce370f2aeffe6664d76f657a94dd27a52ccda28db1b877a35ca0.png" src="_images/6774fb936ccfce370f2aeffe6664d76f657a94dd27a52ccda28db1b877a35ca0.png" />
+<img alt="_images/17aeb43c98dffecad0bead043a5b25ad4473026002548bb4fa9d78d9758e898e.png" src="_images/17aeb43c98dffecad0bead043a5b25ad4473026002548bb4fa9d78d9758e898e.png" />
+<img alt="_images/b4b51f7e72279b8a12160ed831070178b57696dbeb70c4418083926964b181fb.png" src="_images/b4b51f7e72279b8a12160ed831070178b57696dbeb70c4418083926964b181fb.png" />
+<img alt="_images/dbe9959886007e774a73fd7e017b11a8d3a0f7e7578fc0b03ff3142dc6a62f7f.png" src="_images/dbe9959886007e774a73fd7e017b11a8d3a0f7e7578fc0b03ff3142dc6a62f7f.png" />
+<img alt="_images/7cf53b68629c619182f6f531efccf17e6f11cb4e9a9434a15d4fc9c336239736.png" src="_images/7cf53b68629c619182f6f531efccf17e6f11cb4e9a9434a15d4fc9c336239736.png" />
+<img alt="_images/c20f4de18716a974e6584d625eca543292c85e73d06a614ac95883b862280654.png" src="_images/c20f4de18716a974e6584d625eca543292c85e73d06a614ac95883b862280654.png" />
+<img alt="_images/be3c70d3801f6cf47b096f3eaaf6f3533ed99f5ef29f6a40605ae8ed12d20db7.png" src="_images/be3c70d3801f6cf47b096f3eaaf6f3533ed99f5ef29f6a40605ae8ed12d20db7.png" />
+<img alt="_images/4b5df2cb5fb443152ba0407533a78d9f9fd76f82afb58f0a4066542a9599a17f.png" src="_images/4b5df2cb5fb443152ba0407533a78d9f9fd76f82afb58f0a4066542a9599a17f.png" />
+<img alt="_images/bbbc44aa77c980d6ca266ca43fae772f9bc8aedfae7a23a6b256d9256bb7fd60.png" src="_images/bbbc44aa77c980d6ca266ca43fae772f9bc8aedfae7a23a6b256d9256bb7fd60.png" />
+<img alt="_images/e124564869ee14495c9e9eb25766abdc6b277e424bf05339253dc99ce3f09d79.png" src="_images/e124564869ee14495c9e9eb25766abdc6b277e424bf05339253dc99ce3f09d79.png" />
+<img alt="_images/2dd816afe47e644d3c6453256ac90cab0acc02c9e5fac30e43c13e093488f807.png" src="_images/2dd816afe47e644d3c6453256ac90cab0acc02c9e5fac30e43c13e093488f807.png" />
+<img alt="_images/fecb1d74d508a2c7537df0a7d8db86eee7de6e4a91ba56bfce46c07606a25f49.png" src="_images/fecb1d74d508a2c7537df0a7d8db86eee7de6e4a91ba56bfce46c07606a25f49.png" />
+<img alt="_images/77244938695067ca23f21c0a319e2c88597cb463ab71b76d2538bcdbc8da04da.png" src="_images/77244938695067ca23f21c0a319e2c88597cb463ab71b76d2538bcdbc8da04da.png" />
+<img alt="_images/5fcd89e398325dd268ef1f45ab092db9ce306831af575200be71af4af50b07fc.png" src="_images/5fcd89e398325dd268ef1f45ab092db9ce306831af575200be71af4af50b07fc.png" />
+<img alt="_images/52a4b75e5d2d9ecfcbbd585d011805231a7b62363bb6a141f5c72274036f2bef.png" src="_images/52a4b75e5d2d9ecfcbbd585d011805231a7b62363bb6a141f5c72274036f2bef.png" />
+<img alt="_images/afb9194134de425ceb494b1dcd83088e03ba51c40abd501aabda05bb9e1fd44b.png" src="_images/afb9194134de425ceb494b1dcd83088e03ba51c40abd501aabda05bb9e1fd44b.png" />
+<img alt="_images/a01ec7ece38e7d106bcf46a0edfe91bc4b6a84fbc0b608161d751dbea0f014a0.png" src="_images/a01ec7ece38e7d106bcf46a0edfe91bc4b6a84fbc0b608161d751dbea0f014a0.png" />
+<img alt="_images/4b15bb9bd1dec6f1cf12354aa00b99f9410df718e59616c7a06dab7273621f68.png" src="_images/4b15bb9bd1dec6f1cf12354aa00b99f9410df718e59616c7a06dab7273621f68.png" />
+<img alt="_images/0bfe019ec11e64ff579d21ce11dfe9c60a4ed27cbb1f5d82a36b6ff3bb0dd438.png" src="_images/0bfe019ec11e64ff579d21ce11dfe9c60a4ed27cbb1f5d82a36b6ff3bb0dd438.png" />
+<img alt="_images/f041c8bc76749896a37c5869eb10c8b0423c87350c7de2b391e7c11a60888403.png" src="_images/f041c8bc76749896a37c5869eb10c8b0423c87350c7de2b391e7c11a60888403.png" />
+<img alt="_images/0c9b3696fd82cbe8a6977ff63d6a42914f044339bbf63ae04df77f232547e67a.png" src="_images/0c9b3696fd82cbe8a6977ff63d6a42914f044339bbf63ae04df77f232547e67a.png" />
+<img alt="_images/390e9fb28e8e45b3d4a36101ccf68a3c0c8c7a922da0b831d9a23ae81b1c5493.png" src="_images/390e9fb28e8e45b3d4a36101ccf68a3c0c8c7a922da0b831d9a23ae81b1c5493.png" />
+<img alt="_images/f315c6b22f59bc7c165906f3a9969590b99a767ebd86317ebba3caa05304b2e4.png" src="_images/f315c6b22f59bc7c165906f3a9969590b99a767ebd86317ebba3caa05304b2e4.png" />
+<img alt="_images/a325b4fbe4bdc829c9d6aeb657625222bd0b720d6561275ed7fc94da121e38b0.png" src="_images/a325b4fbe4bdc829c9d6aeb657625222bd0b720d6561275ed7fc94da121e38b0.png" />
+<img alt="_images/0f3a4c91137885ada022a8c359fa96d885ce330395ad60ab24ffa90c2b49b40d.png" src="_images/0f3a4c91137885ada022a8c359fa96d885ce330395ad60ab24ffa90c2b49b40d.png" />
+<img alt="_images/23bcfe12bc28ea29a5eb4ce535352e97cba5249539ff6708c7cca33888b2f401.png" src="_images/23bcfe12bc28ea29a5eb4ce535352e97cba5249539ff6708c7cca33888b2f401.png" />
+<img alt="_images/8d25236e75101188c2e3f845591b44eef7f15caeb7baa868c379581128336618.png" src="_images/8d25236e75101188c2e3f845591b44eef7f15caeb7baa868c379581128336618.png" />
+<img alt="_images/64d842f1c9686e43ad3076fa1fdf6c42e689ffdb75f3ad0a81316f06ad516fc7.png" src="_images/64d842f1c9686e43ad3076fa1fdf6c42e689ffdb75f3ad0a81316f06ad516fc7.png" />
+<img alt="_images/ec789d7bc04983d0e9b02494d091d02db8fa013eb44a984673134dad74507e60.png" src="_images/ec789d7bc04983d0e9b02494d091d02db8fa013eb44a984673134dad74507e60.png" />
+<img alt="_images/027a7a9f97cee3fcd520fde90f8e4d0600c2b65912c98db68253e52016eb2e6b.png" src="_images/027a7a9f97cee3fcd520fde90f8e4d0600c2b65912c98db68253e52016eb2e6b.png" />
+<img alt="_images/bdb580c2275a5a6125d8fc29800d664260fefa739ef2592b9a355a8abf7b4b07.png" src="_images/bdb580c2275a5a6125d8fc29800d664260fefa739ef2592b9a355a8abf7b4b07.png" />
+<img alt="_images/dc2b36e1880a52ddc24a6944cc1a236f7dd5ef97a42795e29b84c5c5e6932b07.png" src="_images/dc2b36e1880a52ddc24a6944cc1a236f7dd5ef97a42795e29b84c5c5e6932b07.png" />
+<img alt="_images/8cf2ba32eabc871a4ad176ad127fe82de886c1b435d095d30ff19ead5e2c2e12.png" src="_images/8cf2ba32eabc871a4ad176ad127fe82de886c1b435d095d30ff19ead5e2c2e12.png" />
+<img alt="_images/9fe01fdf214f0aefdff3137ef86cde2f28fe78d7dcef6f4433d3f99bb7434ca0.png" src="_images/9fe01fdf214f0aefdff3137ef86cde2f28fe78d7dcef6f4433d3f99bb7434ca0.png" />
+<img alt="_images/c8f2dcade1787d85fa40b4e1252380f57172605c653e706ccd045045f311b384.png" src="_images/c8f2dcade1787d85fa40b4e1252380f57172605c653e706ccd045045f311b384.png" />
+<img alt="_images/78a848616536a5bed42892eca8fcff67a69daae36873540778d91a0de904e1bd.png" src="_images/78a848616536a5bed42892eca8fcff67a69daae36873540778d91a0de904e1bd.png" />
+<img alt="_images/002a2a2ae7034d7d76d281aaa0d94aaa6e148ad43222dae28fd8a6aeb77d397b.png" src="_images/002a2a2ae7034d7d76d281aaa0d94aaa6e148ad43222dae28fd8a6aeb77d397b.png" />
+<img alt="_images/6c881a2e909e29fdad476c0f08d8bcceefcf5d3e4739d3ebaaa2513ecf61b618.png" src="_images/6c881a2e909e29fdad476c0f08d8bcceefcf5d3e4739d3ebaaa2513ecf61b618.png" />
+<img alt="_images/5542a63b085351ccd8b513797e3644889ede7dce702b85d6efa284a9af96bcac.png" src="_images/5542a63b085351ccd8b513797e3644889ede7dce702b85d6efa284a9af96bcac.png" />
+<img alt="_images/67040236253eadffa93e9d05e7de3431e138e6aa9ea8116603d548b68ae6774c.png" src="_images/67040236253eadffa93e9d05e7de3431e138e6aa9ea8116603d548b68ae6774c.png" />
+<img alt="_images/90d05af38d42daa96c0868e6df58e836d4d5d5856484673ede26eb4e065a42ab.png" src="_images/90d05af38d42daa96c0868e6df58e836d4d5d5856484673ede26eb4e065a42ab.png" />
+<img alt="_images/335841977374f6b648e96ba016215fc3232d9339b649351c1c960d0f3edb8c13.png" src="_images/335841977374f6b648e96ba016215fc3232d9339b649351c1c960d0f3edb8c13.png" />
+<img alt="_images/15a5290d7c2e8997bb93362f5aa73f42bb9b73fb9eec364e8d078ebaaf9d936c.png" src="_images/15a5290d7c2e8997bb93362f5aa73f42bb9b73fb9eec364e8d078ebaaf9d936c.png" />
+<img alt="_images/512781bc48236c8b88c6299199d4b7d645e845cedd6fc4601be2e53a7c81a693.png" src="_images/512781bc48236c8b88c6299199d4b7d645e845cedd6fc4601be2e53a7c81a693.png" />
+<img alt="_images/4dcb62576064575ff5bcfd85f74d6299dcabe392e2764d866b1b5add8e85abe8.png" src="_images/4dcb62576064575ff5bcfd85f74d6299dcabe392e2764d866b1b5add8e85abe8.png" />
+<img alt="_images/0bdba8f43670943d91fdedd1d01fc4b561a6fdd2c4821ffbac81ef2f1dd853d3.png" src="_images/0bdba8f43670943d91fdedd1d01fc4b561a6fdd2c4821ffbac81ef2f1dd853d3.png" />
+<img alt="_images/d1cb27f961dda04ab003efffc72ed5cf87416c1ff4e4382d0227463d27c9f600.png" src="_images/d1cb27f961dda04ab003efffc72ed5cf87416c1ff4e4382d0227463d27c9f600.png" />
+<img alt="_images/090afcb4630332ff0316012e119e734d976e9d6c5d99f3e9d8323fe505ae7bc4.png" src="_images/090afcb4630332ff0316012e119e734d976e9d6c5d99f3e9d8323fe505ae7bc4.png" />
+<img alt="_images/345289633626deef1c536087c79cf4887fbc716211d7c5122f7fb9e1aada96c3.png" src="_images/345289633626deef1c536087c79cf4887fbc716211d7c5122f7fb9e1aada96c3.png" />
+<img alt="_images/7b4e40a9dc362bb488ff1bfb4d015c5b656f5e6cb18eaeb48533e25aa94d9037.png" src="_images/7b4e40a9dc362bb488ff1bfb4d015c5b656f5e6cb18eaeb48533e25aa94d9037.png" />
+<img alt="_images/86c9c583f1dfb7eecfdc7fe7e660725b8d9a31f5dd2cc7720b20fc42e1813dcb.png" src="_images/86c9c583f1dfb7eecfdc7fe7e660725b8d9a31f5dd2cc7720b20fc42e1813dcb.png" />
+<img alt="_images/8c00439b80ca95b5cf391d1f1da6950c7890393d541059b639bec4c26df76ee8.png" src="_images/8c00439b80ca95b5cf391d1f1da6950c7890393d541059b639bec4c26df76ee8.png" />
+<img alt="_images/2ddfa9519c041128406cd8afa3ecfa0ba96ef7168b79b0c825645f7278fcaea6.png" src="_images/2ddfa9519c041128406cd8afa3ecfa0ba96ef7168b79b0c825645f7278fcaea6.png" />
+<img alt="_images/ddd4fb795246e143c8e206aebe01e756bc951e6d193df33704ea9b72c43e60d7.png" src="_images/ddd4fb795246e143c8e206aebe01e756bc951e6d193df33704ea9b72c43e60d7.png" />
+<img alt="_images/e9d550c69757bb06ad06b506571e187eca63210bf568df04a6990fa68a3c91a3.png" src="_images/e9d550c69757bb06ad06b506571e187eca63210bf568df04a6990fa68a3c91a3.png" />
+<img alt="_images/2a345815a302b7ad3edcb74908e365cc3fee7a31135839c25d123be3f4821e32.png" src="_images/2a345815a302b7ad3edcb74908e365cc3fee7a31135839c25d123be3f4821e32.png" />
+<img alt="_images/634d12e5256876d5087eeb1cc1cb336b50bd02705c16bb191094177e30470051.png" src="_images/634d12e5256876d5087eeb1cc1cb336b50bd02705c16bb191094177e30470051.png" />
+<img alt="_images/64e080bc22746c8fed9f62c4cb747614a424fc784a6c55615d31bc4b2d97f5f0.png" src="_images/64e080bc22746c8fed9f62c4cb747614a424fc784a6c55615d31bc4b2d97f5f0.png" />
+<img alt="_images/43971059365f36e6e804bff772251bbb1613e2f1b95bc7e49917c10961e4801d.png" src="_images/43971059365f36e6e804bff772251bbb1613e2f1b95bc7e49917c10961e4801d.png" />
+<img alt="_images/c626ddd2ba3c2a9dd48f4d92537cc57aabe0da1063c8021ad8c40cbdf3a1c4d7.png" src="_images/c626ddd2ba3c2a9dd48f4d92537cc57aabe0da1063c8021ad8c40cbdf3a1c4d7.png" />
+<img alt="_images/36f8547ff00c69ecd5714f6f0849c39cb3e31a8b92a1de4bb7a724892826ad41.png" src="_images/36f8547ff00c69ecd5714f6f0849c39cb3e31a8b92a1de4bb7a724892826ad41.png" />
+<img alt="_images/fdeccf10dd51173c59650ebccd34d5959d36198dd504f2df9a32171dcc6d4133.png" src="_images/fdeccf10dd51173c59650ebccd34d5959d36198dd504f2df9a32171dcc6d4133.png" />
+<img alt="_images/51d4ffacc54d6a79f36a6ff83ee8411fa61709650c6be982716b30e060401aab.png" src="_images/51d4ffacc54d6a79f36a6ff83ee8411fa61709650c6be982716b30e060401aab.png" />
+<img alt="_images/9965ad41eb1a150d4ea77abaa7cffecd114bd86f4548afa1d2756d3d8e5d7171.png" src="_images/9965ad41eb1a150d4ea77abaa7cffecd114bd86f4548afa1d2756d3d8e5d7171.png" />
+<img alt="_images/28aedc7229c33f2248991ee9ef079cad11d8dad490bf2711897664e2c77eb466.png" src="_images/28aedc7229c33f2248991ee9ef079cad11d8dad490bf2711897664e2c77eb466.png" />
+<img alt="_images/ab32e2ee41bdfec0b15bc36fd17d736ed749299c3b3a9ee2b78c90d3001a03a4.png" src="_images/ab32e2ee41bdfec0b15bc36fd17d736ed749299c3b3a9ee2b78c90d3001a03a4.png" />
+<img alt="_images/b2e6a0479cc43192ca8becd101f08d91ab265dee0285dadc33d25a4737da57ab.png" src="_images/b2e6a0479cc43192ca8becd101f08d91ab265dee0285dadc33d25a4737da57ab.png" />
+<img alt="_images/307730f5d8b6833ad58649e56647c4aca7e195087642c30259a54113e8d7ffa7.png" src="_images/307730f5d8b6833ad58649e56647c4aca7e195087642c30259a54113e8d7ffa7.png" />
+<img alt="_images/ed9585c107e54d2618c6d5adff94b31d1684d0b76c9b980b17aebc051c75ec8b.png" src="_images/ed9585c107e54d2618c6d5adff94b31d1684d0b76c9b980b17aebc051c75ec8b.png" />
+<img alt="_images/04cdd5a6930a9b2fa58a664122b57b7c01df71a7efc7e16d2250d0bd407e765f.png" src="_images/04cdd5a6930a9b2fa58a664122b57b7c01df71a7efc7e16d2250d0bd407e765f.png" />
+<img alt="_images/6d158d10cbd7d9678c91a51f45c113653dce1735cdcd7a08374d7facbe7f602c.png" src="_images/6d158d10cbd7d9678c91a51f45c113653dce1735cdcd7a08374d7facbe7f602c.png" />
+<img alt="_images/29aaf9f5b0181ca64012d528190476f0c57c53b6ad525e0f24a49c9147540578.png" src="_images/29aaf9f5b0181ca64012d528190476f0c57c53b6ad525e0f24a49c9147540578.png" />
+<img alt="_images/c7044df40fad23d72ec0929a9526e4bd75c87b4fb916c43198144d50ecc67c44.png" src="_images/c7044df40fad23d72ec0929a9526e4bd75c87b4fb916c43198144d50ecc67c44.png" />
+<img alt="_images/34f1d55be6c983a9f2f104da63a91cf98c90de528b89103744d10f4265861c92.png" src="_images/34f1d55be6c983a9f2f104da63a91cf98c90de528b89103744d10f4265861c92.png" />
+<img alt="_images/23d83185afdacfe1d0849898e1ea5d584494f70ef9d5452b4cf32d468603ab20.png" src="_images/23d83185afdacfe1d0849898e1ea5d584494f70ef9d5452b4cf32d468603ab20.png" />
+<img alt="_images/578209ba8d1dce6c35573298ddd63d82b2b1431f4ca6d9b0de79eb2a7514ab8d.png" src="_images/578209ba8d1dce6c35573298ddd63d82b2b1431f4ca6d9b0de79eb2a7514ab8d.png" />
+<img alt="_images/63210ec4b3fc7837832715e3fa2402753f7cfcb7ec7ab899733d20acaa10dcf6.png" src="_images/63210ec4b3fc7837832715e3fa2402753f7cfcb7ec7ab899733d20acaa10dcf6.png" />
+<img alt="_images/e7cea3bbfdc9e388456433ac5bab2f06c30bc54dc4991665e707ca9432d4c990.png" src="_images/e7cea3bbfdc9e388456433ac5bab2f06c30bc54dc4991665e707ca9432d4c990.png" />
+<img alt="_images/975ad21644a82449c8c1a0766db49995126c016eb1c34a2317b2a1c48729d6e4.png" src="_images/975ad21644a82449c8c1a0766db49995126c016eb1c34a2317b2a1c48729d6e4.png" />
+<img alt="_images/a177bb25e6ec01d1f96ba9162de053b88ac0e45deef13f5b9de9d5c4c94ff2b2.png" src="_images/a177bb25e6ec01d1f96ba9162de053b88ac0e45deef13f5b9de9d5c4c94ff2b2.png" />
+<img alt="_images/10ee27cf7e0bd7aceeb85695a44c64571d798284e1c6295a3f5cc26581c16470.png" src="_images/10ee27cf7e0bd7aceeb85695a44c64571d798284e1c6295a3f5cc26581c16470.png" />
+<img alt="_images/6aa3ad6298b9a61ac2b8bdf694a14ebd07c3c254af9be445a295bc96ffadda6d.png" src="_images/6aa3ad6298b9a61ac2b8bdf694a14ebd07c3c254af9be445a295bc96ffadda6d.png" />
+<img alt="_images/d9ff5b46b28c3f319694b61a7a41d4bcfc3be1e015866ea07a8b214adf502b83.png" src="_images/d9ff5b46b28c3f319694b61a7a41d4bcfc3be1e015866ea07a8b214adf502b83.png" />
+<img alt="_images/0ca6c0d48d6886ff542885b99c6757b1babb581bfc92eaeb04dfe3f53ef3f94b.png" src="_images/0ca6c0d48d6886ff542885b99c6757b1babb581bfc92eaeb04dfe3f53ef3f94b.png" />
+<img alt="_images/8a782e3c064cdb600488a5d63ea03f939d346169441bae8f668b59563c0290e4.png" src="_images/8a782e3c064cdb600488a5d63ea03f939d346169441bae8f668b59563c0290e4.png" />
+<img alt="_images/d99e547b2235719d4540db5b28de713a755258aba99ac221a9f59458ac266fda.png" src="_images/d99e547b2235719d4540db5b28de713a755258aba99ac221a9f59458ac266fda.png" />
+<img alt="_images/03ac5846c9f24ca8f8d9e4e2c56fd58ffb32e6c70c2aee6be5bb636cda235316.png" src="_images/03ac5846c9f24ca8f8d9e4e2c56fd58ffb32e6c70c2aee6be5bb636cda235316.png" />
+<img alt="_images/892217cf2bed12203188030a2af79c7f3d0d0a8af7d53cb64bc583167354dd16.png" src="_images/892217cf2bed12203188030a2af79c7f3d0d0a8af7d53cb64bc583167354dd16.png" />
+<img alt="_images/cfd2b5c956a50cf8ce2e07f3a3b8a2ccc4b64464835961b5912050ad50688f2b.png" src="_images/cfd2b5c956a50cf8ce2e07f3a3b8a2ccc4b64464835961b5912050ad50688f2b.png" />
+<img alt="_images/a1cf8f68d981ca8f552e98f605bbffa76e0def893aa9182b1eb16d48644a4fcf.png" src="_images/a1cf8f68d981ca8f552e98f605bbffa76e0def893aa9182b1eb16d48644a4fcf.png" />
+<img alt="_images/c868b3a54de3d61605745a86eba01c2ac8d847da841ab77c4f12ee9decf36cc7.png" src="_images/c868b3a54de3d61605745a86eba01c2ac8d847da841ab77c4f12ee9decf36cc7.png" />
+<img alt="_images/9da8307835ef5a2d3e0323b33a60c21b30349e4a80879e9ff698946e187b34a1.png" src="_images/9da8307835ef5a2d3e0323b33a60c21b30349e4a80879e9ff698946e187b34a1.png" />
+<img alt="_images/f8335631a5ac55f76d5c6456e0b6e8f83fc23633fef859e8cd59558deabefc6c.png" src="_images/f8335631a5ac55f76d5c6456e0b6e8f83fc23633fef859e8cd59558deabefc6c.png" />
+<img alt="_images/cd6c62100fa5bc6be79d47d6a14401dedaa5912398fd1c10baec0c8ee5c1ab7e.png" src="_images/cd6c62100fa5bc6be79d47d6a14401dedaa5912398fd1c10baec0c8ee5c1ab7e.png" />
+<img alt="_images/a0273731ccdd12a31121f651b0e78c19e02951efb0f080148447836994a5865a.png" src="_images/a0273731ccdd12a31121f651b0e78c19e02951efb0f080148447836994a5865a.png" />
+<img alt="_images/a9a4c62e74bafe6d7fb56ce568ef09e035ae1b32d434e75e7f684617c6450454.png" src="_images/a9a4c62e74bafe6d7fb56ce568ef09e035ae1b32d434e75e7f684617c6450454.png" />
+<img alt="_images/92c053336ef6390c485f6a29768ec4b6fc431a52966adac7ac8a9feb3c66e006.png" src="_images/92c053336ef6390c485f6a29768ec4b6fc431a52966adac7ac8a9feb3c66e006.png" />
+<img alt="_images/12723893cc16e903f90b88c1a75671b57036e98498095a1de0ba00b513d6c6dd.png" src="_images/12723893cc16e903f90b88c1a75671b57036e98498095a1de0ba00b513d6c6dd.png" />
+<img alt="_images/7f88ad47864f4579f9927e93b678e3a4aebc324fbf17e936d55f7daa687415e4.png" src="_images/7f88ad47864f4579f9927e93b678e3a4aebc324fbf17e936d55f7daa687415e4.png" />
+<img alt="_images/bfdd1acb485f59b60522b104c1cf0329e76f7cefe3bc23baea4c881bfb98aa5d.png" src="_images/bfdd1acb485f59b60522b104c1cf0329e76f7cefe3bc23baea4c881bfb98aa5d.png" />
+<img alt="_images/98256dda55b34cab292d9a76c5a016edb76f39ffd2a33f129f3f58058db5fdf2.png" src="_images/98256dda55b34cab292d9a76c5a016edb76f39ffd2a33f129f3f58058db5fdf2.png" />
+<img alt="_images/548c2313fc5c17266d26d50bb9c10ccea6c4c0a7638ea2ee45eab30730863897.png" src="_images/548c2313fc5c17266d26d50bb9c10ccea6c4c0a7638ea2ee45eab30730863897.png" />
+<img alt="_images/90cc83e4f45103cc423c59ecaf7e7abe9a5206fbb3e078f282376f7137cef5b5.png" src="_images/90cc83e4f45103cc423c59ecaf7e7abe9a5206fbb3e078f282376f7137cef5b5.png" />
+<img alt="_images/c2829c18175f7f6e686a5a069b68bde02e22ba88c0645fe374a9a0db5e6b6391.png" src="_images/c2829c18175f7f6e686a5a069b68bde02e22ba88c0645fe374a9a0db5e6b6391.png" />
+<img alt="_images/b5b6af115d9f488de73f4e38e36bf23e975f2de2776a33669ccf1e6335487777.png" src="_images/b5b6af115d9f488de73f4e38e36bf23e975f2de2776a33669ccf1e6335487777.png" />
+<img alt="_images/881459518a640ace33db1c1f2deeaf72b1ea5ff804ca97e58d6ff175c1f5fd21.png" src="_images/881459518a640ace33db1c1f2deeaf72b1ea5ff804ca97e58d6ff175c1f5fd21.png" />
+<img alt="_images/a7f954ecabb5e319948414d347cf3716d0517d571367ccfbae9c2120a7c3f627.png" src="_images/a7f954ecabb5e319948414d347cf3716d0517d571367ccfbae9c2120a7c3f627.png" />
+<img alt="_images/609f6f59d1c8a22771486d45fa9c5c4df6ff6dd3c8984f9998c8d329a2d86d3d.png" src="_images/609f6f59d1c8a22771486d45fa9c5c4df6ff6dd3c8984f9998c8d329a2d86d3d.png" />
+<img alt="_images/0432557158c0cbd10a9387a67f84b46846155e685c8dcb6c63f3a87c1c3802bc.png" src="_images/0432557158c0cbd10a9387a67f84b46846155e685c8dcb6c63f3a87c1c3802bc.png" />
+<img alt="_images/1b6e08e2a4759e7c86f6e8eb82a63e06e8b47e0fc84a5867263710fc5da5fef2.png" src="_images/1b6e08e2a4759e7c86f6e8eb82a63e06e8b47e0fc84a5867263710fc5da5fef2.png" />
+</div>
+</div>
+</section>
+<section id="with-scale">
+<h2>with scale<a class="headerlink" href="#with-scale" title="Link to this heading">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/225131b9c196d750f3dc7d37c8e42939c881865b55fc03f786d12a1137f02e04.png" src="_images/225131b9c196d750f3dc7d37c8e42939c881865b55fc03f786d12a1137f02e04.png" />
+<img alt="_images/59419b63d2ed2b03f615713e51350bcd7f2ba80a8ccac54d78a8217dad0b7f2e.png" src="_images/59419b63d2ed2b03f615713e51350bcd7f2ba80a8ccac54d78a8217dad0b7f2e.png" />
+<img alt="_images/90f80d66aae3a0334f4a5d96eccf0c0faa2b6e261ab1db03316e72fbc93a8026.png" src="_images/90f80d66aae3a0334f4a5d96eccf0c0faa2b6e261ab1db03316e72fbc93a8026.png" />
+<img alt="_images/93c8e0cb34f2a71667437b5222cc4786caae20dff0534576ed418d938a5fb42c.png" src="_images/93c8e0cb34f2a71667437b5222cc4786caae20dff0534576ed418d938a5fb42c.png" />
+<img alt="_images/fba103fdb10c43efee16dd73cb265cad1d92f85ec33764bc4cc6aa265ac77c53.png" src="_images/fba103fdb10c43efee16dd73cb265cad1d92f85ec33764bc4cc6aa265ac77c53.png" />
+<img alt="_images/a919bc01a24f6d8064fbd77c6cbc750150409c447d0463c9601f6410dc55bff0.png" src="_images/a919bc01a24f6d8064fbd77c6cbc750150409c447d0463c9601f6410dc55bff0.png" />
+<img alt="_images/8b49ae4027a72602440032e86280e7012bf7e825ef318d2f51a563883d84daa3.png" src="_images/8b49ae4027a72602440032e86280e7012bf7e825ef318d2f51a563883d84daa3.png" />
+<img alt="_images/09121eae1970135331c83e2ad1e3449a143ad53ef213f5bbc4f755ba7f84339f.png" src="_images/09121eae1970135331c83e2ad1e3449a143ad53ef213f5bbc4f755ba7f84339f.png" />
+<img alt="_images/23ee0bf0d130d09d94c876dfae93f1694b4340c69ea1928cd6eddd1af4b93402.png" src="_images/23ee0bf0d130d09d94c876dfae93f1694b4340c69ea1928cd6eddd1af4b93402.png" />
+<img alt="_images/53290957eea751654cf73cc5bb216243584ab81170a9dfe7f820137a82111f34.png" src="_images/53290957eea751654cf73cc5bb216243584ab81170a9dfe7f820137a82111f34.png" />
+<img alt="_images/5286fad52248d4a9b0f2eeeec193ee01f46c6a79f95ff2959c858dfa93112777.png" src="_images/5286fad52248d4a9b0f2eeeec193ee01f46c6a79f95ff2959c858dfa93112777.png" />
+<img alt="_images/d32997683d80c84c3f572d93cbbc23788f38ccd499e8e8947689408ab65b4702.png" src="_images/d32997683d80c84c3f572d93cbbc23788f38ccd499e8e8947689408ab65b4702.png" />
+<img alt="_images/d9ececde6437f40b753bc12feeac1c3a3cef90066b4724cd089e5aee5e37a03b.png" src="_images/d9ececde6437f40b753bc12feeac1c3a3cef90066b4724cd089e5aee5e37a03b.png" />
+<img alt="_images/455bc3fc3ae5003f44b7d5ea940c17fffdfbebdbacde766953d3c20a9a5ee7ab.png" src="_images/455bc3fc3ae5003f44b7d5ea940c17fffdfbebdbacde766953d3c20a9a5ee7ab.png" />
+<img alt="_images/249867119c14cee52911a8491addfd5dae8573fa39a506783f388e4476251bb1.png" src="_images/249867119c14cee52911a8491addfd5dae8573fa39a506783f388e4476251bb1.png" />
+<img alt="_images/3052ec0e7f5586d29963ae499d2e53afabc4966d6eec841b799763d38e9bf7cc.png" src="_images/3052ec0e7f5586d29963ae499d2e53afabc4966d6eec841b799763d38e9bf7cc.png" />
+<img alt="_images/4a4748b63b681ab0ab922201c3c664b6aef42417c50516bac94844edb5410499.png" src="_images/4a4748b63b681ab0ab922201c3c664b6aef42417c50516bac94844edb5410499.png" />
+<img alt="_images/d2539e05215c42850c075cfd8ac0db10bcf71b1c5cf24a4c29f77e369e1677f2.png" src="_images/d2539e05215c42850c075cfd8ac0db10bcf71b1c5cf24a4c29f77e369e1677f2.png" />
+<img alt="_images/3f8053be5a5a35ff96c00c4ab350f36d6c7fefa4828fbeb062d831971542c5d3.png" src="_images/3f8053be5a5a35ff96c00c4ab350f36d6c7fefa4828fbeb062d831971542c5d3.png" />
+<img alt="_images/efec1f2ff41c543ee04b968716192b107d1621a338bc6708965bd01253d1e202.png" src="_images/efec1f2ff41c543ee04b968716192b107d1621a338bc6708965bd01253d1e202.png" />
+<img alt="_images/6ad49a4c71779b067ba0d3bf6e927c8e8cc1c255b5ccb9d6836389ff142af5ee.png" src="_images/6ad49a4c71779b067ba0d3bf6e927c8e8cc1c255b5ccb9d6836389ff142af5ee.png" />
+<img alt="_images/7b86000c5add06df11c274e48747057849d7f400289f6dcc6960c3e02f97c0b6.png" src="_images/7b86000c5add06df11c274e48747057849d7f400289f6dcc6960c3e02f97c0b6.png" />
+<img alt="_images/192886d30d287d98f13351b48af815a43c295bccbff8fa52feccc8bf39682424.png" src="_images/192886d30d287d98f13351b48af815a43c295bccbff8fa52feccc8bf39682424.png" />
+<img alt="_images/62cd5c0aaf4776e6d6340bb94ce101d1047ee25c35931dc15d400f71dd8e086c.png" src="_images/62cd5c0aaf4776e6d6340bb94ce101d1047ee25c35931dc15d400f71dd8e086c.png" />
+<img alt="_images/a416e6161adf61a716303bdf6b0e44a21fdb18cb1799eca1c3d43021c53ab5ad.png" src="_images/a416e6161adf61a716303bdf6b0e44a21fdb18cb1799eca1c3d43021c53ab5ad.png" />
+<img alt="_images/832fdba21010705dae0d451474006e035484a6cd0f7f382c9be8e90a351f7b19.png" src="_images/832fdba21010705dae0d451474006e035484a6cd0f7f382c9be8e90a351f7b19.png" />
+<img alt="_images/c423b8e005a7e0ddb83ee8f5575441e4ff10a2557db0ba998d777e9858233a58.png" src="_images/c423b8e005a7e0ddb83ee8f5575441e4ff10a2557db0ba998d777e9858233a58.png" />
+<img alt="_images/a2c24a18c09b46789503655c2ebc68a8e757231abef161149f675f35995d536c.png" src="_images/a2c24a18c09b46789503655c2ebc68a8e757231abef161149f675f35995d536c.png" />
+<img alt="_images/f1055a77c8b35e794727f7c13e74dc4aa3041b4fb96fcdd36d0fcfe9600162f4.png" src="_images/f1055a77c8b35e794727f7c13e74dc4aa3041b4fb96fcdd36d0fcfe9600162f4.png" />
+<img alt="_images/59065f27eced790d1e441d0b05d921281dfa100b0126d67732f77913f09b5820.png" src="_images/59065f27eced790d1e441d0b05d921281dfa100b0126d67732f77913f09b5820.png" />
+<img alt="_images/b1925bac58c53054fe5fcec174bff782574577cdac05d0fbafa74c1e14daede7.png" src="_images/b1925bac58c53054fe5fcec174bff782574577cdac05d0fbafa74c1e14daede7.png" />
+<img alt="_images/b3d5130c97f0615e7c06ed29262b4d66217fd42429c75075483c753110367beb.png" src="_images/b3d5130c97f0615e7c06ed29262b4d66217fd42429c75075483c753110367beb.png" />
+<img alt="_images/f33ac518189743094debe34421185c585e508c65c3b6296009d92063fd8f15b1.png" src="_images/f33ac518189743094debe34421185c585e508c65c3b6296009d92063fd8f15b1.png" />
+<img alt="_images/773c4c6e54c0a35a5d59b8dfa6249823bfc3ecc3a18b60adf431e581b2803ec8.png" src="_images/773c4c6e54c0a35a5d59b8dfa6249823bfc3ecc3a18b60adf431e581b2803ec8.png" />
+<img alt="_images/45a331cf96e790f21b1d25aa6e5008d502428a8054412892bcb1d2f8df544d14.png" src="_images/45a331cf96e790f21b1d25aa6e5008d502428a8054412892bcb1d2f8df544d14.png" />
+<img alt="_images/994eab568ba92a9d1d8aacc6da48eeb808a064879f42eab6e4d93485c3593827.png" src="_images/994eab568ba92a9d1d8aacc6da48eeb808a064879f42eab6e4d93485c3593827.png" />
+<img alt="_images/208ebd4a9e4ce744d19fc67ffaea958fe7de6e472e3a1648f26f281c63606da0.png" src="_images/208ebd4a9e4ce744d19fc67ffaea958fe7de6e472e3a1648f26f281c63606da0.png" />
+<img alt="_images/1d04ff80c325c954c227c65512d6771c93e8a2345af60a1d0af25c90e0311c16.png" src="_images/1d04ff80c325c954c227c65512d6771c93e8a2345af60a1d0af25c90e0311c16.png" />
+<img alt="_images/b2f02bb3fcfebde03cbeb95b763f07cbbd7936777af22b864ed3db7a14c6703b.png" src="_images/b2f02bb3fcfebde03cbeb95b763f07cbbd7936777af22b864ed3db7a14c6703b.png" />
+<img alt="_images/c9f3be44935aa58c668ce539ec819964c5ab18ddee0be3ecd2713cfb6b21f7c0.png" src="_images/c9f3be44935aa58c668ce539ec819964c5ab18ddee0be3ecd2713cfb6b21f7c0.png" />
+<img alt="_images/b0b34691fa968682bd7d477c0b62e4dffdfa89c6b55359a0cc656c5d74dca370.png" src="_images/b0b34691fa968682bd7d477c0b62e4dffdfa89c6b55359a0cc656c5d74dca370.png" />
+<img alt="_images/dc97a1d46e77622159fcf5f9268f15150819b8fe8a51b87fb06f04ba330313d1.png" src="_images/dc97a1d46e77622159fcf5f9268f15150819b8fe8a51b87fb06f04ba330313d1.png" />
+<img alt="_images/dd6147ce964e68445998aafbc555de97e544a583b2d93ab4b67ace3bacaa1240.png" src="_images/dd6147ce964e68445998aafbc555de97e544a583b2d93ab4b67ace3bacaa1240.png" />
+<img alt="_images/68e6a52985e3f8f9fc9440171b5b63ccb9f7e0b869f9bdf4764edca8dd07a9b2.png" src="_images/68e6a52985e3f8f9fc9440171b5b63ccb9f7e0b869f9bdf4764edca8dd07a9b2.png" />
+<img alt="_images/c9e255f3cab7bfc337f4edb365017dbc52a9e4a81301e17f0a7d27642933c0db.png" src="_images/c9e255f3cab7bfc337f4edb365017dbc52a9e4a81301e17f0a7d27642933c0db.png" />
+<img alt="_images/8af50d42ad56e206dab6657da4959d4d500e5a6b950c4bdafcd21b782b68c8e6.png" src="_images/8af50d42ad56e206dab6657da4959d4d500e5a6b950c4bdafcd21b782b68c8e6.png" />
+<img alt="_images/68e8bb285cea2278572ca263e8b8a9931937c87e68184e847ba8e2b9e2373eec.png" src="_images/68e8bb285cea2278572ca263e8b8a9931937c87e68184e847ba8e2b9e2373eec.png" />
+<img alt="_images/d7aeaec03190626dc0763cea36e37b496b10e435d30a509cb5867948600333f6.png" src="_images/d7aeaec03190626dc0763cea36e37b496b10e435d30a509cb5867948600333f6.png" />
+<img alt="_images/93a5db1e253bebf75371ec4b778cb6688a042a6d970f4459a282709ee4cfb7d8.png" src="_images/93a5db1e253bebf75371ec4b778cb6688a042a6d970f4459a282709ee4cfb7d8.png" />
+<img alt="_images/7c52401139c5dcdad18eb43896841dea7603a7de69e424246c7cd1c2294e9de5.png" src="_images/7c52401139c5dcdad18eb43896841dea7603a7de69e424246c7cd1c2294e9de5.png" />
+<img alt="_images/f08b0daae85a068c0e225c22cca0997408351f86b4be8c5f9355076d7e1ca2b1.png" src="_images/f08b0daae85a068c0e225c22cca0997408351f86b4be8c5f9355076d7e1ca2b1.png" />
+<img alt="_images/993b4df83e54564791f873148de3254f66e9edb998704c46dc7b7c9221bd243d.png" src="_images/993b4df83e54564791f873148de3254f66e9edb998704c46dc7b7c9221bd243d.png" />
+<img alt="_images/b4497e059fb76183cb1dd9d7420dbbe37ca950a265ddaa17af3c66e0962f9b1a.png" src="_images/b4497e059fb76183cb1dd9d7420dbbe37ca950a265ddaa17af3c66e0962f9b1a.png" />
+<img alt="_images/75157204d39a3a4fad5cd5687c9aaa88526d1db856fc2c3b7ba170dbb119dade.png" src="_images/75157204d39a3a4fad5cd5687c9aaa88526d1db856fc2c3b7ba170dbb119dade.png" />
+<img alt="_images/8e68f02c7140329e567e0d2a423d10545d9fb7a951115543342c66e134ef132e.png" src="_images/8e68f02c7140329e567e0d2a423d10545d9fb7a951115543342c66e134ef132e.png" />
+<img alt="_images/7b65d5dba9faa2e67c003970109ed67fd1104bd079d8ecab749f5e7092086cde.png" src="_images/7b65d5dba9faa2e67c003970109ed67fd1104bd079d8ecab749f5e7092086cde.png" />
+<img alt="_images/2837a7242ea0380ebe74df9166f09816278d8f7321120e23beda44a3c439b305.png" src="_images/2837a7242ea0380ebe74df9166f09816278d8f7321120e23beda44a3c439b305.png" />
+<img alt="_images/9359a75e409111dac9eaf64a250395c5f56e113755d0b5191eccd7d57d1d4a78.png" src="_images/9359a75e409111dac9eaf64a250395c5f56e113755d0b5191eccd7d57d1d4a78.png" />
+<img alt="_images/83571c94dc6129d746562fee07e57d602320660de3206ab85537da0eab28f264.png" src="_images/83571c94dc6129d746562fee07e57d602320660de3206ab85537da0eab28f264.png" />
+<img alt="_images/544ae52b7961b5285008ac26d9cbee708a3a45d95ca1a8223ad28c65aee2e0ea.png" src="_images/544ae52b7961b5285008ac26d9cbee708a3a45d95ca1a8223ad28c65aee2e0ea.png" />
+<img alt="_images/4d20c368c28367200e8b51a2cc1ef7dc590760026c475a9ce44bfb2965b45df2.png" src="_images/4d20c368c28367200e8b51a2cc1ef7dc590760026c475a9ce44bfb2965b45df2.png" />
+<img alt="_images/8da5bfbed57e79db280f605619391eaee6a298bb0668a7c971af82ea278ba21d.png" src="_images/8da5bfbed57e79db280f605619391eaee6a298bb0668a7c971af82ea278ba21d.png" />
+<img alt="_images/538599ae66be378f66c18279be8e8ca317ae92e2fc5b89a01e2efa54523fff5f.png" src="_images/538599ae66be378f66c18279be8e8ca317ae92e2fc5b89a01e2efa54523fff5f.png" />
+<img alt="_images/bee6503c7defcd1f391c4a033e32a8cb64458359f9a985b01e57d7cb1f045f97.png" src="_images/bee6503c7defcd1f391c4a033e32a8cb64458359f9a985b01e57d7cb1f045f97.png" />
+<img alt="_images/f70cb4a8238490361b1612118b76ad09c0aa6e84d591d0b9f9e84e9a24d192a1.png" src="_images/f70cb4a8238490361b1612118b76ad09c0aa6e84d591d0b9f9e84e9a24d192a1.png" />
+<img alt="_images/c598beeeea144880c6a41312696bab36efe8a9b9f27f191cc4d93a41a0057f79.png" src="_images/c598beeeea144880c6a41312696bab36efe8a9b9f27f191cc4d93a41a0057f79.png" />
+<img alt="_images/f4e2e70ab62cee4f758c72dc6940ac2ca35bf926b69b52b6b5dfc4a2f2b69ed1.png" src="_images/f4e2e70ab62cee4f758c72dc6940ac2ca35bf926b69b52b6b5dfc4a2f2b69ed1.png" />
+<img alt="_images/c47ea69484b9148bf9fa2ac4f3814c76f288428fd44552bcc85cd27f5cef01c0.png" src="_images/c47ea69484b9148bf9fa2ac4f3814c76f288428fd44552bcc85cd27f5cef01c0.png" />
+<img alt="_images/cd051fd2de10227f935d53382ba7f96e0ebae00753b89dd2a755fa2f4f6fae08.png" src="_images/cd051fd2de10227f935d53382ba7f96e0ebae00753b89dd2a755fa2f4f6fae08.png" />
+<img alt="_images/d3cf51eb8bb5d5837270795a9ccfd2645ffca4492bcac45a51e2b0ddd91239a3.png" src="_images/d3cf51eb8bb5d5837270795a9ccfd2645ffca4492bcac45a51e2b0ddd91239a3.png" />
+<img alt="_images/d88c7393deaae3177873df8d0a0f013dcf41dec37fbbec6b2d260bb6ff8260ef.png" src="_images/d88c7393deaae3177873df8d0a0f013dcf41dec37fbbec6b2d260bb6ff8260ef.png" />
+<img alt="_images/258dea67b48fdfa23a7b83372edc5b81475fa6fd4bb99019dde950285631d917.png" src="_images/258dea67b48fdfa23a7b83372edc5b81475fa6fd4bb99019dde950285631d917.png" />
+<img alt="_images/565515a291dfa9df1e5b008f3eab777923cc3a89e2ceb3dfebf084bde725701e.png" src="_images/565515a291dfa9df1e5b008f3eab777923cc3a89e2ceb3dfebf084bde725701e.png" />
+<img alt="_images/49a2afb86156d1b88de5cb33cadea9847b255d1746406ed32f892848656cb70f.png" src="_images/49a2afb86156d1b88de5cb33cadea9847b255d1746406ed32f892848656cb70f.png" />
+<img alt="_images/faf9c8d74267539a3cccf575938618be6780225e3ee7907bf9af78d176ea4114.png" src="_images/faf9c8d74267539a3cccf575938618be6780225e3ee7907bf9af78d176ea4114.png" />
+<img alt="_images/e03f9deb950c120b5b40a02b53b50bcf09bc0e3d89484b0a25771e877cfdb886.png" src="_images/e03f9deb950c120b5b40a02b53b50bcf09bc0e3d89484b0a25771e877cfdb886.png" />
+<img alt="_images/1280e474ea9e1c055214169dea18d5d8de3ae24b76632696d38736b38ed25c5e.png" src="_images/1280e474ea9e1c055214169dea18d5d8de3ae24b76632696d38736b38ed25c5e.png" />
+<img alt="_images/fc80c6ac160389512bd641aa94908b52d98d4d35a5e32886ac18d248d7a8ed51.png" src="_images/fc80c6ac160389512bd641aa94908b52d98d4d35a5e32886ac18d248d7a8ed51.png" />
+<img alt="_images/8f2e6c5276242f0ccfa9ef989586d83c0d37c32083f38e4c165bb3da56c5e45a.png" src="_images/8f2e6c5276242f0ccfa9ef989586d83c0d37c32083f38e4c165bb3da56c5e45a.png" />
+<img alt="_images/91c92aef84f0c1d226a850ea4d0c75e7ee7f2db70ede7708f4f206ff8f85a4fc.png" src="_images/91c92aef84f0c1d226a850ea4d0c75e7ee7f2db70ede7708f4f206ff8f85a4fc.png" />
+<img alt="_images/cd17efce25367e91bded3b1fb7addfac490d12f1e0bbaecb9a45440934c001c8.png" src="_images/cd17efce25367e91bded3b1fb7addfac490d12f1e0bbaecb9a45440934c001c8.png" />
+<img alt="_images/8743e47a2fbff249f3b43ba78496e8472b53e037e8f5633a45262ab3043b390e.png" src="_images/8743e47a2fbff249f3b43ba78496e8472b53e037e8f5633a45262ab3043b390e.png" />
+<img alt="_images/7483839d339e60ebfe1c37f1898b7db8f746f8f26c3cadaeb891dbbd4391ac71.png" src="_images/7483839d339e60ebfe1c37f1898b7db8f746f8f26c3cadaeb891dbbd4391ac71.png" />
+<img alt="_images/651b33383af466489c916358fb566a9c2931d824dfbb5aa2c6888ad633c13500.png" src="_images/651b33383af466489c916358fb566a9c2931d824dfbb5aa2c6888ad633c13500.png" />
+<img alt="_images/6637bdd431ebc6644153e4957c7f4e99d4f33b9f8b3d04f69d4a3054b84547d2.png" src="_images/6637bdd431ebc6644153e4957c7f4e99d4f33b9f8b3d04f69d4a3054b84547d2.png" />
+<img alt="_images/bb210fcb6dece8cbd8d070480e16accae1064db81c7df325128dde3a28128ef0.png" src="_images/bb210fcb6dece8cbd8d070480e16accae1064db81c7df325128dde3a28128ef0.png" />
+<img alt="_images/9b5dbb79491a4dc0e404ad1ea810628f33497063ba2cb22e2fce56fbf3fee900.png" src="_images/9b5dbb79491a4dc0e404ad1ea810628f33497063ba2cb22e2fce56fbf3fee900.png" />
+<img alt="_images/f6910f852cf87d684b2829c661cba1064cf8fcd8759adad987a8e9d780a0bd1b.png" src="_images/f6910f852cf87d684b2829c661cba1064cf8fcd8759adad987a8e9d780a0bd1b.png" />
+<img alt="_images/b1046e7ebf4d45ea4d42dcc7e8a882312b230d38bd035a6c53acad9e4b92654c.png" src="_images/b1046e7ebf4d45ea4d42dcc7e8a882312b230d38bd035a6c53acad9e4b92654c.png" />
+<img alt="_images/cee3fce8a412963241dc871af954ea8af788b54394b46e6e478874c924d84bbf.png" src="_images/cee3fce8a412963241dc871af954ea8af788b54394b46e6e478874c924d84bbf.png" />
+<img alt="_images/4d126711fcfcd0d1a7d44b87fdec6cd7c7204ac086c8c25e0c26c5e2ffb86dad.png" src="_images/4d126711fcfcd0d1a7d44b87fdec6cd7c7204ac086c8c25e0c26c5e2ffb86dad.png" />
+<img alt="_images/0d5583412281f48f1f8f8e8c3a82107cdeb2f658ce2417626dc746405a626328.png" src="_images/0d5583412281f48f1f8f8e8c3a82107cdeb2f658ce2417626dc746405a626328.png" />
+<img alt="_images/4a2b92c87f41b8922920f630c0296613e3c54aeec22d70f67c68a34575d28c14.png" src="_images/4a2b92c87f41b8922920f630c0296613e3c54aeec22d70f67c68a34575d28c14.png" />
+<img alt="_images/fedaaad9efc4c201e374589918dca42fe07fe84d8056b74af5bb10da218c2b99.png" src="_images/fedaaad9efc4c201e374589918dca42fe07fe84d8056b74af5bb10da218c2b99.png" />
+<img alt="_images/1c95f2949b1db80cbb6a5d6a56e0785ffee04696142202fdff3d7425aa927abd.png" src="_images/1c95f2949b1db80cbb6a5d6a56e0785ffee04696142202fdff3d7425aa927abd.png" />
+<img alt="_images/bd8af3f28a20cb32a0b9171a3c6733c7d6616fe326be90ce93dfdb6821d19750.png" src="_images/bd8af3f28a20cb32a0b9171a3c6733c7d6616fe326be90ce93dfdb6821d19750.png" />
+<img alt="_images/7e5df9733efb4a7a187179abc22ba5bc4fc595008e0246ab4296da7d31a9f1a4.png" src="_images/7e5df9733efb4a7a187179abc22ba5bc4fc595008e0246ab4296da7d31a9f1a4.png" />
+<img alt="_images/811ef945a792cc113904990357445a02554fe5b9f8305e721c79a722b7412522.png" src="_images/811ef945a792cc113904990357445a02554fe5b9f8305e721c79a722b7412522.png" />
+<img alt="_images/75c083cc00014cdc248c393c39686b2b0e43be8bea53f42065a0b3fb91d0bc78.png" src="_images/75c083cc00014cdc248c393c39686b2b0e43be8bea53f42065a0b3fb91d0bc78.png" />
+<img alt="_images/ffe8f99fd7463115d4dfec10d097690ccb8e9f68bdb3e5bfd7e0bd16cc3ad171.png" src="_images/ffe8f99fd7463115d4dfec10d097690ccb8e9f68bdb3e5bfd7e0bd16cc3ad171.png" />
+<img alt="_images/9563abc9289af5d38d5b1fc8332f98be95d63248c29f6f9920a1f2246422079c.png" src="_images/9563abc9289af5d38d5b1fc8332f98be95d63248c29f6f9920a1f2246422079c.png" />
+<img alt="_images/cad2f75587b10c4f8efdc835262c6744fb49c066139ea51aa81665e91df4e0ab.png" src="_images/cad2f75587b10c4f8efdc835262c6744fb49c066139ea51aa81665e91df4e0ab.png" />
+<img alt="_images/513c4f900cfa5bca15a9a5f1ab866b7b02f309bcf718e68cf58dc0c3e6b6ce08.png" src="_images/513c4f900cfa5bca15a9a5f1ab866b7b02f309bcf718e68cf58dc0c3e6b6ce08.png" />
+<img alt="_images/85b4a2c257f1983d5f1310532e41728b753abb54be66f9b0517704c6c1284da1.png" src="_images/85b4a2c257f1983d5f1310532e41728b753abb54be66f9b0517704c6c1284da1.png" />
+<img alt="_images/9a64d4b541d9d169af175bbdc1809a71396350ee6c9b8144f3f7fda72542b9b1.png" src="_images/9a64d4b541d9d169af175bbdc1809a71396350ee6c9b8144f3f7fda72542b9b1.png" />
+<img alt="_images/988fcb7e8df78e4e0905461a7511d32fa3286bdac1385a31dcc767514a6e60f9.png" src="_images/988fcb7e8df78e4e0905461a7511d32fa3286bdac1385a31dcc767514a6e60f9.png" />
+<img alt="_images/0040716ae8beeefe1952aecc9cc3930de4099f3f0c07ae4d2f9ce455cba47275.png" src="_images/0040716ae8beeefe1952aecc9cc3930de4099f3f0c07ae4d2f9ce455cba47275.png" />
+<img alt="_images/0b09254be8da10fe2ef348f372a1fe6f0b91417d66c7264e5b9ba9a80ed8fbc9.png" src="_images/0b09254be8da10fe2ef348f372a1fe6f0b91417d66c7264e5b9ba9a80ed8fbc9.png" />
+<img alt="_images/ea3f98dac5b6cf4c5ce767d01f7943b0fe9a5f20d23ae85d083a4e34ba525885.png" src="_images/ea3f98dac5b6cf4c5ce767d01f7943b0fe9a5f20d23ae85d083a4e34ba525885.png" />
+<img alt="_images/7a942beb9bfff43aefa8b78c0027ae2b3f5601fe1382a0920430c72a7e8637ec.png" src="_images/7a942beb9bfff43aefa8b78c0027ae2b3f5601fe1382a0920430c72a7e8637ec.png" />
+<img alt="_images/e57c68a302b816396f3cbcbc8d3f39b08cbee6a2d4991a9e3cbb4947c169e067.png" src="_images/e57c68a302b816396f3cbcbc8d3f39b08cbee6a2d4991a9e3cbb4947c169e067.png" />
+<img alt="_images/1b0f46ebda3703b491154c9998700f1e213d5830bff83de333b60d41a1d13f15.png" src="_images/1b0f46ebda3703b491154c9998700f1e213d5830bff83de333b60d41a1d13f15.png" />
+<img alt="_images/bd6d6d2dfdfd44cc03d44b140360e2845c390d83b2c6572d27340a2698d18a00.png" src="_images/bd6d6d2dfdfd44cc03d44b140360e2845c390d83b2c6572d27340a2698d18a00.png" />
+<img alt="_images/19d02fe18f97de1398758cd0bfe8734bb9b8deee32bd8a8fb29da69f900af889.png" src="_images/19d02fe18f97de1398758cd0bfe8734bb9b8deee32bd8a8fb29da69f900af889.png" />
+<img alt="_images/774e5ab3ddcaa1ec936b81b8d97fec91a866db3bf8eb7ba622a3aae9613aacff.png" src="_images/774e5ab3ddcaa1ec936b81b8d97fec91a866db3bf8eb7ba622a3aae9613aacff.png" />
+<img alt="_images/020d7d982afe10813be318e708d892be3991b896f4a8f0e20cfe317ee980f3f6.png" src="_images/020d7d982afe10813be318e708d892be3991b896f4a8f0e20cfe317ee980f3f6.png" />
+<img alt="_images/19e5870df6d995cf3247994ad099b9a5ce58cf930836062bdb9b8f04c71a8eb6.png" src="_images/19e5870df6d995cf3247994ad099b9a5ce58cf930836062bdb9b8f04c71a8eb6.png" />
+<img alt="_images/e760d6ca0925f37cdc5affebf0be5e8ff62293f39bcab18fac8b606b6093c3eb.png" src="_images/e760d6ca0925f37cdc5affebf0be5e8ff62293f39bcab18fac8b606b6093c3eb.png" />
+<img alt="_images/b28b6962545b9b1e4f7ba8404798dea0e815073be113c3b196ecc2eb6d9adb84.png" src="_images/b28b6962545b9b1e4f7ba8404798dea0e815073be113c3b196ecc2eb6d9adb84.png" />
+<img alt="_images/f692b0351909692aca12512d4885863c5b607d8b92479d76a58c5cc32a182a67.png" src="_images/f692b0351909692aca12512d4885863c5b607d8b92479d76a58c5cc32a182a67.png" />
+<img alt="_images/92f8b814cb01ae6560074b9ad973952251da8f6c28a0a16fb4e2ab44b8a733ee.png" src="_images/92f8b814cb01ae6560074b9ad973952251da8f6c28a0a16fb4e2ab44b8a733ee.png" />
+<img alt="_images/c7bc1956ec17f764de0c2ece44f3b39b4cd0dcdc5d876e59291a1029d52d8a05.png" src="_images/c7bc1956ec17f764de0c2ece44f3b39b4cd0dcdc5d876e59291a1029d52d8a05.png" />
+<img alt="_images/32825cdbe082e55ea3832e07ccae4f15c5eb12b24125fea788a063d5bb3365cd.png" src="_images/32825cdbe082e55ea3832e07ccae4f15c5eb12b24125fea788a063d5bb3365cd.png" />
+<img alt="_images/1b8b142f55931a951868aa21183dceccc6f3d42b0b2d00a69999b2e7bd292f62.png" src="_images/1b8b142f55931a951868aa21183dceccc6f3d42b0b2d00a69999b2e7bd292f62.png" />
+<img alt="_images/f027ac2a159c3b23fe2fb3a2fc111a1876101d9f238ce5b479190eaecad36d91.png" src="_images/f027ac2a159c3b23fe2fb3a2fc111a1876101d9f238ce5b479190eaecad36d91.png" />
+<img alt="_images/24ad4e31257e3a0ed49e2984f0cd555dd343eb7ada956044a6de016d751bf960.png" src="_images/24ad4e31257e3a0ed49e2984f0cd555dd343eb7ada956044a6de016d751bf960.png" />
+<img alt="_images/18cc75e6dd7b72e2fc0b2829075c937a9bf7f57e04f79cbaee8b062837cd3abf.png" src="_images/18cc75e6dd7b72e2fc0b2829075c937a9bf7f57e04f79cbaee8b062837cd3abf.png" />
+<img alt="_images/1b3934c8e44f4e51b1f932acec35d6ca98d5e5234a47ef085607b1cade9f8e04.png" src="_images/1b3934c8e44f4e51b1f932acec35d6ca98d5e5234a47ef085607b1cade9f8e04.png" />
+<img alt="_images/45e6f46d6054ed50c6a7f6462f4a843d53edbe9ecae4849ff338cafeba8864a1.png" src="_images/45e6f46d6054ed50c6a7f6462f4a843d53edbe9ecae4849ff338cafeba8864a1.png" />
+<img alt="_images/62c35f22b88b8a596e92e3107d6204892369e55a488d43c29134ce202ab59b62.png" src="_images/62c35f22b88b8a596e92e3107d6204892369e55a488d43c29134ce202ab59b62.png" />
+<img alt="_images/55d310a2d141a32f00eb5703ad6edea1237dad764580ffb5d289b1b9d061c9e3.png" src="_images/55d310a2d141a32f00eb5703ad6edea1237dad764580ffb5d289b1b9d061c9e3.png" />
+<img alt="_images/5a1b5a2a7bdba18872dcc57cf5326f2253e25c5112e38b6ed73f41ae018185a8.png" src="_images/5a1b5a2a7bdba18872dcc57cf5326f2253e25c5112e38b6ed73f41ae018185a8.png" />
+<img alt="_images/ea620683176d0fc709706ea69e18874d54fa26f859459ada40c039b2249162c0.png" src="_images/ea620683176d0fc709706ea69e18874d54fa26f859459ada40c039b2249162c0.png" />
+<img alt="_images/2cc9c1f6e23ed37c7679d66969700d33e8fbca73f166185e85c394912b34fc13.png" src="_images/2cc9c1f6e23ed37c7679d66969700d33e8fbca73f166185e85c394912b34fc13.png" />
+<img alt="_images/82b65f8872a407f92ae3e830021c09086d0b7f033c06267274ed22738b346a79.png" src="_images/82b65f8872a407f92ae3e830021c09086d0b7f033c06267274ed22738b346a79.png" />
+<img alt="_images/ffe8f073f5d0a2db45ac765f00d7a2b7d76c8df52bd563caa4c50c025d83eb7a.png" src="_images/ffe8f073f5d0a2db45ac765f00d7a2b7d76c8df52bd563caa4c50c025d83eb7a.png" />
+<img alt="_images/dfa57675cfebc6725258c1736027e6651c4e4f59606c56d2bb2b2b3bf4c1733b.png" src="_images/dfa57675cfebc6725258c1736027e6651c4e4f59606c56d2bb2b2b3bf4c1733b.png" />
+<img alt="_images/a4031cefb76a57f7479f516ee095f41d43e9de31aa93df99704cdf73238ec4ef.png" src="_images/a4031cefb76a57f7479f516ee095f41d43e9de31aa93df99704cdf73238ec4ef.png" />
+<img alt="_images/1b927818973577e01f46bc2dff234201c5cdcada69db1dc20eee89715b890390.png" src="_images/1b927818973577e01f46bc2dff234201c5cdcada69db1dc20eee89715b890390.png" />
+<img alt="_images/bed4537baf0f8f2bbc258d51e94d391911b48aa3984aca14b9e1864e6593ef29.png" src="_images/bed4537baf0f8f2bbc258d51e94d391911b48aa3984aca14b9e1864e6593ef29.png" />
+<img alt="_images/83c1590c6dd58707879f5cb4d34e4e34edff52f487ff10b1e11e26ac6b7ec5b1.png" src="_images/83c1590c6dd58707879f5cb4d34e4e34edff52f487ff10b1e11e26ac6b7ec5b1.png" />
+<img alt="_images/ce7a6d774b6c865739a8ba164a6ba0285623cb3eaaed8615207f43290165ab95.png" src="_images/ce7a6d774b6c865739a8ba164a6ba0285623cb3eaaed8615207f43290165ab95.png" />
+<img alt="_images/b0846d6b0356987b92addd0a30a6b0b81933539e4eb166c0c5a1786f1bbcbde8.png" src="_images/b0846d6b0356987b92addd0a30a6b0b81933539e4eb166c0c5a1786f1bbcbde8.png" />
+<img alt="_images/8569d86be8155c1528489097cd3ea1f2ea179d7cfcba5fd1c9bfb58c586923ff.png" src="_images/8569d86be8155c1528489097cd3ea1f2ea179d7cfcba5fd1c9bfb58c586923ff.png" />
+<img alt="_images/e89c039d83c4b16f7854418f50c2fed1a8a64a31d0a91e0274448a2926a91000.png" src="_images/e89c039d83c4b16f7854418f50c2fed1a8a64a31d0a91e0274448a2926a91000.png" />
+<img alt="_images/130ab9ee51a0ce4d93d62a25371ab0b076b779dd2a8591ced082c24741f88774.png" src="_images/130ab9ee51a0ce4d93d62a25371ab0b076b779dd2a8591ced082c24741f88774.png" />
+<img alt="_images/361d90d759501fb52cab63299c5aed5173f4746ecc52b112cf2a80f6ad2278e5.png" src="_images/361d90d759501fb52cab63299c5aed5173f4746ecc52b112cf2a80f6ad2278e5.png" />
+<img alt="_images/674010c1248d011a2b6e165ba4a97b86b737506e5b6442d1f8047626d07e2818.png" src="_images/674010c1248d011a2b6e165ba4a97b86b737506e5b6442d1f8047626d07e2818.png" />
+<img alt="_images/12da3923cbf093d45118543ad084f9cf8292ddbb97172bea2373f4c12b06cf0f.png" src="_images/12da3923cbf093d45118543ad084f9cf8292ddbb97172bea2373f4c12b06cf0f.png" />
+<img alt="_images/a92f066e530ca1dca27b8675450730151b31649bc126c8993e330e7c37f41985.png" src="_images/a92f066e530ca1dca27b8675450730151b31649bc126c8993e330e7c37f41985.png" />
+<img alt="_images/a310760882776c157059091d61c423121cd92e2a6e50bdca15b46b4131593ca9.png" src="_images/a310760882776c157059091d61c423121cd92e2a6e50bdca15b46b4131593ca9.png" />
+<img alt="_images/c0340e75e8d92a1f1cc9dbb700b1b991eeb12cf552329273a772c85297e4a40d.png" src="_images/c0340e75e8d92a1f1cc9dbb700b1b991eeb12cf552329273a772c85297e4a40d.png" />
+<img alt="_images/8645cbcacbee24eca9a9935ee3348364515e501bc54a9fc3db3b66ae06a25ca6.png" src="_images/8645cbcacbee24eca9a9935ee3348364515e501bc54a9fc3db3b66ae06a25ca6.png" />
+<img alt="_images/8f9b495688859d09e84053985e7d94cf96b3f015ed58fc6a78e8f9866e34cc45.png" src="_images/8f9b495688859d09e84053985e7d94cf96b3f015ed58fc6a78e8f9866e34cc45.png" />
+<img alt="_images/9aa5d0dbf91b6937f298f5ab5d91cd1dad4766d2568d00af14eee1569ae34b49.png" src="_images/9aa5d0dbf91b6937f298f5ab5d91cd1dad4766d2568d00af14eee1569ae34b49.png" />
+<img alt="_images/7e8aa746e9d8a8fab06cd930f12d51ba832b957d5c43d7f7f65ad9c13508a947.png" src="_images/7e8aa746e9d8a8fab06cd930f12d51ba832b957d5c43d7f7f65ad9c13508a947.png" />
+<img alt="_images/4fc20cab1641d4f07f65b1b6201cfe0b3d9898e52ce789c08a49eea257697121.png" src="_images/4fc20cab1641d4f07f65b1b6201cfe0b3d9898e52ce789c08a49eea257697121.png" />
+<img alt="_images/3d43cdb80e7c4fdc59118785eabcaad58871af0e309a3be8b43018543fe62f2a.png" src="_images/3d43cdb80e7c4fdc59118785eabcaad58871af0e309a3be8b43018543fe62f2a.png" />
+<img alt="_images/c7865d3b65aae1c05c009690985476a85615af4ee2a80f6aee39450a8c67a9cd.png" src="_images/c7865d3b65aae1c05c009690985476a85615af4ee2a80f6aee39450a8c67a9cd.png" />
+<img alt="_images/a445736ffd614431a25dac46a990b2a6a0bdd907ddfc62171a537bb3f1a0c5d1.png" src="_images/a445736ffd614431a25dac46a990b2a6a0bdd907ddfc62171a537bb3f1a0c5d1.png" />
+<img alt="_images/e03bb42107ee796617dce54c425ad8993193a2ea4c55244f0b1ee13853ab88c7.png" src="_images/e03bb42107ee796617dce54c425ad8993193a2ea4c55244f0b1ee13853ab88c7.png" />
+<img alt="_images/4a4058e373172636ab17c69ec7f134f3c497a5b51cec9d43b0a6cc976db5c3e1.png" src="_images/4a4058e373172636ab17c69ec7f134f3c497a5b51cec9d43b0a6cc976db5c3e1.png" />
+<img alt="_images/01b2eccd80a04edaa7190edf7e17af3bcbcf2bb4e1170e15a9ac51cede0dc211.png" src="_images/01b2eccd80a04edaa7190edf7e17af3bcbcf2bb4e1170e15a9ac51cede0dc211.png" />
+<img alt="_images/791b30688aeb35078b157c428208ed8c15be9ae744bc075a4b856c142623b39a.png" src="_images/791b30688aeb35078b157c428208ed8c15be9ae744bc075a4b856c142623b39a.png" />
+<img alt="_images/5d036b4d8c81845747fd689ebac80adcfdec04aba8d25f09a85a2ebbfcc730a7.png" src="_images/5d036b4d8c81845747fd689ebac80adcfdec04aba8d25f09a85a2ebbfcc730a7.png" />
+<img alt="_images/cc667f69084b6054b0807f1fa456ca30f637ff349025356da1e747302d8c4ec7.png" src="_images/cc667f69084b6054b0807f1fa456ca30f637ff349025356da1e747302d8c4ec7.png" />
+<img alt="_images/c8e9458aa448f1e1b6a9d9732302f2c752508e9529344714838c503c47104408.png" src="_images/c8e9458aa448f1e1b6a9d9732302f2c752508e9529344714838c503c47104408.png" />
+<img alt="_images/338099839a9fda670e93de60ee4b21bd550fc3804cbc54f9c4e6ee4c02881865.png" src="_images/338099839a9fda670e93de60ee4b21bd550fc3804cbc54f9c4e6ee4c02881865.png" />
+<img alt="_images/2c3097624aad10923a6e9593865d330f3ab7490a66a789b24dbcb4816d8ed1a2.png" src="_images/2c3097624aad10923a6e9593865d330f3ab7490a66a789b24dbcb4816d8ed1a2.png" />
+<img alt="_images/f5f1a55a3ccc887f30056be09c0a07249cc4ed22984a8a638dc07e7340515bcc.png" src="_images/f5f1a55a3ccc887f30056be09c0a07249cc4ed22984a8a638dc07e7340515bcc.png" />
+<img alt="_images/b67d96610587718fdfe4aa9d477ef291ef5944111d151231100212b71697a2e3.png" src="_images/b67d96610587718fdfe4aa9d477ef291ef5944111d151231100212b71697a2e3.png" />
+<img alt="_images/bd6ed7418b173807c79615b1f26af559bc301229ccfbfc6219d44baaeb6e3761.png" src="_images/bd6ed7418b173807c79615b1f26af559bc301229ccfbfc6219d44baaeb6e3761.png" />
+<img alt="_images/042706be49cde3fc510f33286d80408a05c990ce09a85b18fcc69c114bf5d88e.png" src="_images/042706be49cde3fc510f33286d80408a05c990ce09a85b18fcc69c114bf5d88e.png" />
+<img alt="_images/4410392ee6b29ae4257738d9fa0fef12c7fb222df388c9fc0bf8de1e3cbc87c4.png" src="_images/4410392ee6b29ae4257738d9fa0fef12c7fb222df388c9fc0bf8de1e3cbc87c4.png" />
+<img alt="_images/5817bd57febf6920aa9061b0d0a2d3b4277425295dcd39b518e012d69106bc38.png" src="_images/5817bd57febf6920aa9061b0d0a2d3b4277425295dcd39b518e012d69106bc38.png" />
+<img alt="_images/c08af807e1cbeddeffcf5f8ff16513d25aa80311af61a51fa7c723e32bd7ce0b.png" src="_images/c08af807e1cbeddeffcf5f8ff16513d25aa80311af61a51fa7c723e32bd7ce0b.png" />
+<img alt="_images/bd56a432b9ff9a5f775058a232bab3b5a6f0f44d50224d4cde70451c3bcad432.png" src="_images/bd56a432b9ff9a5f775058a232bab3b5a6f0f44d50224d4cde70451c3bcad432.png" />
+<img alt="_images/871e34607dc153d26208429ed0e6bef63a894ddac9ae90fe18111ffb3d428328.png" src="_images/871e34607dc153d26208429ed0e6bef63a894ddac9ae90fe18111ffb3d428328.png" />
+<img alt="_images/18d89b58bb260a950d570ccb0cdbda79214388452d9dad7611f191090d1d9e80.png" src="_images/18d89b58bb260a950d570ccb0cdbda79214388452d9dad7611f191090d1d9e80.png" />
+<img alt="_images/81963e63439fcfa825fa2f18ccc83f129d3f8ee7aac083255eef170f56b63648.png" src="_images/81963e63439fcfa825fa2f18ccc83f129d3f8ee7aac083255eef170f56b63648.png" />
+<img alt="_images/5840c95c980320bf629875383ded29b0cd5917ad8c3aaad0fa14da781a0c2fae.png" src="_images/5840c95c980320bf629875383ded29b0cd5917ad8c3aaad0fa14da781a0c2fae.png" />
+<img alt="_images/c6acc0c20828b521d6dc60f093e94e07b36a9eba8c1eb360b18ed2b150be4daa.png" src="_images/c6acc0c20828b521d6dc60f093e94e07b36a9eba8c1eb360b18ed2b150be4daa.png" />
+<img alt="_images/a0c77da043c97c4736c5125fd002ef860a1a1bb5591f7ac8d02287ebb74a0e41.png" src="_images/a0c77da043c97c4736c5125fd002ef860a1a1bb5591f7ac8d02287ebb74a0e41.png" />
+<img alt="_images/3b94303f4816cf09032a2703525bce0eef2da8d906f5cf169a4b41a40e44cc88.png" src="_images/3b94303f4816cf09032a2703525bce0eef2da8d906f5cf169a4b41a40e44cc88.png" />
+<img alt="_images/d9926bf95798bd44926bd66181556112fe27cd54be8bdff0d2ca0bb354d221d9.png" src="_images/d9926bf95798bd44926bd66181556112fe27cd54be8bdff0d2ca0bb354d221d9.png" />
+<img alt="_images/b3e35815b9f0fd4237d7e6dce46d53d5ac348c710d3d5b0e55cb782008ab61f8.png" src="_images/b3e35815b9f0fd4237d7e6dce46d53d5ac348c710d3d5b0e55cb782008ab61f8.png" />
+<img alt="_images/07f6a34ef45801a27301142a05309e6c41bcc614ac85c9623f44da023687cd94.png" src="_images/07f6a34ef45801a27301142a05309e6c41bcc614ac85c9623f44da023687cd94.png" />
+<img alt="_images/b1968ae47925ff163a592a556caee4db9281ee30100b33762f3dc64a5b0e8dbc.png" src="_images/b1968ae47925ff163a592a556caee4db9281ee30100b33762f3dc64a5b0e8dbc.png" />
+<img alt="_images/333b338e08278474b6faf13957e336e0a12516ed5fb67431491550fa374ace76.png" src="_images/333b338e08278474b6faf13957e336e0a12516ed5fb67431491550fa374ace76.png" />
+<img alt="_images/d9e1e1bfe6fd059e3ba6b8f263c85c85a9f8e539d6793a4936161ca6146a85e5.png" src="_images/d9e1e1bfe6fd059e3ba6b8f263c85c85a9f8e539d6793a4936161ca6146a85e5.png" />
+<img alt="_images/7d80ce3f163e5e28414f7d1914045d3a42b3fd2d83d953ca3be448180166f465.png" src="_images/7d80ce3f163e5e28414f7d1914045d3a42b3fd2d83d953ca3be448180166f465.png" />
+<img alt="_images/111fed6a08c430f8eb7621f1b4aa20cf6374bd49a6ef9b6c5afd4cd918b59ed8.png" src="_images/111fed6a08c430f8eb7621f1b4aa20cf6374bd49a6ef9b6c5afd4cd918b59ed8.png" />
+<img alt="_images/11264b673ace89af7f1e1010d2240511134c7d8636aefdb3b1d9042a07ab33fc.png" src="_images/11264b673ace89af7f1e1010d2240511134c7d8636aefdb3b1d9042a07ab33fc.png" />
+<img alt="_images/4dfd51afbf523e4cecd83f89a6703549b941e08cf8208767faca80b876c9f979.png" src="_images/4dfd51afbf523e4cecd83f89a6703549b941e08cf8208767faca80b876c9f979.png" />
+<img alt="_images/f705ecb22e993b318138015b13ccc32bf34696146f93cea09fe47b3398ed1938.png" src="_images/f705ecb22e993b318138015b13ccc32bf34696146f93cea09fe47b3398ed1938.png" />
+<img alt="_images/e8e295eb41c0295449a960eda9a805ef5fd4deb3076addd940ca6c774c4da9cc.png" src="_images/e8e295eb41c0295449a960eda9a805ef5fd4deb3076addd940ca6c774c4da9cc.png" />
+<img alt="_images/cdde80a85e2e585d9808c7faccc47eab12141095ccb8a8c6eb8606eb0f89a349.png" src="_images/cdde80a85e2e585d9808c7faccc47eab12141095ccb8a8c6eb8606eb0f89a349.png" />
+<img alt="_images/335e2e8914bf17df1ce1686f581fa542ea676228819aa1ee56a249cf49841c86.png" src="_images/335e2e8914bf17df1ce1686f581fa542ea676228819aa1ee56a249cf49841c86.png" />
+<img alt="_images/d5a9ea66bb2f89acb4c9dacbd0c5dc7a3f8c5cbce1382405bdb45b405ec13f2f.png" src="_images/d5a9ea66bb2f89acb4c9dacbd0c5dc7a3f8c5cbce1382405bdb45b405ec13f2f.png" />
+<img alt="_images/876dd9da00da21a545cebf23e3818ac94b4012d5731d6058c4bb9c54fe66d493.png" src="_images/876dd9da00da21a545cebf23e3818ac94b4012d5731d6058c4bb9c54fe66d493.png" />
+<img alt="_images/05c195d3ae8b2369e55ee00e1d581d3c9569d97894692965dcf0528b1e678c24.png" src="_images/05c195d3ae8b2369e55ee00e1d581d3c9569d97894692965dcf0528b1e678c24.png" />
+<img alt="_images/78adbb721f0a0a91b568c7353ffc1420b8ca36e4909dd64f5ca30abdbb1c43da.png" src="_images/78adbb721f0a0a91b568c7353ffc1420b8ca36e4909dd64f5ca30abdbb1c43da.png" />
+<img alt="_images/813065f264375695ad25ca5d05c81c7b3f51001d9fe875f166a5cafc22bf37f4.png" src="_images/813065f264375695ad25ca5d05c81c7b3f51001d9fe875f166a5cafc22bf37f4.png" />
+<img alt="_images/177e3954b1d6db34184c97138499ded1cc92074d653088b7274d8c859d1a2346.png" src="_images/177e3954b1d6db34184c97138499ded1cc92074d653088b7274d8c859d1a2346.png" />
+<img alt="_images/256cbb0df6ffa88a6c48a0968450377aaee782c50536c8027ec4ea83b32f000d.png" src="_images/256cbb0df6ffa88a6c48a0968450377aaee782c50536c8027ec4ea83b32f000d.png" />
+<img alt="_images/f58a94089dd75dfaa8f5ca4a6b612eb47bfd48317dc99293bb4cf3196de919c9.png" src="_images/f58a94089dd75dfaa8f5ca4a6b612eb47bfd48317dc99293bb4cf3196de919c9.png" />
+<img alt="_images/421b41364e7ac669404a82e2734e50951031eeb3f923c0321b8f40a96ea07992.png" src="_images/421b41364e7ac669404a82e2734e50951031eeb3f923c0321b8f40a96ea07992.png" />
+<img alt="_images/b3466389c49612c8720c6cd199c81b78d187d89204df2ff774ef0ce36f887f6b.png" src="_images/b3466389c49612c8720c6cd199c81b78d187d89204df2ff774ef0ce36f887f6b.png" />
+<img alt="_images/31b73bdc9454a372ac377c6031d4b94a1514c1fd0820dfcd9bcd3523c4423abd.png" src="_images/31b73bdc9454a372ac377c6031d4b94a1514c1fd0820dfcd9bcd3523c4423abd.png" />
+<img alt="_images/5aa48b4ac47b512b75c82604f47c312dea02c8f16111376a141a95bea55db95a.png" src="_images/5aa48b4ac47b512b75c82604f47c312dea02c8f16111376a141a95bea55db95a.png" />
+<img alt="_images/f44968eea1c470acc217a7e924b95363f2921c60f8b3602d0e59e83f20b16e33.png" src="_images/f44968eea1c470acc217a7e924b95363f2921c60f8b3602d0e59e83f20b16e33.png" />
+<img alt="_images/9bb7b147d660b34cf7a65ae9955bf37efc2a5680ec23688d1048f571ca705817.png" src="_images/9bb7b147d660b34cf7a65ae9955bf37efc2a5680ec23688d1048f571ca705817.png" />
+<img alt="_images/50d8b7028cba60864e945d3b8c7b45797060131b8fbf6ad884f356db26fa21df.png" src="_images/50d8b7028cba60864e945d3b8c7b45797060131b8fbf6ad884f356db26fa21df.png" />
+<img alt="_images/85f00f25759c0d0849e0985e9b7d8fcdb797a7afaf47c77030a2de50d1503b43.png" src="_images/85f00f25759c0d0849e0985e9b7d8fcdb797a7afaf47c77030a2de50d1503b43.png" />
+<img alt="_images/89bc5bece1bd9c1bb62bed4be60cff5eeebc7f2d279884539aca443ee3adaddc.png" src="_images/89bc5bece1bd9c1bb62bed4be60cff5eeebc7f2d279884539aca443ee3adaddc.png" />
+<img alt="_images/284cb058ad1be8d91921bb2647312ba52023a882df2a63cffd9a70c9c009f81f.png" src="_images/284cb058ad1be8d91921bb2647312ba52023a882df2a63cffd9a70c9c009f81f.png" />
+<img alt="_images/19259161b679b020f419375eaea0b623d9f0b9207afb6e7b83faca3d22464166.png" src="_images/19259161b679b020f419375eaea0b623d9f0b9207afb6e7b83faca3d22464166.png" />
+<img alt="_images/65b938bc7332d9f1242d83dc4c25d6ba3ec1765ecff413e278d05670fe883b5e.png" src="_images/65b938bc7332d9f1242d83dc4c25d6ba3ec1765ecff413e278d05670fe883b5e.png" />
+<img alt="_images/7a0b7177b324a0d7bb956f940322cd653a60dff843cd16d32391c69ccf94c493.png" src="_images/7a0b7177b324a0d7bb956f940322cd653a60dff843cd16d32391c69ccf94c493.png" />
+<img alt="_images/bd5f20fef047f20809fb48728c5b39e87d66947d2294af3f39a66d3139c7259d.png" src="_images/bd5f20fef047f20809fb48728c5b39e87d66947d2294af3f39a66d3139c7259d.png" />
+<img alt="_images/577389ff9bc4e57ea8d496aa79e1226a82e747a77a9943ff9385cf8dcf8494c4.png" src="_images/577389ff9bc4e57ea8d496aa79e1226a82e747a77a9943ff9385cf8dcf8494c4.png" />
+<img alt="_images/6b27a2028e43e780130796c772dcb0da4203a346ed4cadb16a27d2b24bc83aa6.png" src="_images/6b27a2028e43e780130796c772dcb0da4203a346ed4cadb16a27d2b24bc83aa6.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ILLUSTRIS_autoencoder.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">AutoEncoder</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ILLUSTRIS_peronamalik.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">PeronaMalik</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#without-zscale">without zscale</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-scale">with scale</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
