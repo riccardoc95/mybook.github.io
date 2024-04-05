@@ -57,11 +57,13 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'FORECAST_peronamalik';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="All Models" href="FORECAST.html" />
-    <link rel="prev" title="TopoAttention" href="FORECAST_topoattention.html" />
+    <link rel="next" title="AstroU-NET" href="FORECAST_unet.html" />
+    <link rel="prev" title="All Models" href="FORECAST.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,19 +181,19 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Denoising</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="sec_forecast.html">FORECAST</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="FORECAST.html">All Models</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">PeronaMalik</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FORECAST_unet.html">AstroU-NET</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FORECAST_autoencoder.html">AutoEncoder</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FORECAST_topoattention.html">TopoAttention</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">PeronaMalik</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FORECAST.html">All Models</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="sec_illustris.html">ILLUSTRIS</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS.html">All Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS_peronamalik.html">PeronaMalik</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS_unet.html">AstroU-NET</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS_autoencoder.html">AutoEncoder</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS_topoattention.html">TopoAttention</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS_peronamalik.html">PeronaMalik</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS.html">All Models</a></li>
 </ul>
 </li>
 </ul>
@@ -420,6 +422,8 @@ document.write(`
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="peronamalik">
 <h1>PeronaMalik<a class="headerlink" href="#peronamalik" title="Link to this heading">#</a></h1>
+<p><strong>Code</strong> implementation from <a class="reference external" href="https://github.com/valerioroscani/perona-malik">valerioroscani</a></p>
+<p><strong>Parameters</strong>: <span class="math notranslate nohighlight">\(\kappa=0.1\)</span> <span class="math notranslate nohighlight">\(\gamma=0.2\)</span></p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Input</p></th>
@@ -947,20 +951,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="FORECAST_topoattention.html"
+       href="FORECAST.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">TopoAttention</p>
+        <p class="prev-next-title">All Models</p>
       </div>
     </a>
     <a class="right-next"
-       href="FORECAST.html"
+       href="FORECAST_unet.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">All Models</p>
+        <p class="prev-next-title">AstroU-NET</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
