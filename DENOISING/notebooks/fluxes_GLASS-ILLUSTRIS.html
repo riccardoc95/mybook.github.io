@@ -1,0 +1,5946 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Fluxes &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script type="application/vnd.jupyter.widget-state+json">{"state": {"1162b16f821e4966b09b3a760afb9f25": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HBoxModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_4e7902bce7e846b280d1d5749528405f", "IPY_MODEL_cd23df14e6d94579a1a67550a05b61cb", "IPY_MODEL_6659eb97082d4677aa06977764ded847"], "layout": "IPY_MODEL_730cdfd284624503864af0f407afdec6", "tabbable": null, "tooltip": null}}, "325612be5ec040049c6a02c76bd9aa5a": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "4e7902bce7e846b280d1d5749528405f": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "DropdownModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DropdownModel", "_options_labels": ["6.fits", "57.fits", "158.fits", "288.fits", "16.fits", "119.fits", "41.fits", "139.fits", "210.fits", "98.fits", "115.fits", "143.fits", "293.fits", "102.fits", "21.fits", "207.fits", "76.fits", "60.fits", "37.fits", "227.fits", "122.fits", "83.fits", "7.fits", "163.fits", "168.fits", "67.fits", "216.fits", "200.fits", "257.fits", "144.fits", "125.fits", "109.fits", "298.fits", "10.fits", "47.fits", "46.fits", "237.fits", "11.fits", "260.fits", "299.fits", "108.fits", "124.fits", "93.fits", "132.fits", "112.fits", "283.fits", "153.fits", "104.fits", "27.fits", "190.fits", "201.fits", "70.fits", "186.fits", "296.fits", "255.fits", "193.fits", "202.fits", "73.fits", "65.fits", "45.fits", "275.fits", "53.fits", "259.fits", "86.fits", "2.fits", "131.fits", "218.fits", "52.fits", "262.fits", "13.fits", "33.fits", "64.fits", "106.fits", "151.fits", "278.fits", "147.fits", "110.fits", "224.fits", "199.fits", "79.fits", "38.fits", "269.fits", "18.fits", "101.fits", "253.fits", "195.fits", "9.fits", "62.fits", "213.fits", "74.fits", "205.fits", "23.fits", "58.fits", "229.fits", "157.fits", "291.fits", "19.fits", "116.fits", "39.fits", "161.fits", "136.fits", "97.fits", "120.fits", "177.fits", "42.fits"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "DropdownView", "description": "Image:", "description_allow_html": false, "disabled": false, "index": 0, "layout": "IPY_MODEL_6ad56f7958424690988f8b9b22a3df15", "style": "IPY_MODEL_e65f51b92ae843f18ed4f72b85daa655", "tabbable": null, "tooltip": null}}, "5d3bfb8a4934454f9881975c1f6943fd": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_9af45c73d63342fcbe53170fdd663ec7", "msg_id": "", "outputs": [], "tabbable": null, "tooltip": null}}, "6659eb97082d4677aa06977764ded847": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "ButtonModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "Show!", "disabled": false, "icon": "", "layout": "IPY_MODEL_325612be5ec040049c6a02c76bd9aa5a", "style": "IPY_MODEL_9da7fffefd32498d973514d929a25aa6", "tabbable": null, "tooltip": null}}, "6ad56f7958424690988f8b9b22a3df15": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "730cdfd284624503864af0f407afdec6": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "7551ece3fd57441d98240538784550bd": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9af45c73d63342fcbe53170fdd663ec7": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9da7fffefd32498d973514d929a25aa6": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "ButtonStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": null, "font_family": null, "font_size": null, "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "cd23df14e6d94579a1a67550a05b61cb": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "ToggleButtonModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ToggleButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ToggleButtonView", "button_style": "", "description": "Zscale", "description_allow_html": false, "disabled": false, "icon": "check", "layout": "IPY_MODEL_7551ece3fd57441d98240538784550bd", "style": "IPY_MODEL_f8166af7be1c4db19dd8db429c74f0a7", "tabbable": null, "tooltip": "Description", "value": false}}, "e65f51b92ae843f18ed4f72b85daa655": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "DescriptionStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "f8166af7be1c4db19dd8db429c74f0a7": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "ToggleButtonStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ToggleButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": "", "font_family": null, "font_size": null, "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}}, "version_major": 2, "version_minor": 0}</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'DENOISING/notebooks/fluxes_GLASS-ILLUSTRIS';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MC-VIS" href="../../sections/mcvis.html" />
+    <link rel="prev" title="All Models" href="GLASS-ILLUSTRIS.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../sections/intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../sections/intro.html">
+                    Home
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Denoising</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../sections/forecast.html">FORECAST</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="FORECAST.html">All Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FORECAST_peronamalik.html">PeronaMalik</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FORECAST_unet.html">Astro-UNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FORECAST_autoencoder.html">AutoEncoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FORECAST_topoattention.html">Topological Attention for AutoEncoder</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../sections/illustris.html">ILLUSTRIS</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS.html">All Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS_peronamalik.html">PeronaMalik</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS_unet.html">Astro-UNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS_autoencoder.html">AutoEncoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ILLUSTRIS_topoattention.html">Topological Attention for AutoEncoder</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../sections/glass_forecast.html">Test: GLASS-FORECAST</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="GLASS-FORECAST.html">All Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fluxes_GLASS-FORECAST.html">Fluxes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../sections/glass_illustris.html">Test: GLASS-ILLUSTRIS</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="GLASS-ILLUSTRIS.html">All Models</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Fluxes</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Segmentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../sections/mcvis.html">MC-VIS</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../SEGMENTATION/notebooks/UNetTopoLoss.html">UNet with TopoLoss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SEGMENTATION/notebooks/TIS.html">TIS</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../sections/glass_segm.html">Test: GLASS-SEGMENTATIONS</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../SEGMENTATION/notebooks/GLASS.html">All Methods</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bibliography</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../sections/references.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDENOISING/notebooks/fluxes_GLASS-ILLUSTRIS.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/DENOISING/notebooks/fluxes_GLASS-ILLUSTRIS.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Fluxes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-min-max">scale: min-max</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-zscale">scale: zscale</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_parameters tag_remove-input docutils container">
+</div>
+<div class="cell tag_injected-parameters tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="fluxes">
+<h1>Fluxes<a class="headerlink" href="#fluxes" title="Link to this heading">#</a></h1>
+<section id="scale-min-max">
+<h2>scale: min-max<a class="headerlink" href="#scale-min-max" title="Link to this heading">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/85e0ac3f5e2bcbd1ff120380d6fbcf224a91e6711c4729c9ee8f0225dc69741d.png" src="../../_images/85e0ac3f5e2bcbd1ff120380d6fbcf224a91e6711c4729c9ee8f0225dc69741d.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/84ae266cd4309090bcc181c17504b6500b3a7159f50a17dbaccbb191222b8fb4.png" src="../../_images/84ae266cd4309090bcc181c17504b6500b3a7159f50a17dbaccbb191222b8fb4.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>18443</td>
+      <td>1.490968</td>
+      <td>1.030759</td>
+      <td>22.834345</td>
+      <td>25.947674</td>
+      <td>9.86446</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/b62ed80d3972848605f14ce2555e12b4cfbc0ba9fb685ca845e17b342a8c9ca4.png" src="../../_images/b62ed80d3972848605f14ce2555e12b4cfbc0ba9fb685ca845e17b342a8c9ca4.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1738</td>
+      <td>862.1864</td>
+      <td>771.5333</td>
+      <td>186.86353</td>
+      <td>313.08862</td>
+      <td>336.07437</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/2dc5cb91a7530a59f71f457a466c26ac7dcea4ada9ecfd02d7ba70c517ef77a1.png" src="../../_images/2dc5cb91a7530a59f71f457a466c26ac7dcea4ada9ecfd02d7ba70c517ef77a1.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>20306</td>
+      <td>92.13797</td>
+      <td>82.0423</td>
+      <td>25.058252</td>
+      <td>60.910774</td>
+      <td>10.823275</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/9a1972da9b1503509f31842dee459915e9125cc1c85d88b96cace0da879c1116.png" src="../../_images/9a1972da9b1503509f31842dee459915e9125cc1c85d88b96cace0da879c1116.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/cec4f786422c2b9ddad2529ed65d5e489134c62099e2027805ac78b209aada4c.png" src="../../_images/cec4f786422c2b9ddad2529ed65d5e489134c62099e2027805ac78b209aada4c.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>23051</td>
+      <td>28.532982</td>
+      <td>27.37729</td>
+      <td>151.56647</td>
+      <td>197.64738</td>
+      <td>58.262924</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/3cdce6c69e85934c6c7a289308624c2874ed44c01e152ba82c3529149f37a9a7.png" src="../../_images/3cdce6c69e85934c6c7a289308624c2874ed44c01e152ba82c3529149f37a9a7.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/966931df9929cb12168f01b23e69391c4aad8f450ab582861436e2c898e6df71.png" src="../../_images/966931df9929cb12168f01b23e69391c4aad8f450ab582861436e2c898e6df71.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6920</td>
+      <td>310.33423</td>
+      <td>239.23734</td>
+      <td>130.34631</td>
+      <td>276.46588</td>
+      <td>61.244568</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/47803b8b8e82400078c3257826f799e596d4c7522cf052c6c9fa28f0af3c7d3c.png" src="../../_images/47803b8b8e82400078c3257826f799e596d4c7522cf052c6c9fa28f0af3c7d3c.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/fe1f221363fa1380cb0a061d8df9a97820e08873ba9d5f68b6199db09d94b46f.png" src="../../_images/fe1f221363fa1380cb0a061d8df9a97820e08873ba9d5f68b6199db09d94b46f.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4113</td>
+      <td>86.304665</td>
+      <td>58.93135</td>
+      <td>156.32835</td>
+      <td>218.8045</td>
+      <td>60.924282</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/c730db0cc20f90ba7897302578fd3ad0576a8daa56c29e823126a0e311f226ab.png" src="../../_images/c730db0cc20f90ba7897302578fd3ad0576a8daa56c29e823126a0e311f226ab.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>16679</td>
+      <td>168.68835</td>
+      <td>178.66406</td>
+      <td>86.28862</td>
+      <td>122.67459</td>
+      <td>108.68096</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/e86490cef72120dce537ef6761419da46cd66cc8f282ece3b01a9cb03e7017e1.png" src="../../_images/e86490cef72120dce537ef6761419da46cd66cc8f282ece3b01a9cb03e7017e1.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>22777</td>
+      <td>3.649346</td>
+      <td>3.005085</td>
+      <td>153.48041</td>
+      <td>176.18106</td>
+      <td>56.91224</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/cdccd79d373e93d3c4fe528f92ea47715029c7ddd6317f2b10be6d20c6947a4d.png" src="../../_images/cdccd79d373e93d3c4fe528f92ea47715029c7ddd6317f2b10be6d20c6947a4d.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/b09abe3999e185926bb45e647de4c57b21ce88471759ad927506f10697be215c.png" src="../../_images/b09abe3999e185926bb45e647de4c57b21ce88471759ad927506f10697be215c.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/b75b5d0539a271b3769f1ea4377d4a654b4e6673c55ed181d4f4c4c2f3cd0c0d.png" src="../../_images/b75b5d0539a271b3769f1ea4377d4a654b4e6673c55ed181d4f4c4c2f3cd0c0d.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/8f5ffb0db201eab2dfa0b24e18c5e2f89f583f51229a379ea241eb625a7d9793.png" src="../../_images/8f5ffb0db201eab2dfa0b24e18c5e2f89f583f51229a379ea241eb625a7d9793.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>11066</td>
+      <td>543.58453</td>
+      <td>445.76807</td>
+      <td>101.450960</td>
+      <td>248.55914</td>
+      <td>88.186250</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>11141</td>
+      <td>127.23700</td>
+      <td>100.88922</td>
+      <td>24.098667</td>
+      <td>55.92543</td>
+      <td>12.357681</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/0e84d32c22d5a1fd5204581f14cc6f4e89cadcb09787f5d34b0bedac61e20386.png" src="../../_images/0e84d32c22d5a1fd5204581f14cc6f4e89cadcb09787f5d34b0bedac61e20386.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>16241</td>
+      <td>478.90002</td>
+      <td>402.82794</td>
+      <td>121.125626</td>
+      <td>201.27032</td>
+      <td>189.14105</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>16281</td>
+      <td>533.59265</td>
+      <td>445.97720</td>
+      <td>125.173480</td>
+      <td>218.79831</td>
+      <td>209.59479</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>16363</td>
+      <td>1375.61390</td>
+      <td>1122.04930</td>
+      <td>257.728180</td>
+      <td>503.11823</td>
+      <td>362.72620</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/d2cbfbef6d56933a3e888900ea917a7aa355e39e5ce42e5bc9176f17f58d44ef.png" src="../../_images/d2cbfbef6d56933a3e888900ea917a7aa355e39e5ce42e5bc9176f17f58d44ef.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/0ba265e8c7b659c49379f43fdc8fe2ed30544a7caf7cf497d99ec74490814ed1.png" src="../../_images/0ba265e8c7b659c49379f43fdc8fe2ed30544a7caf7cf497d99ec74490814ed1.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6355</td>
+      <td>169.00424</td>
+      <td>157.13629</td>
+      <td>101.82687</td>
+      <td>133.86482</td>
+      <td>140.12424</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>6367</td>
+      <td>411.78930</td>
+      <td>369.01520</td>
+      <td>155.07437</td>
+      <td>245.90619</td>
+      <td>221.54620</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>6427</td>
+      <td>310.57610</td>
+      <td>278.11642</td>
+      <td>111.77782</td>
+      <td>181.24963</td>
+      <td>129.55917</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/745567001cda296f697564522d10a188ec63f987ed9ea703065d106897ff8cef.png" src="../../_images/745567001cda296f697564522d10a188ec63f987ed9ea703065d106897ff8cef.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3785</td>
+      <td>221.88788</td>
+      <td>198.60864</td>
+      <td>110.58205</td>
+      <td>187.3664</td>
+      <td>111.519775</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/6f048a52c9dd3f44945208d30ef62343cabe682a064c2f08fed06f25b5ff16c9.png" src="../../_images/6f048a52c9dd3f44945208d30ef62343cabe682a064c2f08fed06f25b5ff16c9.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4824</td>
+      <td>504.35724</td>
+      <td>428.12714</td>
+      <td>132.79868</td>
+      <td>231.58406</td>
+      <td>209.25032</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/6ef16a99da5a6605db0b1995f3fc5056ca28d99c29038d327094abad6fc7a0bd.png" src="../../_images/6ef16a99da5a6605db0b1995f3fc5056ca28d99c29038d327094abad6fc7a0bd.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>18853</td>
+      <td>1199.24510</td>
+      <td>978.0354</td>
+      <td>136.174620</td>
+      <td>344.26532</td>
+      <td>213.56413</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>18888</td>
+      <td>259.73538</td>
+      <td>220.0382</td>
+      <td>59.159233</td>
+      <td>122.79360</td>
+      <td>104.98343</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/45f1ae994e24a2e7391e4d87c55c188d7a6731d8f590743dc792d1a211526a4c.png" src="../../_images/45f1ae994e24a2e7391e4d87c55c188d7a6731d8f590743dc792d1a211526a4c.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>12545</td>
+      <td>349.741900</td>
+      <td>289.352570</td>
+      <td>36.302704</td>
+      <td>124.468440</td>
+      <td>21.005724</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12567</td>
+      <td>122.465930</td>
+      <td>100.363464</td>
+      <td>13.474859</td>
+      <td>44.911263</td>
+      <td>8.625426</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12596</td>
+      <td>53.825615</td>
+      <td>45.030575</td>
+      <td>4.912203</td>
+      <td>18.365719</td>
+      <td>5.577919</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12598</td>
+      <td>164.895140</td>
+      <td>137.098920</td>
+      <td>16.680378</td>
+      <td>57.659904</td>
+      <td>14.194483</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12604</td>
+      <td>358.089260</td>
+      <td>296.036800</td>
+      <td>36.674130</td>
+      <td>128.105740</td>
+      <td>25.607796</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12608</td>
+      <td>203.285310</td>
+      <td>167.817260</td>
+      <td>22.094963</td>
+      <td>72.994660</td>
+      <td>18.141930</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12610</td>
+      <td>411.094000</td>
+      <td>339.174560</td>
+      <td>43.150208</td>
+      <td>147.488560</td>
+      <td>35.969894</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12633</td>
+      <td>495.969420</td>
+      <td>410.721440</td>
+      <td>51.217392</td>
+      <td>176.474840</td>
+      <td>43.337727</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12642</td>
+      <td>590.871700</td>
+      <td>490.306520</td>
+      <td>59.313324</td>
+      <td>208.772800</td>
+      <td>48.069984</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12653</td>
+      <td>470.576170</td>
+      <td>389.597050</td>
+      <td>47.210960</td>
+      <td>167.043490</td>
+      <td>42.330597</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12658</td>
+      <td>808.167500</td>
+      <td>689.811400</td>
+      <td>128.620500</td>
+      <td>327.681030</td>
+      <td>146.078550</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12670</td>
+      <td>290.374050</td>
+      <td>244.325740</td>
+      <td>25.648163</td>
+      <td>98.486770</td>
+      <td>18.643420</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12674</td>
+      <td>184.520540</td>
+      <td>155.572650</td>
+      <td>15.709750</td>
+      <td>61.886555</td>
+      <td>16.231392</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12685</td>
+      <td>243.610030</td>
+      <td>203.424900</td>
+      <td>23.690685</td>
+      <td>83.761720</td>
+      <td>24.834219</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12700</td>
+      <td>166.181410</td>
+      <td>140.775670</td>
+      <td>14.015860</td>
+      <td>54.536423</td>
+      <td>13.013658</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12704</td>
+      <td>154.161830</td>
+      <td>135.931490</td>
+      <td>12.001558</td>
+      <td>48.292374</td>
+      <td>22.118435</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12724</td>
+      <td>319.694950</td>
+      <td>286.293200</td>
+      <td>74.019360</td>
+      <td>146.346530</td>
+      <td>100.866490</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12729</td>
+      <td>470.841400</td>
+      <td>393.290900</td>
+      <td>45.670654</td>
+      <td>163.023160</td>
+      <td>36.200050</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12730</td>
+      <td>151.692170</td>
+      <td>126.442140</td>
+      <td>15.472469</td>
+      <td>52.917350</td>
+      <td>14.216673</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12820</td>
+      <td>54.723440</td>
+      <td>44.621490</td>
+      <td>5.795657</td>
+      <td>20.495945</td>
+      <td>3.776571</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/d638ca70ade70504dc951346bfa6b8621db6341935fc5c6bf5f73476dffd97bd.png" src="../../_images/d638ca70ade70504dc951346bfa6b8621db6341935fc5c6bf5f73476dffd97bd.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>366</td>
+      <td>138.24615</td>
+      <td>132.99028</td>
+      <td>131.38171</td>
+      <td>197.97958</td>
+      <td>148.28897</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/0025a72b87d5bdd158836416c474c215318e83c6e69eed4a548ff8d6f79e43a3.png" src="../../_images/0025a72b87d5bdd158836416c474c215318e83c6e69eed4a548ff8d6f79e43a3.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/48db17bf61a8ffc69129fd7ed071af0c6ad3e890723294a04360852492ae0424.png" src="../../_images/48db17bf61a8ffc69129fd7ed071af0c6ad3e890723294a04360852492ae0424.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/86bd1c0e8c78658fc34211ab48e4b0715e3ccd87ff0099a12ad2e2727bdb0c6b.png" src="../../_images/86bd1c0e8c78658fc34211ab48e4b0715e3ccd87ff0099a12ad2e2727bdb0c6b.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>8805</td>
+      <td>1052.11910</td>
+      <td>895.16190</td>
+      <td>165.38402</td>
+      <td>352.59625</td>
+      <td>214.8663</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>8852</td>
+      <td>631.03015</td>
+      <td>531.06274</td>
+      <td>77.99819</td>
+      <td>194.41049</td>
+      <td>161.1130</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/d3d95a6f1f2bb9e5395b27df2d2c347fc9cb2544638976aecaaabf8d89ca8ac9.png" src="../../_images/d3d95a6f1f2bb9e5395b27df2d2c347fc9cb2544638976aecaaabf8d89ca8ac9.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>12990</td>
+      <td>558.31836</td>
+      <td>463.32275</td>
+      <td>117.27822</td>
+      <td>270.39926</td>
+      <td>91.99196</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/dd2b0cc7c97f016f8338649e33da8f4a34638871a8c2be1252fd0e33f7c0efbd.png" src="../../_images/dd2b0cc7c97f016f8338649e33da8f4a34638871a8c2be1252fd0e33f7c0efbd.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>335</td>
+      <td>112.41501</td>
+      <td>125.35636</td>
+      <td>49.314747</td>
+      <td>86.03181</td>
+      <td>86.37816</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/76a27e69c1324feea96c354be3ef87e11eeb97888844aff50a5547260bee797b.png" src="../../_images/76a27e69c1324feea96c354be3ef87e11eeb97888844aff50a5547260bee797b.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>17730</td>
+      <td>69.43493</td>
+      <td>57.737495</td>
+      <td>34.106117</td>
+      <td>67.94882</td>
+      <td>16.85138</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/d8bf529b0046dd8a8f55ea7c2b2c2459fb6a06921b52c0590277d29ac6bbcecc.png" src="../../_images/d8bf529b0046dd8a8f55ea7c2b2c2459fb6a06921b52c0590277d29ac6bbcecc.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/4c5afa61796b95aabbf38f168379b11622267c7d623a17661f421a9b5448c1c9.png" src="../../_images/4c5afa61796b95aabbf38f168379b11622267c7d623a17661f421a9b5448c1c9.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10089</td>
+      <td>430.85986</td>
+      <td>348.2904</td>
+      <td>61.31477</td>
+      <td>157.66002</td>
+      <td>95.9509</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/dae28d0109d32c1b330583b63e787c97099e20c22c097b421caa05ce1693c76a.png" src="../../_images/dae28d0109d32c1b330583b63e787c97099e20c22c097b421caa05ce1693c76a.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2145</td>
+      <td>384.57490</td>
+      <td>358.10938</td>
+      <td>130.487690</td>
+      <td>216.588210</td>
+      <td>234.04926</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2195</td>
+      <td>87.19162</td>
+      <td>83.39308</td>
+      <td>37.886894</td>
+      <td>53.982674</td>
+      <td>80.25396</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/210b17c6bfde0a31a1099b27c48a1599668acdfba8fec8cce0f30a247dfb2dd6.png" src="../../_images/210b17c6bfde0a31a1099b27c48a1599668acdfba8fec8cce0f30a247dfb2dd6.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/0846f7e1e33cd07cc86302f025851d51c65a203ea8ad75ce3296ebca1d9df438.png" src="../../_images/0846f7e1e33cd07cc86302f025851d51c65a203ea8ad75ce3296ebca1d9df438.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/27aa28b91525ce9383d4ac1c2a2630f3ff1926b6017ce8ad12494496efe78eca.png" src="../../_images/27aa28b91525ce9383d4ac1c2a2630f3ff1926b6017ce8ad12494496efe78eca.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>15125</td>
+      <td>51.0597</td>
+      <td>46.29392</td>
+      <td>3.398773</td>
+      <td>13.200075</td>
+      <td>2.559929</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/10092a981716bb3415d4f61dc41e7576109a508ee67e8719a14416bef3a2d4fb.png" src="../../_images/10092a981716bb3415d4f61dc41e7576109a508ee67e8719a14416bef3a2d4fb.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/d976091be69510611a6cedff91895ede68a3b1c4201372e0a19a58a220f377c6.png" src="../../_images/d976091be69510611a6cedff91895ede68a3b1c4201372e0a19a58a220f377c6.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10947</td>
+      <td>1289.14150</td>
+      <td>1058.66630</td>
+      <td>192.759890</td>
+      <td>486.48767</td>
+      <td>215.464000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>10984</td>
+      <td>533.55690</td>
+      <td>453.26495</td>
+      <td>118.766910</td>
+      <td>235.35810</td>
+      <td>158.188540</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>11074</td>
+      <td>591.86926</td>
+      <td>493.63360</td>
+      <td>50.495537</td>
+      <td>176.50441</td>
+      <td>55.879223</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/0ede967485f24c09feda40d961e04e335c5f413021300bfb953aed50088c83ae.png" src="../../_images/0ede967485f24c09feda40d961e04e335c5f413021300bfb953aed50088c83ae.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>94</td>
+      <td>368.20624</td>
+      <td>329.138300</td>
+      <td>120.96321</td>
+      <td>254.07788</td>
+      <td>109.978090</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>111</td>
+      <td>117.56981</td>
+      <td>100.891815</td>
+      <td>34.21682</td>
+      <td>78.50572</td>
+      <td>16.118607</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/c11f59df49de8af06423563266fd06453cbf9df2c14544bfbe9259548afd4816.png" src="../../_images/c11f59df49de8af06423563266fd06453cbf9df2c14544bfbe9259548afd4816.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>20167</td>
+      <td>667.24260</td>
+      <td>552.11180</td>
+      <td>116.158356</td>
+      <td>284.73618</td>
+      <td>112.823395</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>20290</td>
+      <td>253.19257</td>
+      <td>203.88437</td>
+      <td>24.129803</td>
+      <td>90.51151</td>
+      <td>9.867722</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/3b95904fc0ad9352ad20790a2fa3791e8fd01220746b5a69b997242102e4433a.png" src="../../_images/3b95904fc0ad9352ad20790a2fa3791e8fd01220746b5a69b997242102e4433a.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>22756</td>
+      <td>22.563103</td>
+      <td>19.497507</td>
+      <td>24.761276</td>
+      <td>39.12460</td>
+      <td>12.793406</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>23315</td>
+      <td>34.068325</td>
+      <td>29.192999</td>
+      <td>40.084060</td>
+      <td>63.18778</td>
+      <td>18.049799</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/6ea69bb2440489a7c3f366dbd4b3187a741edb40e3130a62f52f3dd89810f501.png" src="../../_images/6ea69bb2440489a7c3f366dbd4b3187a741edb40e3130a62f52f3dd89810f501.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>17554</td>
+      <td>50.434616</td>
+      <td>44.187843</td>
+      <td>17.571396</td>
+      <td>38.161186</td>
+      <td>5.955748</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>17669</td>
+      <td>40.533340</td>
+      <td>35.848167</td>
+      <td>12.715648</td>
+      <td>28.717316</td>
+      <td>6.623941</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/e7ceeb364f71af760b27833e17a699b499dcefeb1c21adfacb38eaaaf3be89f8.png" src="../../_images/e7ceeb364f71af760b27833e17a699b499dcefeb1c21adfacb38eaaaf3be89f8.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>18413</td>
+      <td>115.81231</td>
+      <td>95.434940</td>
+      <td>192.38693</td>
+      <td>273.26624</td>
+      <td>85.18586</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>18445</td>
+      <td>72.97128</td>
+      <td>59.956215</td>
+      <td>122.06464</td>
+      <td>176.24387</td>
+      <td>61.38411</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>18471</td>
+      <td>135.02478</td>
+      <td>117.200550</td>
+      <td>180.10555</td>
+      <td>288.15552</td>
+      <td>106.67421</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/7ba8088bf767561de7f777dd84a354bb5724e25c97f1f76548753c0b0176545d.png" src="../../_images/7ba8088bf767561de7f777dd84a354bb5724e25c97f1f76548753c0b0176545d.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/ada2c70db683143ef24e7b4d5fa93f35e44695e4b3a028a57ab95782878364bc.png" src="../../_images/ada2c70db683143ef24e7b4d5fa93f35e44695e4b3a028a57ab95782878364bc.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/9987970933f8f1f079683cd4db93a109946128025c829ce5d71da69a15df57c1.png" src="../../_images/9987970933f8f1f079683cd4db93a109946128025c829ce5d71da69a15df57c1.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/e42dab5883d66e90dc5e4c59640a6ba286e525cdfe1b919c1404eeaeea0d7801.png" src="../../_images/e42dab5883d66e90dc5e4c59640a6ba286e525cdfe1b919c1404eeaeea0d7801.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>424</td>
+      <td>201.20538</td>
+      <td>180.98502</td>
+      <td>17.374626</td>
+      <td>54.0402</td>
+      <td>38.30603</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/c64b4f2160c978f270ba1c2e5ece07bed8f42c8ae3852b30303ed56af0cc61c4.png" src="../../_images/c64b4f2160c978f270ba1c2e5ece07bed8f42c8ae3852b30303ed56af0cc61c4.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/d176823eaa41d8c36d9a5113ca20731cd05135c4ff2a5ddaadae626cbc7a1d5a.png" src="../../_images/d176823eaa41d8c36d9a5113ca20731cd05135c4ff2a5ddaadae626cbc7a1d5a.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>19112</td>
+      <td>30.507418</td>
+      <td>25.92842</td>
+      <td>17.04342</td>
+      <td>32.73887</td>
+      <td>9.028296</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/afd398d257a7343ee906fde879ce393523e417a29d3a6188f591a59b4efab5c5.png" src="../../_images/afd398d257a7343ee906fde879ce393523e417a29d3a6188f591a59b4efab5c5.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6423</td>
+      <td>199.36502</td>
+      <td>214.5218</td>
+      <td>130.07413</td>
+      <td>179.42441</td>
+      <td>242.93665</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/b19b1fedcf622eecabc2ecf18423a0c7e2f08fdfe54e35e2b8abea8b413c1d05.png" src="../../_images/b19b1fedcf622eecabc2ecf18423a0c7e2f08fdfe54e35e2b8abea8b413c1d05.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/23e67b4a1d5ea68d1e452b7a4ea90b1ffdc61fa39a320799937ed255cc0a0de0.png" src="../../_images/23e67b4a1d5ea68d1e452b7a4ea90b1ffdc61fa39a320799937ed255cc0a0de0.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>11947</td>
+      <td>197.54547</td>
+      <td>152.60663</td>
+      <td>18.485174</td>
+      <td>70.14561</td>
+      <td>10.272135</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/13963c15bc1bed6e94353d28bcaf65f7eb37c0bf65ef6698e9524cbd76b39dfe.png" src="../../_images/13963c15bc1bed6e94353d28bcaf65f7eb37c0bf65ef6698e9524cbd76b39dfe.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>17861</td>
+      <td>248.294200</td>
+      <td>196.349580</td>
+      <td>17.320324</td>
+      <td>47.544243</td>
+      <td>18.845045</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>17991</td>
+      <td>623.711300</td>
+      <td>487.749730</td>
+      <td>94.528885</td>
+      <td>186.103210</td>
+      <td>114.592660</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>18019</td>
+      <td>59.458702</td>
+      <td>47.144997</td>
+      <td>3.801718</td>
+      <td>11.387918</td>
+      <td>3.825930</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/0240ff69e9cf13c83c5d696b368c2b8f413036799e198713a64f6a1b2e025ea7.png" src="../../_images/0240ff69e9cf13c83c5d696b368c2b8f413036799e198713a64f6a1b2e025ea7.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>19635</td>
+      <td>632.74810</td>
+      <td>599.96470</td>
+      <td>130.336880</td>
+      <td>231.58487</td>
+      <td>175.81277</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>19733</td>
+      <td>481.56818</td>
+      <td>448.42175</td>
+      <td>62.263447</td>
+      <td>139.13812</td>
+      <td>78.16319</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/bffaf2f8048e8de0a775da693562f492683cde596646763f10b14bba2a05c94b.png" src="../../_images/bffaf2f8048e8de0a775da693562f492683cde596646763f10b14bba2a05c94b.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/4d894613d3fd0cbf21b9eaa1a5b1ad67c44c72827eb18442c83b06af71ce4213.png" src="../../_images/4d894613d3fd0cbf21b9eaa1a5b1ad67c44c72827eb18442c83b06af71ce4213.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6118</td>
+      <td>848.68340</td>
+      <td>626.87040</td>
+      <td>209.465770</td>
+      <td>344.362030</td>
+      <td>295.73240</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>6184</td>
+      <td>110.23176</td>
+      <td>83.87155</td>
+      <td>34.765617</td>
+      <td>52.543224</td>
+      <td>72.20294</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/f143b994ab2c4263591ed788e9338f110d4eced460f72b0483f3d5ba8ce0f96c.png" src="../../_images/f143b994ab2c4263591ed788e9338f110d4eced460f72b0483f3d5ba8ce0f96c.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/9b545ec3b3899f9e51d182769f3e5609ed9a875da1db9e4dbe99009169c0b045.png" src="../../_images/9b545ec3b3899f9e51d182769f3e5609ed9a875da1db9e4dbe99009169c0b045.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/0dd4130009adec022e6da78805581ed89e0a9895de526d5217585c3834cb2ae7.png" src="../../_images/0dd4130009adec022e6da78805581ed89e0a9895de526d5217585c3834cb2ae7.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>13014</td>
+      <td>15.628595</td>
+      <td>12.571292</td>
+      <td>30.311687</td>
+      <td>42.064255</td>
+      <td>14.824036</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/a955835fabb2a7e7a0e58256de8d614c43328fb2d4cea208f3b7933369cb0058.png" src="../../_images/a955835fabb2a7e7a0e58256de8d614c43328fb2d4cea208f3b7933369cb0058.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>7616</td>
+      <td>21.705635</td>
+      <td>14.82315</td>
+      <td>41.298622</td>
+      <td>56.68804</td>
+      <td>15.659912</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/93c7c16e88e4022a1de02eae615ecf3e2e0a64d7f395a355a01704902d7a3922.png" src="../../_images/93c7c16e88e4022a1de02eae615ecf3e2e0a64d7f395a355a01704902d7a3922.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>13955</td>
+      <td>467.01944</td>
+      <td>448.64185</td>
+      <td>131.300480</td>
+      <td>218.36539</td>
+      <td>246.12910</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>13978</td>
+      <td>223.38016</td>
+      <td>211.07175</td>
+      <td>48.102283</td>
+      <td>94.33936</td>
+      <td>134.03777</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>14097</td>
+      <td>118.20743</td>
+      <td>112.95010</td>
+      <td>32.643333</td>
+      <td>67.74466</td>
+      <td>91.80328</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/7a6c00740bc6827d94855698c8f0e49ef51c5db1f05523279e9efd22517d0206.png" src="../../_images/7a6c00740bc6827d94855698c8f0e49ef51c5db1f05523279e9efd22517d0206.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2790</td>
+      <td>396.58752</td>
+      <td>401.70035</td>
+      <td>171.75653</td>
+      <td>266.92715</td>
+      <td>211.54721</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/6876b8af62ae82caeacdbd72237883fe0f7a80067728bb4af45cd51b7790c077.png" src="../../_images/6876b8af62ae82caeacdbd72237883fe0f7a80067728bb4af45cd51b7790c077.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4469</td>
+      <td>22.625677</td>
+      <td>18.321789</td>
+      <td>87.894196</td>
+      <td>110.199326</td>
+      <td>34.026875</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>4489</td>
+      <td>11.161069</td>
+      <td>8.862710</td>
+      <td>45.550995</td>
+      <td>56.890800</td>
+      <td>18.164700</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/a02f2a9670311cdb8295e68a566c5748282a3f2b281daa23ca4570deac6bac1d.png" src="../../_images/a02f2a9670311cdb8295e68a566c5748282a3f2b281daa23ca4570deac6bac1d.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/c2592afd5db702a78e6baeae5c3c275fd8d4fced74c08bba12cd1c6f512b0ce1.png" src="../../_images/c2592afd5db702a78e6baeae5c3c275fd8d4fced74c08bba12cd1c6f512b0ce1.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>21143</td>
+      <td>412.36410</td>
+      <td>369.94922</td>
+      <td>57.440155</td>
+      <td>119.56910</td>
+      <td>83.999740</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>24248</td>
+      <td>587.52203</td>
+      <td>522.26825</td>
+      <td>88.367310</td>
+      <td>185.48111</td>
+      <td>126.407074</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/96fa2b98fc029e182174852753128f2014629ad405de859f707ceb7945fd8502.png" src="../../_images/96fa2b98fc029e182174852753128f2014629ad405de859f707ceb7945fd8502.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/c63229121929aa167010f13e1a3780556f2c8a7daa6ac0e18482efd3d11222f6.png" src="../../_images/c63229121929aa167010f13e1a3780556f2c8a7daa6ac0e18482efd3d11222f6.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>9943</td>
+      <td>67.38488</td>
+      <td>49.34591</td>
+      <td>197.80356</td>
+      <td>256.06567</td>
+      <td>96.11898</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/b31857661d4c8062d38ee7da5a0064251f5311360062b13bf80790950fb0da76.png" src="../../_images/b31857661d4c8062d38ee7da5a0064251f5311360062b13bf80790950fb0da76.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>9138</td>
+      <td>377.20600</td>
+      <td>356.2844</td>
+      <td>50.774130</td>
+      <td>116.48952</td>
+      <td>111.68302</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>9152</td>
+      <td>255.64424</td>
+      <td>244.5323</td>
+      <td>37.134903</td>
+      <td>82.53223</td>
+      <td>84.65083</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/fa78e2e77383bc3ba3d8c6afc69189c8a5f3d1b08006bb2759116fdb7f061ead.png" src="../../_images/fa78e2e77383bc3ba3d8c6afc69189c8a5f3d1b08006bb2759116fdb7f061ead.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>24359</td>
+      <td>10.582537</td>
+      <td>8.258793</td>
+      <td>47.419174</td>
+      <td>57.971535</td>
+      <td>18.966705</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/bd6530786f97d61ff3669ddb79c229d022c087b62ce7f3c72375e0cadbcdc329.png" src="../../_images/bd6530786f97d61ff3669ddb79c229d022c087b62ce7f3c72375e0cadbcdc329.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>767</td>
+      <td>315.23584</td>
+      <td>263.56488</td>
+      <td>143.42600</td>
+      <td>207.52173</td>
+      <td>288.31726</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>787</td>
+      <td>234.24199</td>
+      <td>200.49872</td>
+      <td>124.93092</td>
+      <td>183.07516</td>
+      <td>196.81479</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/582c24e60f531aea6f62cb5d0949d3fc5d3c08e01b6734e6f290878e6a311ec7.png" src="../../_images/582c24e60f531aea6f62cb5d0949d3fc5d3c08e01b6734e6f290878e6a311ec7.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/34b1c8587cba83c7637d39354d1e56f1b4fb07df19a2a1360f463e63305c2361.png" src="../../_images/34b1c8587cba83c7637d39354d1e56f1b4fb07df19a2a1360f463e63305c2361.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>17286</td>
+      <td>45.396366</td>
+      <td>48.89789</td>
+      <td>710.92957</td>
+      <td>845.757</td>
+      <td>286.51785</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/ad27f1a7ec4ff5ef3a90fc920d621218a7139e4b69d36879a45d90e1b736a2d1.png" src="../../_images/ad27f1a7ec4ff5ef3a90fc920d621218a7139e4b69d36879a45d90e1b736a2d1.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/3f1a5de0e29a446d7a4a4ddfc5db617063a29af28bc0c9ce48e4116c89dee359.png" src="../../_images/3f1a5de0e29a446d7a4a4ddfc5db617063a29af28bc0c9ce48e4116c89dee359.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>22703</td>
+      <td>38.46147</td>
+      <td>28.91977</td>
+      <td>148.63379</td>
+      <td>183.29532</td>
+      <td>57.3246</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/694e528b2c133f7ef5a1625ec8324aefc7fb61f023542c94934e80508bccd8d6.png" src="../../_images/694e528b2c133f7ef5a1625ec8324aefc7fb61f023542c94934e80508bccd8d6.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/5285058fe82a2b9cfed68fb777b2643bb360c044ed9a6f8a13eb573cd990ad58.png" src="../../_images/5285058fe82a2b9cfed68fb777b2643bb360c044ed9a6f8a13eb573cd990ad58.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/ba97c11c64d91c4777f944d000c40420ebdf17bb719c7ffd861cd3c67e588348.png" src="../../_images/ba97c11c64d91c4777f944d000c40420ebdf17bb719c7ffd861cd3c67e588348.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/353a9b87a2775429be227c4753b17ee115d5a411bd8f6e2d5104ec5ce2e13bff.png" src="../../_images/353a9b87a2775429be227c4753b17ee115d5a411bd8f6e2d5104ec5ce2e13bff.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/86c222631982666b86e5997b35acf17e1474a18085478ea37856da71eada8fbc.png" src="../../_images/86c222631982666b86e5997b35acf17e1474a18085478ea37856da71eada8fbc.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/bc24f3a8632f46a8f27867cd2a3d319778b35bb9e4b83d5ab2ce3a896e87a774.png" src="../../_images/bc24f3a8632f46a8f27867cd2a3d319778b35bb9e4b83d5ab2ce3a896e87a774.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6033</td>
+      <td>815.87800</td>
+      <td>801.26196</td>
+      <td>103.876730</td>
+      <td>258.25705</td>
+      <td>152.494380</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>6121</td>
+      <td>197.83508</td>
+      <td>191.48380</td>
+      <td>15.333473</td>
+      <td>44.26840</td>
+      <td>7.880258</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/3650349ec97aa1ddb6d0665b3f8383681ff104f522d095f46cacb617b4c504f1.png" src="../../_images/3650349ec97aa1ddb6d0665b3f8383681ff104f522d095f46cacb617b4c504f1.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5873</td>
+      <td>7.115836</td>
+      <td>4.936631</td>
+      <td>89.21795</td>
+      <td>102.00598</td>
+      <td>34.24465</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>5901</td>
+      <td>20.575323</td>
+      <td>14.624859</td>
+      <td>244.72014</td>
+      <td>283.39624</td>
+      <td>94.44893</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/bce3f9eb984d59f7980117120c597d9d299d8b3c021565e03622fd57fe7413ca.png" src="../../_images/bce3f9eb984d59f7980117120c597d9d299d8b3c021565e03622fd57fe7413ca.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>7144</td>
+      <td>8.164288</td>
+      <td>6.457831</td>
+      <td>335.877320</td>
+      <td>378.05838</td>
+      <td>126.624170</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>7182</td>
+      <td>2.659454</td>
+      <td>2.036772</td>
+      <td>118.362946</td>
+      <td>136.04367</td>
+      <td>43.919926</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>7185</td>
+      <td>1.832194</td>
+      <td>1.422048</td>
+      <td>79.088550</td>
+      <td>91.02767</td>
+      <td>28.607098</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>7201</td>
+      <td>2.386760</td>
+      <td>1.784196</td>
+      <td>112.346690</td>
+      <td>126.53420</td>
+      <td>41.200974</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/dca6c8dddf1989780c369a78dce7405df1e65f0479086f163764184520cb30df.png" src="../../_images/dca6c8dddf1989780c369a78dce7405df1e65f0479086f163764184520cb30df.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/8386233cee6df4ad32f2972e76c19eabed2c9ebd0aed79ca21d9a574a55210de.png" src="../../_images/8386233cee6df4ad32f2972e76c19eabed2c9ebd0aed79ca21d9a574a55210de.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>15978</td>
+      <td>110.37531</td>
+      <td>89.579346</td>
+      <td>46.952984</td>
+      <td>97.65004</td>
+      <td>12.715537</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>15991</td>
+      <td>131.78204</td>
+      <td>108.154980</td>
+      <td>52.301247</td>
+      <td>111.85637</td>
+      <td>21.577236</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>16126</td>
+      <td>254.08147</td>
+      <td>242.743730</td>
+      <td>62.699913</td>
+      <td>131.90909</td>
+      <td>100.379850</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/ff8745f456003ad91e425c20e9c72e21317288135e78a7232ccd745f22ab2071.png" src="../../_images/ff8745f456003ad91e425c20e9c72e21317288135e78a7232ccd745f22ab2071.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>16703</td>
+      <td>47.45737</td>
+      <td>37.276016</td>
+      <td>32.81147</td>
+      <td>59.996674</td>
+      <td>14.590048</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/68b719a5ed53691fe158c62a26171da84618022a4c415052a7b2667b62984b61.png" src="../../_images/68b719a5ed53691fe158c62a26171da84618022a4c415052a7b2667b62984b61.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/2a6423d018a3a6b6cd3c828447e7999ee1307af7d544a4f43c13766f6b3e9876.png" src="../../_images/2a6423d018a3a6b6cd3c828447e7999ee1307af7d544a4f43c13766f6b3e9876.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6092</td>
+      <td>494.99158</td>
+      <td>417.01193</td>
+      <td>34.434258</td>
+      <td>125.594410</td>
+      <td>48.432450</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>6095</td>
+      <td>130.56432</td>
+      <td>109.69197</td>
+      <td>7.609190</td>
+      <td>32.862846</td>
+      <td>6.755522</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>6153</td>
+      <td>137.96169</td>
+      <td>120.53375</td>
+      <td>7.420027</td>
+      <td>31.769276</td>
+      <td>5.665226</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/6a24b03a7f0354e27eee697a39c56bacd90ecc0f69da4303b5e9ee2905616ff8.png" src="../../_images/6a24b03a7f0354e27eee697a39c56bacd90ecc0f69da4303b5e9ee2905616ff8.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/4bd706ddfe02c2667b3d84f033f7313e82d27f3de3188367d47b2d632438e300.png" src="../../_images/4bd706ddfe02c2667b3d84f033f7313e82d27f3de3188367d47b2d632438e300.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>20401</td>
+      <td>122.98192</td>
+      <td>106.786804</td>
+      <td>9.043880</td>
+      <td>26.801476</td>
+      <td>6.262432</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>20444</td>
+      <td>275.26904</td>
+      <td>239.238780</td>
+      <td>27.309113</td>
+      <td>62.693336</td>
+      <td>55.146156</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/323b43bc80c68e1d519accd03d8762587a7d6157929a30ecdac1d693ee407581.png" src="../../_images/323b43bc80c68e1d519accd03d8762587a7d6157929a30ecdac1d693ee407581.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10941</td>
+      <td>514.1933</td>
+      <td>440.289670</td>
+      <td>229.84802</td>
+      <td>438.73944</td>
+      <td>193.209370</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>11052</td>
+      <td>59.4791</td>
+      <td>49.479313</td>
+      <td>22.59182</td>
+      <td>48.42582</td>
+      <td>13.314555</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/0ea29bb19cce013a054080cd7855276490943984f6d0dacb200438aa534b4adf.png" src="../../_images/0ea29bb19cce013a054080cd7855276490943984f6d0dacb200438aa534b4adf.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>14708</td>
+      <td>46.736187</td>
+      <td>41.04299</td>
+      <td>151.0263</td>
+      <td>192.76443</td>
+      <td>55.398155</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>14730</td>
+      <td>75.470610</td>
+      <td>72.98221</td>
+      <td>154.8461</td>
+      <td>202.29895</td>
+      <td>88.669556</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/9073d2b4cce67828162151efc7857badea59acbd03588c2f463e7ec119138b8b.png" src="../../_images/9073d2b4cce67828162151efc7857badea59acbd03588c2f463e7ec119138b8b.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/8778769cb111d7ad32b93f7970ebd0fe80ec40a5900d6a3a58f06f2255944e64.png" src="../../_images/8778769cb111d7ad32b93f7970ebd0fe80ec40a5900d6a3a58f06f2255944e64.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>23960</td>
+      <td>855.8414</td>
+      <td>779.4991</td>
+      <td>102.507095</td>
+      <td>315.64264</td>
+      <td>106.575485</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/1bac729edd6bb9da02de1e187d176240445987089951254b9396cbb0be954f81.png" src="../../_images/1bac729edd6bb9da02de1e187d176240445987089951254b9396cbb0be954f81.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5353</td>
+      <td>2025.0446</td>
+      <td>1636.3103</td>
+      <td>228.48224</td>
+      <td>605.2258</td>
+      <td>288.05402</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/b5d7f9c77eec3d9b15d0d0711efadc297cfd1d31308405588538b692aa28c99b.png" src="../../_images/b5d7f9c77eec3d9b15d0d0711efadc297cfd1d31308405588538b692aa28c99b.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>23469</td>
+      <td>589.30396</td>
+      <td>523.15845</td>
+      <td>97.41258</td>
+      <td>189.43181</td>
+      <td>167.19943</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/a4bb45af0917e6f92c1649404760d219f5248afd4de690b9597119f18a334289.png" src="../../_images/a4bb45af0917e6f92c1649404760d219f5248afd4de690b9597119f18a334289.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2896</td>
+      <td>81.80902</td>
+      <td>77.71023</td>
+      <td>11.031394</td>
+      <td>33.571064</td>
+      <td>3.721366</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2905</td>
+      <td>73.38704</td>
+      <td>70.04235</td>
+      <td>9.283696</td>
+      <td>29.202192</td>
+      <td>3.956315</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/94072ff3c15e3c3f0d92a50e844228f2267774952b389f423b5944a9ee156d8d.png" src="../../_images/94072ff3c15e3c3f0d92a50e844228f2267774952b389f423b5944a9ee156d8d.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>22501</td>
+      <td>208.50858</td>
+      <td>160.06058</td>
+      <td>42.797493</td>
+      <td>108.04914</td>
+      <td>23.064548</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/92291320a1963521ce27ee34582d9d8c61d7848ecf02375d791ec24fa7a01886.png" src="../../_images/92291320a1963521ce27ee34582d9d8c61d7848ecf02375d791ec24fa7a01886.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/e845644497a6f76d2197d82f92c581fb7d806311611c9520761ff4af5b53b440.png" src="../../_images/e845644497a6f76d2197d82f92c581fb7d806311611c9520761ff4af5b53b440.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2579</td>
+      <td>41.60475</td>
+      <td>33.223373</td>
+      <td>80.75937</td>
+      <td>108.91202</td>
+      <td>38.48153</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/ba07bac54e88ac234ed5b99ff18a4b4846536cc242ef188a82958228ccfa3117.png" src="../../_images/ba07bac54e88ac234ed5b99ff18a4b4846536cc242ef188a82958228ccfa3117.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>20457</td>
+      <td>223.80472</td>
+      <td>209.28508</td>
+      <td>39.678432</td>
+      <td>104.9862</td>
+      <td>19.110641</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/02fa21633b53c7a5428f952fb71ca1f43dc0de128a385db9baefa6cf53a9f651.png" src="../../_images/02fa21633b53c7a5428f952fb71ca1f43dc0de128a385db9baefa6cf53a9f651.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1258</td>
+      <td>801.7057</td>
+      <td>758.4308</td>
+      <td>187.92026</td>
+      <td>361.1421</td>
+      <td>299.8635</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/0525b873e7920b3e71c7c272fd8fef201a7e8961a1157927bcf6c307158fd7d2.png" src="../../_images/0525b873e7920b3e71c7c272fd8fef201a7e8961a1157927bcf6c307158fd7d2.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/904b735e9eb063a33e4eccfaf276edbba16df6247f6d4b925077ca7df3f26cfb.png" src="../../_images/904b735e9eb063a33e4eccfaf276edbba16df6247f6d4b925077ca7df3f26cfb.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/78308f93df33fa71cd7ac936a5b223ddb41b6dc22376e1ac884e8e7c13b54e62.png" src="../../_images/78308f93df33fa71cd7ac936a5b223ddb41b6dc22376e1ac884e8e7c13b54e62.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/15f08fe2d14d4f604cc937b43bedd4fba46528d204cb8e46568abc1984ca2770.png" src="../../_images/15f08fe2d14d4f604cc937b43bedd4fba46528d204cb8e46568abc1984ca2770.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div></div>
+</div>
+</section>
+<section id="scale-zscale">
+<h2>scale: zscale<a class="headerlink" href="#scale-zscale" title="Link to this heading">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/85e0ac3f5e2bcbd1ff120380d6fbcf224a91e6711c4729c9ee8f0225dc69741d.png" src="../../_images/85e0ac3f5e2bcbd1ff120380d6fbcf224a91e6711c4729c9ee8f0225dc69741d.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/84ae266cd4309090bcc181c17504b6500b3a7159f50a17dbaccbb191222b8fb4.png" src="../../_images/84ae266cd4309090bcc181c17504b6500b3a7159f50a17dbaccbb191222b8fb4.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>18443</td>
+      <td>1.490968</td>
+      <td>1.030759</td>
+      <td>22.834345</td>
+      <td>25.947674</td>
+      <td>9.86446</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/b62ed80d3972848605f14ce2555e12b4cfbc0ba9fb685ca845e17b342a8c9ca4.png" src="../../_images/b62ed80d3972848605f14ce2555e12b4cfbc0ba9fb685ca845e17b342a8c9ca4.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1738</td>
+      <td>862.1864</td>
+      <td>771.5333</td>
+      <td>186.86353</td>
+      <td>313.08862</td>
+      <td>336.07437</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/2dc5cb91a7530a59f71f457a466c26ac7dcea4ada9ecfd02d7ba70c517ef77a1.png" src="../../_images/2dc5cb91a7530a59f71f457a466c26ac7dcea4ada9ecfd02d7ba70c517ef77a1.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>20306</td>
+      <td>92.13797</td>
+      <td>82.0423</td>
+      <td>25.058252</td>
+      <td>60.910774</td>
+      <td>10.823275</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/9a1972da9b1503509f31842dee459915e9125cc1c85d88b96cace0da879c1116.png" src="../../_images/9a1972da9b1503509f31842dee459915e9125cc1c85d88b96cace0da879c1116.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/cec4f786422c2b9ddad2529ed65d5e489134c62099e2027805ac78b209aada4c.png" src="../../_images/cec4f786422c2b9ddad2529ed65d5e489134c62099e2027805ac78b209aada4c.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>23051</td>
+      <td>28.532982</td>
+      <td>27.37729</td>
+      <td>151.56647</td>
+      <td>197.64738</td>
+      <td>58.262924</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/3cdce6c69e85934c6c7a289308624c2874ed44c01e152ba82c3529149f37a9a7.png" src="../../_images/3cdce6c69e85934c6c7a289308624c2874ed44c01e152ba82c3529149f37a9a7.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/966931df9929cb12168f01b23e69391c4aad8f450ab582861436e2c898e6df71.png" src="../../_images/966931df9929cb12168f01b23e69391c4aad8f450ab582861436e2c898e6df71.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6920</td>
+      <td>310.33423</td>
+      <td>239.23734</td>
+      <td>130.34631</td>
+      <td>276.46588</td>
+      <td>61.244568</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/47803b8b8e82400078c3257826f799e596d4c7522cf052c6c9fa28f0af3c7d3c.png" src="../../_images/47803b8b8e82400078c3257826f799e596d4c7522cf052c6c9fa28f0af3c7d3c.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/fe1f221363fa1380cb0a061d8df9a97820e08873ba9d5f68b6199db09d94b46f.png" src="../../_images/fe1f221363fa1380cb0a061d8df9a97820e08873ba9d5f68b6199db09d94b46f.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4113</td>
+      <td>86.304665</td>
+      <td>58.93135</td>
+      <td>156.32835</td>
+      <td>218.8045</td>
+      <td>60.924282</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/c730db0cc20f90ba7897302578fd3ad0576a8daa56c29e823126a0e311f226ab.png" src="../../_images/c730db0cc20f90ba7897302578fd3ad0576a8daa56c29e823126a0e311f226ab.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>16679</td>
+      <td>168.68835</td>
+      <td>178.66406</td>
+      <td>86.28862</td>
+      <td>122.67459</td>
+      <td>108.68096</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/e86490cef72120dce537ef6761419da46cd66cc8f282ece3b01a9cb03e7017e1.png" src="../../_images/e86490cef72120dce537ef6761419da46cd66cc8f282ece3b01a9cb03e7017e1.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>22777</td>
+      <td>3.649346</td>
+      <td>3.005085</td>
+      <td>153.48041</td>
+      <td>176.18106</td>
+      <td>56.91224</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/cdccd79d373e93d3c4fe528f92ea47715029c7ddd6317f2b10be6d20c6947a4d.png" src="../../_images/cdccd79d373e93d3c4fe528f92ea47715029c7ddd6317f2b10be6d20c6947a4d.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/b09abe3999e185926bb45e647de4c57b21ce88471759ad927506f10697be215c.png" src="../../_images/b09abe3999e185926bb45e647de4c57b21ce88471759ad927506f10697be215c.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/b75b5d0539a271b3769f1ea4377d4a654b4e6673c55ed181d4f4c4c2f3cd0c0d.png" src="../../_images/b75b5d0539a271b3769f1ea4377d4a654b4e6673c55ed181d4f4c4c2f3cd0c0d.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/8f5ffb0db201eab2dfa0b24e18c5e2f89f583f51229a379ea241eb625a7d9793.png" src="../../_images/8f5ffb0db201eab2dfa0b24e18c5e2f89f583f51229a379ea241eb625a7d9793.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>11066</td>
+      <td>543.58453</td>
+      <td>445.76807</td>
+      <td>101.450960</td>
+      <td>248.55914</td>
+      <td>88.186250</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>11141</td>
+      <td>127.23700</td>
+      <td>100.88922</td>
+      <td>24.098667</td>
+      <td>55.92543</td>
+      <td>12.357681</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/0e84d32c22d5a1fd5204581f14cc6f4e89cadcb09787f5d34b0bedac61e20386.png" src="../../_images/0e84d32c22d5a1fd5204581f14cc6f4e89cadcb09787f5d34b0bedac61e20386.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>16241</td>
+      <td>478.90002</td>
+      <td>402.82794</td>
+      <td>121.125626</td>
+      <td>201.27032</td>
+      <td>189.14105</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>16281</td>
+      <td>533.59265</td>
+      <td>445.97720</td>
+      <td>125.173480</td>
+      <td>218.79831</td>
+      <td>209.59479</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>16363</td>
+      <td>1375.61390</td>
+      <td>1122.04930</td>
+      <td>257.728180</td>
+      <td>503.11823</td>
+      <td>362.72620</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/d2cbfbef6d56933a3e888900ea917a7aa355e39e5ce42e5bc9176f17f58d44ef.png" src="../../_images/d2cbfbef6d56933a3e888900ea917a7aa355e39e5ce42e5bc9176f17f58d44ef.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/0ba265e8c7b659c49379f43fdc8fe2ed30544a7caf7cf497d99ec74490814ed1.png" src="../../_images/0ba265e8c7b659c49379f43fdc8fe2ed30544a7caf7cf497d99ec74490814ed1.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6355</td>
+      <td>169.00424</td>
+      <td>157.13629</td>
+      <td>101.82687</td>
+      <td>133.86482</td>
+      <td>140.12424</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>6367</td>
+      <td>411.78930</td>
+      <td>369.01520</td>
+      <td>155.07437</td>
+      <td>245.90619</td>
+      <td>221.54620</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>6427</td>
+      <td>310.57610</td>
+      <td>278.11642</td>
+      <td>111.77782</td>
+      <td>181.24963</td>
+      <td>129.55917</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/745567001cda296f697564522d10a188ec63f987ed9ea703065d106897ff8cef.png" src="../../_images/745567001cda296f697564522d10a188ec63f987ed9ea703065d106897ff8cef.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3785</td>
+      <td>221.88788</td>
+      <td>198.60864</td>
+      <td>110.58205</td>
+      <td>187.3664</td>
+      <td>111.519775</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/6f048a52c9dd3f44945208d30ef62343cabe682a064c2f08fed06f25b5ff16c9.png" src="../../_images/6f048a52c9dd3f44945208d30ef62343cabe682a064c2f08fed06f25b5ff16c9.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4824</td>
+      <td>504.35724</td>
+      <td>428.12714</td>
+      <td>132.79868</td>
+      <td>231.58406</td>
+      <td>209.25032</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/6ef16a99da5a6605db0b1995f3fc5056ca28d99c29038d327094abad6fc7a0bd.png" src="../../_images/6ef16a99da5a6605db0b1995f3fc5056ca28d99c29038d327094abad6fc7a0bd.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>18853</td>
+      <td>1199.24510</td>
+      <td>978.0354</td>
+      <td>136.174620</td>
+      <td>344.26532</td>
+      <td>213.56413</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>18888</td>
+      <td>259.73538</td>
+      <td>220.0382</td>
+      <td>59.159233</td>
+      <td>122.79360</td>
+      <td>104.98343</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/45f1ae994e24a2e7391e4d87c55c188d7a6731d8f590743dc792d1a211526a4c.png" src="../../_images/45f1ae994e24a2e7391e4d87c55c188d7a6731d8f590743dc792d1a211526a4c.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>12545</td>
+      <td>349.741900</td>
+      <td>289.352570</td>
+      <td>36.302704</td>
+      <td>124.468440</td>
+      <td>21.005724</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12567</td>
+      <td>122.465930</td>
+      <td>100.363464</td>
+      <td>13.474859</td>
+      <td>44.911263</td>
+      <td>8.625426</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12596</td>
+      <td>53.825615</td>
+      <td>45.030575</td>
+      <td>4.912203</td>
+      <td>18.365719</td>
+      <td>5.577919</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12598</td>
+      <td>164.895140</td>
+      <td>137.098920</td>
+      <td>16.680378</td>
+      <td>57.659904</td>
+      <td>14.194483</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12604</td>
+      <td>358.089260</td>
+      <td>296.036800</td>
+      <td>36.674130</td>
+      <td>128.105740</td>
+      <td>25.607796</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12608</td>
+      <td>203.285310</td>
+      <td>167.817260</td>
+      <td>22.094963</td>
+      <td>72.994660</td>
+      <td>18.141930</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12610</td>
+      <td>411.094000</td>
+      <td>339.174560</td>
+      <td>43.150208</td>
+      <td>147.488560</td>
+      <td>35.969894</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12633</td>
+      <td>495.969420</td>
+      <td>410.721440</td>
+      <td>51.217392</td>
+      <td>176.474840</td>
+      <td>43.337727</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12642</td>
+      <td>590.871700</td>
+      <td>490.306520</td>
+      <td>59.313324</td>
+      <td>208.772800</td>
+      <td>48.069984</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12653</td>
+      <td>470.576170</td>
+      <td>389.597050</td>
+      <td>47.210960</td>
+      <td>167.043490</td>
+      <td>42.330597</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12658</td>
+      <td>808.167500</td>
+      <td>689.811400</td>
+      <td>128.620500</td>
+      <td>327.681030</td>
+      <td>146.078550</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12670</td>
+      <td>290.374050</td>
+      <td>244.325740</td>
+      <td>25.648163</td>
+      <td>98.486770</td>
+      <td>18.643420</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12674</td>
+      <td>184.520540</td>
+      <td>155.572650</td>
+      <td>15.709750</td>
+      <td>61.886555</td>
+      <td>16.231392</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12685</td>
+      <td>243.610030</td>
+      <td>203.424900</td>
+      <td>23.690685</td>
+      <td>83.761720</td>
+      <td>24.834219</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12700</td>
+      <td>166.181410</td>
+      <td>140.775670</td>
+      <td>14.015860</td>
+      <td>54.536423</td>
+      <td>13.013658</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12704</td>
+      <td>154.161830</td>
+      <td>135.931490</td>
+      <td>12.001558</td>
+      <td>48.292374</td>
+      <td>22.118435</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12724</td>
+      <td>319.694950</td>
+      <td>286.293200</td>
+      <td>74.019360</td>
+      <td>146.346530</td>
+      <td>100.866490</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12729</td>
+      <td>470.841400</td>
+      <td>393.290900</td>
+      <td>45.670654</td>
+      <td>163.023160</td>
+      <td>36.200050</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12730</td>
+      <td>151.692170</td>
+      <td>126.442140</td>
+      <td>15.472469</td>
+      <td>52.917350</td>
+      <td>14.216673</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>12820</td>
+      <td>54.723440</td>
+      <td>44.621490</td>
+      <td>5.795657</td>
+      <td>20.495945</td>
+      <td>3.776571</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/d638ca70ade70504dc951346bfa6b8621db6341935fc5c6bf5f73476dffd97bd.png" src="../../_images/d638ca70ade70504dc951346bfa6b8621db6341935fc5c6bf5f73476dffd97bd.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>366</td>
+      <td>138.24615</td>
+      <td>132.99028</td>
+      <td>131.38171</td>
+      <td>197.97958</td>
+      <td>148.28897</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/0025a72b87d5bdd158836416c474c215318e83c6e69eed4a548ff8d6f79e43a3.png" src="../../_images/0025a72b87d5bdd158836416c474c215318e83c6e69eed4a548ff8d6f79e43a3.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/48db17bf61a8ffc69129fd7ed071af0c6ad3e890723294a04360852492ae0424.png" src="../../_images/48db17bf61a8ffc69129fd7ed071af0c6ad3e890723294a04360852492ae0424.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/86bd1c0e8c78658fc34211ab48e4b0715e3ccd87ff0099a12ad2e2727bdb0c6b.png" src="../../_images/86bd1c0e8c78658fc34211ab48e4b0715e3ccd87ff0099a12ad2e2727bdb0c6b.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>8805</td>
+      <td>1052.11910</td>
+      <td>895.16190</td>
+      <td>165.38402</td>
+      <td>352.59625</td>
+      <td>214.8663</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>8852</td>
+      <td>631.03015</td>
+      <td>531.06274</td>
+      <td>77.99819</td>
+      <td>194.41049</td>
+      <td>161.1130</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/d3d95a6f1f2bb9e5395b27df2d2c347fc9cb2544638976aecaaabf8d89ca8ac9.png" src="../../_images/d3d95a6f1f2bb9e5395b27df2d2c347fc9cb2544638976aecaaabf8d89ca8ac9.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>12990</td>
+      <td>558.31836</td>
+      <td>463.32275</td>
+      <td>117.27822</td>
+      <td>270.39926</td>
+      <td>91.99196</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/dd2b0cc7c97f016f8338649e33da8f4a34638871a8c2be1252fd0e33f7c0efbd.png" src="../../_images/dd2b0cc7c97f016f8338649e33da8f4a34638871a8c2be1252fd0e33f7c0efbd.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>335</td>
+      <td>112.41501</td>
+      <td>125.35636</td>
+      <td>49.314747</td>
+      <td>86.03181</td>
+      <td>86.37816</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/76a27e69c1324feea96c354be3ef87e11eeb97888844aff50a5547260bee797b.png" src="../../_images/76a27e69c1324feea96c354be3ef87e11eeb97888844aff50a5547260bee797b.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>17730</td>
+      <td>69.43493</td>
+      <td>57.737495</td>
+      <td>34.106117</td>
+      <td>67.94882</td>
+      <td>16.85138</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/d8bf529b0046dd8a8f55ea7c2b2c2459fb6a06921b52c0590277d29ac6bbcecc.png" src="../../_images/d8bf529b0046dd8a8f55ea7c2b2c2459fb6a06921b52c0590277d29ac6bbcecc.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/4c5afa61796b95aabbf38f168379b11622267c7d623a17661f421a9b5448c1c9.png" src="../../_images/4c5afa61796b95aabbf38f168379b11622267c7d623a17661f421a9b5448c1c9.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10089</td>
+      <td>430.85986</td>
+      <td>348.2904</td>
+      <td>61.31477</td>
+      <td>157.66002</td>
+      <td>95.9509</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/dae28d0109d32c1b330583b63e787c97099e20c22c097b421caa05ce1693c76a.png" src="../../_images/dae28d0109d32c1b330583b63e787c97099e20c22c097b421caa05ce1693c76a.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2145</td>
+      <td>384.57490</td>
+      <td>358.10938</td>
+      <td>130.487690</td>
+      <td>216.588210</td>
+      <td>234.04926</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2195</td>
+      <td>87.19162</td>
+      <td>83.39308</td>
+      <td>37.886894</td>
+      <td>53.982674</td>
+      <td>80.25396</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/210b17c6bfde0a31a1099b27c48a1599668acdfba8fec8cce0f30a247dfb2dd6.png" src="../../_images/210b17c6bfde0a31a1099b27c48a1599668acdfba8fec8cce0f30a247dfb2dd6.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/0846f7e1e33cd07cc86302f025851d51c65a203ea8ad75ce3296ebca1d9df438.png" src="../../_images/0846f7e1e33cd07cc86302f025851d51c65a203ea8ad75ce3296ebca1d9df438.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/27aa28b91525ce9383d4ac1c2a2630f3ff1926b6017ce8ad12494496efe78eca.png" src="../../_images/27aa28b91525ce9383d4ac1c2a2630f3ff1926b6017ce8ad12494496efe78eca.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>15125</td>
+      <td>51.0597</td>
+      <td>46.29392</td>
+      <td>3.398773</td>
+      <td>13.200075</td>
+      <td>2.559929</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/10092a981716bb3415d4f61dc41e7576109a508ee67e8719a14416bef3a2d4fb.png" src="../../_images/10092a981716bb3415d4f61dc41e7576109a508ee67e8719a14416bef3a2d4fb.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/d976091be69510611a6cedff91895ede68a3b1c4201372e0a19a58a220f377c6.png" src="../../_images/d976091be69510611a6cedff91895ede68a3b1c4201372e0a19a58a220f377c6.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10947</td>
+      <td>1289.14150</td>
+      <td>1058.66630</td>
+      <td>192.759890</td>
+      <td>486.48767</td>
+      <td>215.464000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>10984</td>
+      <td>533.55690</td>
+      <td>453.26495</td>
+      <td>118.766910</td>
+      <td>235.35810</td>
+      <td>158.188540</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>11074</td>
+      <td>591.86926</td>
+      <td>493.63360</td>
+      <td>50.495537</td>
+      <td>176.50441</td>
+      <td>55.879223</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/0ede967485f24c09feda40d961e04e335c5f413021300bfb953aed50088c83ae.png" src="../../_images/0ede967485f24c09feda40d961e04e335c5f413021300bfb953aed50088c83ae.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>94</td>
+      <td>368.20624</td>
+      <td>329.138300</td>
+      <td>120.96321</td>
+      <td>254.07788</td>
+      <td>109.978090</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>111</td>
+      <td>117.56981</td>
+      <td>100.891815</td>
+      <td>34.21682</td>
+      <td>78.50572</td>
+      <td>16.118607</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/c11f59df49de8af06423563266fd06453cbf9df2c14544bfbe9259548afd4816.png" src="../../_images/c11f59df49de8af06423563266fd06453cbf9df2c14544bfbe9259548afd4816.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>20167</td>
+      <td>667.24260</td>
+      <td>552.11180</td>
+      <td>116.158356</td>
+      <td>284.73618</td>
+      <td>112.823395</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>20290</td>
+      <td>253.19257</td>
+      <td>203.88437</td>
+      <td>24.129803</td>
+      <td>90.51151</td>
+      <td>9.867722</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/3b95904fc0ad9352ad20790a2fa3791e8fd01220746b5a69b997242102e4433a.png" src="../../_images/3b95904fc0ad9352ad20790a2fa3791e8fd01220746b5a69b997242102e4433a.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>22756</td>
+      <td>22.563103</td>
+      <td>19.497507</td>
+      <td>24.761276</td>
+      <td>39.12460</td>
+      <td>12.793406</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>23315</td>
+      <td>34.068325</td>
+      <td>29.192999</td>
+      <td>40.084060</td>
+      <td>63.18778</td>
+      <td>18.049799</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/6ea69bb2440489a7c3f366dbd4b3187a741edb40e3130a62f52f3dd89810f501.png" src="../../_images/6ea69bb2440489a7c3f366dbd4b3187a741edb40e3130a62f52f3dd89810f501.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>17554</td>
+      <td>50.434616</td>
+      <td>44.187843</td>
+      <td>17.571396</td>
+      <td>38.161186</td>
+      <td>5.955748</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>17669</td>
+      <td>40.533340</td>
+      <td>35.848167</td>
+      <td>12.715648</td>
+      <td>28.717316</td>
+      <td>6.623941</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/e7ceeb364f71af760b27833e17a699b499dcefeb1c21adfacb38eaaaf3be89f8.png" src="../../_images/e7ceeb364f71af760b27833e17a699b499dcefeb1c21adfacb38eaaaf3be89f8.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>18413</td>
+      <td>115.81231</td>
+      <td>95.434940</td>
+      <td>192.38693</td>
+      <td>273.26624</td>
+      <td>85.18586</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>18445</td>
+      <td>72.97128</td>
+      <td>59.956215</td>
+      <td>122.06464</td>
+      <td>176.24387</td>
+      <td>61.38411</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>18471</td>
+      <td>135.02478</td>
+      <td>117.200550</td>
+      <td>180.10555</td>
+      <td>288.15552</td>
+      <td>106.67421</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/7ba8088bf767561de7f777dd84a354bb5724e25c97f1f76548753c0b0176545d.png" src="../../_images/7ba8088bf767561de7f777dd84a354bb5724e25c97f1f76548753c0b0176545d.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/ada2c70db683143ef24e7b4d5fa93f35e44695e4b3a028a57ab95782878364bc.png" src="../../_images/ada2c70db683143ef24e7b4d5fa93f35e44695e4b3a028a57ab95782878364bc.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/9987970933f8f1f079683cd4db93a109946128025c829ce5d71da69a15df57c1.png" src="../../_images/9987970933f8f1f079683cd4db93a109946128025c829ce5d71da69a15df57c1.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/e42dab5883d66e90dc5e4c59640a6ba286e525cdfe1b919c1404eeaeea0d7801.png" src="../../_images/e42dab5883d66e90dc5e4c59640a6ba286e525cdfe1b919c1404eeaeea0d7801.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>424</td>
+      <td>201.20538</td>
+      <td>180.98502</td>
+      <td>17.374626</td>
+      <td>54.0402</td>
+      <td>38.30603</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/c64b4f2160c978f270ba1c2e5ece07bed8f42c8ae3852b30303ed56af0cc61c4.png" src="../../_images/c64b4f2160c978f270ba1c2e5ece07bed8f42c8ae3852b30303ed56af0cc61c4.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/d176823eaa41d8c36d9a5113ca20731cd05135c4ff2a5ddaadae626cbc7a1d5a.png" src="../../_images/d176823eaa41d8c36d9a5113ca20731cd05135c4ff2a5ddaadae626cbc7a1d5a.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>19112</td>
+      <td>30.507418</td>
+      <td>25.92842</td>
+      <td>17.04342</td>
+      <td>32.73887</td>
+      <td>9.028296</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/afd398d257a7343ee906fde879ce393523e417a29d3a6188f591a59b4efab5c5.png" src="../../_images/afd398d257a7343ee906fde879ce393523e417a29d3a6188f591a59b4efab5c5.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6423</td>
+      <td>199.36502</td>
+      <td>214.5218</td>
+      <td>130.07413</td>
+      <td>179.42441</td>
+      <td>242.93665</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/b19b1fedcf622eecabc2ecf18423a0c7e2f08fdfe54e35e2b8abea8b413c1d05.png" src="../../_images/b19b1fedcf622eecabc2ecf18423a0c7e2f08fdfe54e35e2b8abea8b413c1d05.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/23e67b4a1d5ea68d1e452b7a4ea90b1ffdc61fa39a320799937ed255cc0a0de0.png" src="../../_images/23e67b4a1d5ea68d1e452b7a4ea90b1ffdc61fa39a320799937ed255cc0a0de0.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>11947</td>
+      <td>197.54547</td>
+      <td>152.60663</td>
+      <td>18.485174</td>
+      <td>70.14561</td>
+      <td>10.272135</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/13963c15bc1bed6e94353d28bcaf65f7eb37c0bf65ef6698e9524cbd76b39dfe.png" src="../../_images/13963c15bc1bed6e94353d28bcaf65f7eb37c0bf65ef6698e9524cbd76b39dfe.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>17861</td>
+      <td>248.294200</td>
+      <td>196.349580</td>
+      <td>17.320324</td>
+      <td>47.544243</td>
+      <td>18.845045</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>17991</td>
+      <td>623.711300</td>
+      <td>487.749730</td>
+      <td>94.528885</td>
+      <td>186.103210</td>
+      <td>114.592660</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>18019</td>
+      <td>59.458702</td>
+      <td>47.144997</td>
+      <td>3.801718</td>
+      <td>11.387918</td>
+      <td>3.825930</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/0240ff69e9cf13c83c5d696b368c2b8f413036799e198713a64f6a1b2e025ea7.png" src="../../_images/0240ff69e9cf13c83c5d696b368c2b8f413036799e198713a64f6a1b2e025ea7.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>19635</td>
+      <td>632.74810</td>
+      <td>599.96470</td>
+      <td>130.336880</td>
+      <td>231.58487</td>
+      <td>175.81277</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>19733</td>
+      <td>481.56818</td>
+      <td>448.42175</td>
+      <td>62.263447</td>
+      <td>139.13812</td>
+      <td>78.16319</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/bffaf2f8048e8de0a775da693562f492683cde596646763f10b14bba2a05c94b.png" src="../../_images/bffaf2f8048e8de0a775da693562f492683cde596646763f10b14bba2a05c94b.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/4d894613d3fd0cbf21b9eaa1a5b1ad67c44c72827eb18442c83b06af71ce4213.png" src="../../_images/4d894613d3fd0cbf21b9eaa1a5b1ad67c44c72827eb18442c83b06af71ce4213.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6118</td>
+      <td>848.68340</td>
+      <td>626.87040</td>
+      <td>209.465770</td>
+      <td>344.362030</td>
+      <td>295.73240</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>6184</td>
+      <td>110.23176</td>
+      <td>83.87155</td>
+      <td>34.765617</td>
+      <td>52.543224</td>
+      <td>72.20294</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/f143b994ab2c4263591ed788e9338f110d4eced460f72b0483f3d5ba8ce0f96c.png" src="../../_images/f143b994ab2c4263591ed788e9338f110d4eced460f72b0483f3d5ba8ce0f96c.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/9b545ec3b3899f9e51d182769f3e5609ed9a875da1db9e4dbe99009169c0b045.png" src="../../_images/9b545ec3b3899f9e51d182769f3e5609ed9a875da1db9e4dbe99009169c0b045.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/0dd4130009adec022e6da78805581ed89e0a9895de526d5217585c3834cb2ae7.png" src="../../_images/0dd4130009adec022e6da78805581ed89e0a9895de526d5217585c3834cb2ae7.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>13014</td>
+      <td>15.628595</td>
+      <td>12.571292</td>
+      <td>30.311687</td>
+      <td>42.064255</td>
+      <td>14.824036</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/a955835fabb2a7e7a0e58256de8d614c43328fb2d4cea208f3b7933369cb0058.png" src="../../_images/a955835fabb2a7e7a0e58256de8d614c43328fb2d4cea208f3b7933369cb0058.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>7616</td>
+      <td>21.705635</td>
+      <td>14.82315</td>
+      <td>41.298622</td>
+      <td>56.68804</td>
+      <td>15.659912</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/93c7c16e88e4022a1de02eae615ecf3e2e0a64d7f395a355a01704902d7a3922.png" src="../../_images/93c7c16e88e4022a1de02eae615ecf3e2e0a64d7f395a355a01704902d7a3922.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>13955</td>
+      <td>467.01944</td>
+      <td>448.64185</td>
+      <td>131.300480</td>
+      <td>218.36539</td>
+      <td>246.12910</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>13978</td>
+      <td>223.38016</td>
+      <td>211.07175</td>
+      <td>48.102283</td>
+      <td>94.33936</td>
+      <td>134.03777</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>14097</td>
+      <td>118.20743</td>
+      <td>112.95010</td>
+      <td>32.643333</td>
+      <td>67.74466</td>
+      <td>91.80328</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/7a6c00740bc6827d94855698c8f0e49ef51c5db1f05523279e9efd22517d0206.png" src="../../_images/7a6c00740bc6827d94855698c8f0e49ef51c5db1f05523279e9efd22517d0206.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2790</td>
+      <td>396.58752</td>
+      <td>401.70035</td>
+      <td>171.75653</td>
+      <td>266.92715</td>
+      <td>211.54721</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/6876b8af62ae82caeacdbd72237883fe0f7a80067728bb4af45cd51b7790c077.png" src="../../_images/6876b8af62ae82caeacdbd72237883fe0f7a80067728bb4af45cd51b7790c077.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4469</td>
+      <td>22.625677</td>
+      <td>18.321789</td>
+      <td>87.894196</td>
+      <td>110.199326</td>
+      <td>34.026875</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>4489</td>
+      <td>11.161069</td>
+      <td>8.862710</td>
+      <td>45.550995</td>
+      <td>56.890800</td>
+      <td>18.164700</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/a02f2a9670311cdb8295e68a566c5748282a3f2b281daa23ca4570deac6bac1d.png" src="../../_images/a02f2a9670311cdb8295e68a566c5748282a3f2b281daa23ca4570deac6bac1d.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/c2592afd5db702a78e6baeae5c3c275fd8d4fced74c08bba12cd1c6f512b0ce1.png" src="../../_images/c2592afd5db702a78e6baeae5c3c275fd8d4fced74c08bba12cd1c6f512b0ce1.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>21143</td>
+      <td>412.36410</td>
+      <td>369.94922</td>
+      <td>57.440155</td>
+      <td>119.56910</td>
+      <td>83.999740</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>24248</td>
+      <td>587.52203</td>
+      <td>522.26825</td>
+      <td>88.367310</td>
+      <td>185.48111</td>
+      <td>126.407074</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/96fa2b98fc029e182174852753128f2014629ad405de859f707ceb7945fd8502.png" src="../../_images/96fa2b98fc029e182174852753128f2014629ad405de859f707ceb7945fd8502.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/c63229121929aa167010f13e1a3780556f2c8a7daa6ac0e18482efd3d11222f6.png" src="../../_images/c63229121929aa167010f13e1a3780556f2c8a7daa6ac0e18482efd3d11222f6.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>9943</td>
+      <td>67.38488</td>
+      <td>49.34591</td>
+      <td>197.80356</td>
+      <td>256.06567</td>
+      <td>96.11898</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/b31857661d4c8062d38ee7da5a0064251f5311360062b13bf80790950fb0da76.png" src="../../_images/b31857661d4c8062d38ee7da5a0064251f5311360062b13bf80790950fb0da76.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>9138</td>
+      <td>377.20600</td>
+      <td>356.2844</td>
+      <td>50.774130</td>
+      <td>116.48952</td>
+      <td>111.68302</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>9152</td>
+      <td>255.64424</td>
+      <td>244.5323</td>
+      <td>37.134903</td>
+      <td>82.53223</td>
+      <td>84.65083</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/fa78e2e77383bc3ba3d8c6afc69189c8a5f3d1b08006bb2759116fdb7f061ead.png" src="../../_images/fa78e2e77383bc3ba3d8c6afc69189c8a5f3d1b08006bb2759116fdb7f061ead.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>24359</td>
+      <td>10.582537</td>
+      <td>8.258793</td>
+      <td>47.419174</td>
+      <td>57.971535</td>
+      <td>18.966705</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/bd6530786f97d61ff3669ddb79c229d022c087b62ce7f3c72375e0cadbcdc329.png" src="../../_images/bd6530786f97d61ff3669ddb79c229d022c087b62ce7f3c72375e0cadbcdc329.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>767</td>
+      <td>315.23584</td>
+      <td>263.56488</td>
+      <td>143.42600</td>
+      <td>207.52173</td>
+      <td>288.31726</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>787</td>
+      <td>234.24199</td>
+      <td>200.49872</td>
+      <td>124.93092</td>
+      <td>183.07516</td>
+      <td>196.81479</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/582c24e60f531aea6f62cb5d0949d3fc5d3c08e01b6734e6f290878e6a311ec7.png" src="../../_images/582c24e60f531aea6f62cb5d0949d3fc5d3c08e01b6734e6f290878e6a311ec7.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/34b1c8587cba83c7637d39354d1e56f1b4fb07df19a2a1360f463e63305c2361.png" src="../../_images/34b1c8587cba83c7637d39354d1e56f1b4fb07df19a2a1360f463e63305c2361.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>17286</td>
+      <td>45.396366</td>
+      <td>48.89789</td>
+      <td>710.92957</td>
+      <td>845.757</td>
+      <td>286.51785</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/ad27f1a7ec4ff5ef3a90fc920d621218a7139e4b69d36879a45d90e1b736a2d1.png" src="../../_images/ad27f1a7ec4ff5ef3a90fc920d621218a7139e4b69d36879a45d90e1b736a2d1.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/3f1a5de0e29a446d7a4a4ddfc5db617063a29af28bc0c9ce48e4116c89dee359.png" src="../../_images/3f1a5de0e29a446d7a4a4ddfc5db617063a29af28bc0c9ce48e4116c89dee359.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>22703</td>
+      <td>38.46147</td>
+      <td>28.91977</td>
+      <td>148.63379</td>
+      <td>183.29532</td>
+      <td>57.3246</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/694e528b2c133f7ef5a1625ec8324aefc7fb61f023542c94934e80508bccd8d6.png" src="../../_images/694e528b2c133f7ef5a1625ec8324aefc7fb61f023542c94934e80508bccd8d6.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/5285058fe82a2b9cfed68fb777b2643bb360c044ed9a6f8a13eb573cd990ad58.png" src="../../_images/5285058fe82a2b9cfed68fb777b2643bb360c044ed9a6f8a13eb573cd990ad58.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/ba97c11c64d91c4777f944d000c40420ebdf17bb719c7ffd861cd3c67e588348.png" src="../../_images/ba97c11c64d91c4777f944d000c40420ebdf17bb719c7ffd861cd3c67e588348.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/353a9b87a2775429be227c4753b17ee115d5a411bd8f6e2d5104ec5ce2e13bff.png" src="../../_images/353a9b87a2775429be227c4753b17ee115d5a411bd8f6e2d5104ec5ce2e13bff.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/86c222631982666b86e5997b35acf17e1474a18085478ea37856da71eada8fbc.png" src="../../_images/86c222631982666b86e5997b35acf17e1474a18085478ea37856da71eada8fbc.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/bc24f3a8632f46a8f27867cd2a3d319778b35bb9e4b83d5ab2ce3a896e87a774.png" src="../../_images/bc24f3a8632f46a8f27867cd2a3d319778b35bb9e4b83d5ab2ce3a896e87a774.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6033</td>
+      <td>815.87800</td>
+      <td>801.26196</td>
+      <td>103.876730</td>
+      <td>258.25705</td>
+      <td>152.494380</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>6121</td>
+      <td>197.83508</td>
+      <td>191.48380</td>
+      <td>15.333473</td>
+      <td>44.26840</td>
+      <td>7.880258</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/3650349ec97aa1ddb6d0665b3f8383681ff104f522d095f46cacb617b4c504f1.png" src="../../_images/3650349ec97aa1ddb6d0665b3f8383681ff104f522d095f46cacb617b4c504f1.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5873</td>
+      <td>7.115836</td>
+      <td>4.936631</td>
+      <td>89.21795</td>
+      <td>102.00598</td>
+      <td>34.24465</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>5901</td>
+      <td>20.575323</td>
+      <td>14.624859</td>
+      <td>244.72014</td>
+      <td>283.39624</td>
+      <td>94.44893</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/bce3f9eb984d59f7980117120c597d9d299d8b3c021565e03622fd57fe7413ca.png" src="../../_images/bce3f9eb984d59f7980117120c597d9d299d8b3c021565e03622fd57fe7413ca.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>7144</td>
+      <td>8.164288</td>
+      <td>6.457831</td>
+      <td>335.877320</td>
+      <td>378.05838</td>
+      <td>126.624170</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>7182</td>
+      <td>2.659454</td>
+      <td>2.036772</td>
+      <td>118.362946</td>
+      <td>136.04367</td>
+      <td>43.919926</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>7185</td>
+      <td>1.832194</td>
+      <td>1.422048</td>
+      <td>79.088550</td>
+      <td>91.02767</td>
+      <td>28.607098</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>7201</td>
+      <td>2.386760</td>
+      <td>1.784196</td>
+      <td>112.346690</td>
+      <td>126.53420</td>
+      <td>41.200974</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/dca6c8dddf1989780c369a78dce7405df1e65f0479086f163764184520cb30df.png" src="../../_images/dca6c8dddf1989780c369a78dce7405df1e65f0479086f163764184520cb30df.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/8386233cee6df4ad32f2972e76c19eabed2c9ebd0aed79ca21d9a574a55210de.png" src="../../_images/8386233cee6df4ad32f2972e76c19eabed2c9ebd0aed79ca21d9a574a55210de.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>15978</td>
+      <td>110.37531</td>
+      <td>89.579346</td>
+      <td>46.952984</td>
+      <td>97.65004</td>
+      <td>12.715537</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>15991</td>
+      <td>131.78204</td>
+      <td>108.154980</td>
+      <td>52.301247</td>
+      <td>111.85637</td>
+      <td>21.577236</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>16126</td>
+      <td>254.08147</td>
+      <td>242.743730</td>
+      <td>62.699913</td>
+      <td>131.90909</td>
+      <td>100.379850</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/ff8745f456003ad91e425c20e9c72e21317288135e78a7232ccd745f22ab2071.png" src="../../_images/ff8745f456003ad91e425c20e9c72e21317288135e78a7232ccd745f22ab2071.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>16703</td>
+      <td>47.45737</td>
+      <td>37.276016</td>
+      <td>32.81147</td>
+      <td>59.996674</td>
+      <td>14.590048</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/68b719a5ed53691fe158c62a26171da84618022a4c415052a7b2667b62984b61.png" src="../../_images/68b719a5ed53691fe158c62a26171da84618022a4c415052a7b2667b62984b61.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/2a6423d018a3a6b6cd3c828447e7999ee1307af7d544a4f43c13766f6b3e9876.png" src="../../_images/2a6423d018a3a6b6cd3c828447e7999ee1307af7d544a4f43c13766f6b3e9876.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6092</td>
+      <td>494.99158</td>
+      <td>417.01193</td>
+      <td>34.434258</td>
+      <td>125.594410</td>
+      <td>48.432450</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>6095</td>
+      <td>130.56432</td>
+      <td>109.69197</td>
+      <td>7.609190</td>
+      <td>32.862846</td>
+      <td>6.755522</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>6153</td>
+      <td>137.96169</td>
+      <td>120.53375</td>
+      <td>7.420027</td>
+      <td>31.769276</td>
+      <td>5.665226</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/6a24b03a7f0354e27eee697a39c56bacd90ecc0f69da4303b5e9ee2905616ff8.png" src="../../_images/6a24b03a7f0354e27eee697a39c56bacd90ecc0f69da4303b5e9ee2905616ff8.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/4bd706ddfe02c2667b3d84f033f7313e82d27f3de3188367d47b2d632438e300.png" src="../../_images/4bd706ddfe02c2667b3d84f033f7313e82d27f3de3188367d47b2d632438e300.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>20401</td>
+      <td>122.98192</td>
+      <td>106.786804</td>
+      <td>9.043880</td>
+      <td>26.801476</td>
+      <td>6.262432</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>20444</td>
+      <td>275.26904</td>
+      <td>239.238780</td>
+      <td>27.309113</td>
+      <td>62.693336</td>
+      <td>55.146156</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/323b43bc80c68e1d519accd03d8762587a7d6157929a30ecdac1d693ee407581.png" src="../../_images/323b43bc80c68e1d519accd03d8762587a7d6157929a30ecdac1d693ee407581.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10941</td>
+      <td>514.1933</td>
+      <td>440.289670</td>
+      <td>229.84802</td>
+      <td>438.73944</td>
+      <td>193.209370</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>11052</td>
+      <td>59.4791</td>
+      <td>49.479313</td>
+      <td>22.59182</td>
+      <td>48.42582</td>
+      <td>13.314555</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/0ea29bb19cce013a054080cd7855276490943984f6d0dacb200438aa534b4adf.png" src="../../_images/0ea29bb19cce013a054080cd7855276490943984f6d0dacb200438aa534b4adf.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>14708</td>
+      <td>46.736187</td>
+      <td>41.04299</td>
+      <td>151.0263</td>
+      <td>192.76443</td>
+      <td>55.398155</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>14730</td>
+      <td>75.470610</td>
+      <td>72.98221</td>
+      <td>154.8461</td>
+      <td>202.29895</td>
+      <td>88.669556</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/9073d2b4cce67828162151efc7857badea59acbd03588c2f463e7ec119138b8b.png" src="../../_images/9073d2b4cce67828162151efc7857badea59acbd03588c2f463e7ec119138b8b.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/8778769cb111d7ad32b93f7970ebd0fe80ec40a5900d6a3a58f06f2255944e64.png" src="../../_images/8778769cb111d7ad32b93f7970ebd0fe80ec40a5900d6a3a58f06f2255944e64.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>23960</td>
+      <td>855.8414</td>
+      <td>779.4991</td>
+      <td>102.507095</td>
+      <td>315.64264</td>
+      <td>106.575485</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/1bac729edd6bb9da02de1e187d176240445987089951254b9396cbb0be954f81.png" src="../../_images/1bac729edd6bb9da02de1e187d176240445987089951254b9396cbb0be954f81.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5353</td>
+      <td>2025.0446</td>
+      <td>1636.3103</td>
+      <td>228.48224</td>
+      <td>605.2258</td>
+      <td>288.05402</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/b5d7f9c77eec3d9b15d0d0711efadc297cfd1d31308405588538b692aa28c99b.png" src="../../_images/b5d7f9c77eec3d9b15d0d0711efadc297cfd1d31308405588538b692aa28c99b.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>23469</td>
+      <td>589.30396</td>
+      <td>523.15845</td>
+      <td>97.41258</td>
+      <td>189.43181</td>
+      <td>167.19943</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/a4bb45af0917e6f92c1649404760d219f5248afd4de690b9597119f18a334289.png" src="../../_images/a4bb45af0917e6f92c1649404760d219f5248afd4de690b9597119f18a334289.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2896</td>
+      <td>81.80902</td>
+      <td>77.71023</td>
+      <td>11.031394</td>
+      <td>33.571064</td>
+      <td>3.721366</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2905</td>
+      <td>73.38704</td>
+      <td>70.04235</td>
+      <td>9.283696</td>
+      <td>29.202192</td>
+      <td>3.956315</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/94072ff3c15e3c3f0d92a50e844228f2267774952b389f423b5944a9ee156d8d.png" src="../../_images/94072ff3c15e3c3f0d92a50e844228f2267774952b389f423b5944a9ee156d8d.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>22501</td>
+      <td>208.50858</td>
+      <td>160.06058</td>
+      <td>42.797493</td>
+      <td>108.04914</td>
+      <td>23.064548</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/92291320a1963521ce27ee34582d9d8c61d7848ecf02375d791ec24fa7a01886.png" src="../../_images/92291320a1963521ce27ee34582d9d8c61d7848ecf02375d791ec24fa7a01886.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/e845644497a6f76d2197d82f92c581fb7d806311611c9520761ff4af5b53b440.png" src="../../_images/e845644497a6f76d2197d82f92c581fb7d806311611c9520761ff4af5b53b440.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2579</td>
+      <td>41.60475</td>
+      <td>33.223373</td>
+      <td>80.75937</td>
+      <td>108.91202</td>
+      <td>38.48153</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/ba07bac54e88ac234ed5b99ff18a4b4846536cc242ef188a82958228ccfa3117.png" src="../../_images/ba07bac54e88ac234ed5b99ff18a4b4846536cc242ef188a82958228ccfa3117.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>20457</td>
+      <td>223.80472</td>
+      <td>209.28508</td>
+      <td>39.678432</td>
+      <td>104.9862</td>
+      <td>19.110641</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/02fa21633b53c7a5428f952fb71ca1f43dc0de128a385db9baefa6cf53a9f651.png" src="../../_images/02fa21633b53c7a5428f952fb71ca1f43dc0de128a385db9baefa6cf53a9f651.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1258</td>
+      <td>801.7057</td>
+      <td>758.4308</td>
+      <td>187.92026</td>
+      <td>361.1421</td>
+      <td>299.8635</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table></div><img alt="../../_images/0525b873e7920b3e71c7c272fd8fef201a7e8961a1157927bcf6c307158fd7d2.png" src="../../_images/0525b873e7920b3e71c7c272fd8fef201a7e8961a1157927bcf6c307158fd7d2.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/904b735e9eb063a33e4eccfaf276edbba16df6247f6d4b925077ca7df3f26cfb.png" src="../../_images/904b735e9eb063a33e4eccfaf276edbba16df6247f6d4b925077ca7df3f26cfb.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/78308f93df33fa71cd7ac936a5b223ddb41b6dc22376e1ac884e8e7c13b54e62.png" src="../../_images/78308f93df33fa71cd7ac936a5b223ddb41b6dc22376e1ac884e8e7c13b54e62.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div><img alt="../../_images/15f08fe2d14d4f604cc937b43bedd4fba46528d204cb8e46568abc1984ca2770.png" src="../../_images/15f08fe2d14d4f604cc937b43bedd4fba46528d204cb8e46568abc1984ca2770.png" />
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>#ID</th>
+      <th>F0</th>
+      <th>F1_peronamalik</th>
+      <th>F1_autoencoder</th>
+      <th>F1_unet</th>
+      <th>F1_topoattention</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./DENOISING/notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="GLASS-ILLUSTRIS.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">All Models</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../sections/mcvis.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">MC-VIS</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-min-max">scale: min-max</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-zscale">scale: zscale</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
